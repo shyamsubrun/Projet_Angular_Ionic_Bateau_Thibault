@@ -1,0 +1,137 @@
+[
+    {
+        "id": 1,
+        "name": "Le Requin Doré",
+        "description": "Un cadre chaleureux où vous pourrez déguster des spécialités marines aux saveurs locales.",
+        "city": "Marseille, 12 Rue du Vieux Port, 13002",
+        "signature_dish": "Bouillabaisse de poisson",
+        "rating": 9.5,
+        "global_price": 45.0
+    },
+    {
+        "id": 2,
+        "name": "L'Écume des Mers",
+        "description": "Un restaurant élégant avec vue sur la mer, spécialisé dans les fruits de mer frais.",
+        "city": "Nice, 15 Promenade des Anglais, 06000",
+        "signature_dish": "Plateau de fruits de mer",
+        "rating": 8.8,
+        "global_price": 55.0
+    },
+    {
+        "id": 3,
+        "name": "Le Marin Gourmand",
+        "description": "Ambiance décontractée et cuisine généreuse à base de produits de la mer.",
+        "city": "Bordeaux, 23 Quai des Chartrons, 33300",
+        "signature_dish": "Grillade de calamars",
+        "rating": 8.2,
+        "global_price": 38.0
+    },
+    {
+        "id": 4,
+        "name": "L'Huîtrière",
+        "description": "Restaurant gastronomique spécialisé dans les huîtres et coquillages.",
+        "city": "Cancale, 7 Rue des Rimains, 35260",
+        "signature_dish": "Huîtres de Cancale",
+        "rating": 9.0,
+        "global_price": 60.0
+    },
+    {
+        "id": 5,
+        "name": "Le Dôme Bleu",
+        "description": "Cuisine créative et raffinée, mettant en valeur les produits de la mer.",
+        "city": "La Rochelle, 10 Rue Saint-Nicolas, 17000",
+        "signature_dish": "Tartare de thon rouge",
+        "rating": 8.7,
+        "global_price": 50.0
+    },
+    {
+        "id": 6,
+        "name": "Le Phare du Goût",
+        "description": "Un restaurant familial où la pêche locale est à l'honneur.",
+        "city": "Port Louis, 5 Rue de la Liberté, 97117",
+        "signature_dish": "Cari de poisson",
+        "rating": 7.9,
+        "global_price": 35.0
+    },
+    {
+        "id": 7,
+        "name": "L'Océan Vert",
+        "description": "Un cadre zen pour une cuisine marine éco-responsable.",
+        "city": "Nantes, 22 Quai de la Fosse, 44100",
+        "signature_dish": "Saint-Jacques rôties",
+        "rating": 8.6,
+        "global_price": 48.0
+    },
+    {
+        "id": 8,
+        "name": "La Criée du Cap",
+        "description": "Ambiance conviviale pour déguster des poissons grillés à la perfection.",
+        "city": "Cap d'Agde, 19 Rue de la Criée, 34300",
+        "signature_dish": "Sardines grillées",
+        "rating": 8.1,
+        "global_price": 32.0
+    },
+    {
+        "id": 9,
+        "name": "Le Rocher Marin",
+        "description": "Un restaurant en bord de mer avec une vue imprenable sur les falaises.",
+        "city": "Étretat, 9 Chemin des Falaises, 76790",
+        "signature_dish": "Filet de bar à la plancha",
+        "rating": 8.9,
+        "global_price": 52.0
+    },
+    {
+        "id": 10,
+        "name": "La Marée Royale",
+        "description": "Un cadre chic et raffiné pour une cuisine marine de haute qualité.",
+        "city": "Paris, 28 Rue de Rivoli, 75004",
+        "signature_dish": "Homard thermidor",
+        "rating": 9.4,
+        "global_price": 70.0
+    },
+    {
+        "id": 11,
+        "name": "Les Voiles Blanches",
+        "description": "Une cuisine de la mer légère et inventive.",
+        "city": "Toulon, 13 Quai de la Corse, 83000",
+        "signature_dish": "Soupe de poisson provençale",
+        "rating": 8.3,
+        "global_price": 42.0
+    },
+    {
+        "id": 12,
+        "name": "Le Trident",
+        "description": "Un restaurant moderne qui revisite les classiques de la mer.",
+        "city": "Montpellier, 17 Place de la Comédie, 34000",
+        "signature_dish": "Ceviche de dorade",
+        "rating": 8.5,
+        "global_price": 46.0
+    },
+    {
+        "id": 13,
+        "name": "La Vague Dorée",
+        "description": "Ambiance cosy pour une expérience culinaire autour des produits marins.",
+        "city": "Lorient, 4 Rue de la Vague, 56100",
+        "signature_dish": "Langoustines rôties",
+        "rating": 8.4,
+        "global_price": 47.0
+    },
+    {
+        "id": 14,
+        "name": "Le Chant des Marins",
+        "description": "Restaurant chaleureux où la cuisine marine est à l'honneur.",
+        "city": "Dieppe, 11 Quai Henri IV, 76200",
+        "signature_dish": "Moules marinières",
+        "rating": 8.0,
+        "global_price": 33.0
+    },
+    {
+        "id": 15,
+        "name": "Les Saveurs de l'Océan",
+        "description": "Une cuisine fraîche et locale avec une vue sur l'océan.",
+        "city": "Biarritz, 20 Avenue de la Grande Plage, 64200",
+        "signature_dish": "Sole meunière",
+        "rating": 9.1,
+        "global_price": 58.0
+    }
+]
