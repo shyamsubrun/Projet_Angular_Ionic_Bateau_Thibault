@@ -1,0 +1,74 @@
+{
+    "Bateaux": [
+        {
+        "nom": "Le Marin Courageux",
+        "taille": "30 mètres",
+        "Type": "Chalutier",
+        "nbEmployer": 15,
+        "typedePache": "Pêche durable",
+        "spécialité": "Poissons",
+        "lieuDePache": "Mer du Nord",
+        "ancienté": 10
+        },
+        {
+        "nom": "La Perle des Mers",
+        "taille": "20 mètres",
+        "Type": "Dragueur",
+        "nbEmployer": 8,
+        "typedePache": "Pêche artisanale respectueuse",
+        "spécialité": "Coquillages",
+        "lieuDePache": "Atlantique",
+        "ancienté": 5
+        },
+        {
+        "nom": "Le Roi des Océans",
+        "taille": "40 mètres",
+        "Type": "Fileyeur",
+        "nbEmployer": 20,
+        "typedePache": "Pêche écoresponsable",
+        "spécialité": "Crustacés",
+        "lieuDePache": "Méditerranée",
+        "ancienté": 12
+        },
+        {
+        "nom": "Le Vent du Large",
+        "taille": "25 mètres",
+        "Type": "Trawler",
+        "nbEmployer": 10,
+        "typedePache": "Pêche bio certifiée",
+        "spécialité": "Poissons",
+        "lieuDePache": "Manche",
+        "ancienté": 7
+        },
+        {
+        "nom": "L'Écume Blanche",
+        "taille": "18 mètres",
+        "Type": "Dragueur",
+        "nbEmployer": 6,
+        "typedePache": "Pêche sélective",
+        "spécialité": "Coquillages",
+        "lieuDePache": "Mer Baltique",
+        "ancienté": 4
+        },
+        {
+        "nom": "Le Trésor Bleu",
+        "taille": "35 mètres",
+        "Type": "Longliner",
+        "nbEmployer": 18,
+        "typedePache": "Pêche équitable",
+        "spécialité": "Crustacés",
+        "lieuDePache": "Océan Indien",
+        "ancienté": 15
+        },
+        {
+        "nom": "Le Capitaine Solitaire",
+        "taille": "22 mètres",
+        "Type": "Palangrier",
+        "nbEmployer": 9,
+        "typedePache": "Pêche artisanale durable",
+        "spécialité": "Poissons",
+        "lieuDePache": "Océan Pacifique",
+        "ancienté": 8
+        }
+    ]
+}
