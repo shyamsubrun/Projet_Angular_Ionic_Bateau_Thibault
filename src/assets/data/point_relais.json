@@ -1,0 +1,102 @@
+[
+    {
+        "id": 1,
+        "name": "Relais Rapide",
+        "address": "12 Avenue de la République, 75011 Paris",
+        "hours": "Lun-Ven: 8h-19h, Sam: 9h-14h",
+        "price": 3.5,
+        "type": "épicerie",
+        "availability": "Ouvert du lundi au samedi",
+        "phone": "+33 1 45 67 89 01"
+    },
+    {
+        "id": 2,
+        "name": "La Boîte Express",
+        "address": "25 Rue de la Gare, 69003 Lyon",
+        "hours": "Lun-Sam: 8h-18h",
+        "price": 4.0,
+        "type": "machine",
+        "availability": "Ouvert tous les jours sauf dimanche",
+        "phone": "+33 4 78 45 12 34"
+    },
+    {
+        "id": 3,
+        "name": "Chez Marcelle",
+        "address": "10 Rue Saint-Pierre, 13001 Marseille",
+        "hours": "Lun-Ven: 7h-20h, Sam: 9h-13h",
+        "price": 3.0,
+        "type": "resto",
+        "availability": "Ouvert en semaine et samedi matin",
+        "phone": "+33 4 91 22 33 44"
+    },
+    {
+        "id": 4,
+        "name": "Point Relais du Port",
+        "address": "14 Quai de Rive Neuve, 29200 Brest",
+        "hours": "Lun-Dim: 8h-22h",
+        "price": 5.0,
+        "type": "machine",
+        "availability": "Ouvert tous les jours",
+        "phone": "+33 2 98 22 33 55"
+    },
+    {
+        "id": 5,
+        "name": "Le Coin des Courses",
+        "address": "9 Rue de la Mer, 14000 Caen",
+        "hours": "Lun-Sam: 8h-19h",
+        "price": 2.5,
+        "type": "épicerie",
+        "availability": "Ouvert du lundi au samedi",
+        "phone": "+33 2 31 45 67 89"
+    },
+    {
+        "id": 6,
+        "name": "Service Relais Bio",
+        "address": "3 Avenue des Champs, 75008 Paris",
+        "hours": "Lun-Sam: 10h-19h",
+        "price": 4.2,
+        "type": "épicerie",
+        "availability": "Ouvert tous les jours sauf dimanche",
+        "phone": "+33 1 55 66 77 88"
+    },
+    {
+        "id": 7,
+        "name": "Café Relais du Sud",
+        "address": "18 Boulevard de la Liberté, 34000 Montpellier",
+        "hours": "Lun-Dim: 7h-22h",
+        "price": 3.8,
+        "type": "resto",
+        "availability": "Ouvert tous les jours",
+        "phone": "+33 4 67 12 34 56"
+    },
+    {
+        "id": 8,
+        "name": "Relais Minute",
+        "address": "22 Rue de la Gare, 59000 Lille",
+        "hours": "Lun-Sam: 6h-20h",
+        "price": 3.0,
+        "type": "machine",
+        "availability": "Ouvert du lundi au samedi",
+        "phone": "+33 3 20 15 67 89"
+    },
+    {
+        "id": 9,
+        "name": "Épicerie du Centre",
+        "address": "5 Place de la République, 75010 Paris",
+        "hours": "Lun-Ven: 9h-18h, Sam: 9h-14h",
+        "price": 2.8,
+        "type": "épicerie",
+        "availability": "Ouvert en semaine et samedi matin",
+        "phone": "+33 1 42 11 22 33"
+    },
+    {
+        "id": 10,
+        "name": "Relais Gourmand",
+        "address": "7 Rue de l'Église, 64100 Bayonne",
+        "hours": "Lun-Sam: 8h-20h",
+        "price": 3.2,
+        "type": "resto",
+        "availability": "Ouvert du lundi au samedi",
+        "phone": "+33 5 59 33 44 55"
+    }
+]
