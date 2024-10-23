@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { IonCardSubtitle,IonCard,IonCardHeader,IonCardTitle,IonCardContent,IonContent, IonHeader, IonTitle, IonToolbar } from '@ionic/angular/standalone';
+import { IonBadge,IonAvatar,IonList,IonItem,IonIcon,IonLabel,IonCardSubtitle,IonCard,IonCardHeader,IonCardTitle,IonCardContent,IonContent, IonHeader, IonTitle, IonToolbar } from '@ionic/angular/standalone';
 import { HttpClient } from '@angular/common/http';
 
 @Component({
@@ -9,7 +9,7 @@ import { HttpClient } from '@angular/common/http';
   templateUrl: './profil.page.html',
   styleUrls: ['./profil.page.scss'],
   standalone: true,
-  imports: [IonCardSubtitle,IonCard,IonCardHeader,IonCardTitle,IonCardContent,IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule]
+  imports: [IonBadge,IonAvatar,IonList,IonItem,IonIcon,IonLabel,IonCardSubtitle,IonCard,IonCardHeader,IonCardTitle,IonCardContent,IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule]
 })
 export class ProfilPage {
   user: any;

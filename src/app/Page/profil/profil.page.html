@@ -1,19 +1,70 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar color="primary">
     <ion-title>Profil</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content *ngIf="user">
-  <ion-card>
-    <ion-card-header>
-      <ion-card-title>{{ user.prenom }} {{ user.nom }}</ion-card-title>
-      <ion-card-subtitle>{{ user.nomDuCommerce }} - {{ user.typeDeCommerce }}</ion-card-subtitle>
-    </ion-card-header>
+<ion-content *ngIf="user" class="profile-content">
+  <ion-card class="profile-card">
+    <div class="profile-header">
+      <ion-avatar class="profile-avatar">
+        <img src="/assets/img_profile/default_avatar.jpg" alt="Photo de profil">
+      </ion-avatar>
+      <div class="profile-info">
+        <ion-card-title class="profile-name">{{ user.prenom }} {{ user.nom }}</ion-card-title>
+        <ion-card-subtitle class="profile-subtitle">{{ user.nomDuCommerce }} - {{ user.typeDeCommerce }}</ion-card-subtitle>
+      </div>
+    </div>
     <ion-card-content>
-      <p>Email: {{ user.email }}</p>
-      <p>Téléphone: {{ user.phone }}</p>
-      <p>Adresse: {{ user.adresse }}</p>
+      <ion-list>
+        <ion-item lines="none">
+          <ion-icon name="calendar-outline" slot="start"></ion-icon>
+          <ion-label>Inscrit depuis le : {{ user.dateInscription | date: 'longDate' }}</ion-label>
+        </ion-item>
+        <ion-item lines="none">
+          <ion-icon name="log-in-outline" slot="start"></ion-icon>
+          <ion-label>Dernière connexion : {{ user.derniereConnexion | date: 'short' }}</ion-label>
+        </ion-item>
+        <ion-item lines="none">
+          <ion-icon name="call-outline" slot="start"></ion-icon>
+          <ion-label>Téléphone : {{ user.telephone }}</ion-label>
+        </ion-item>
+        <ion-item lines="none">
+          <ion-icon name="mail-outline" slot="start"></ion-icon>
+          <ion-label>Email : {{ user.email }}</ion-label>
+        </ion-item>
+        <ion-item lines="none">
+          <ion-icon name="location-outline" slot="start"></ion-icon>
+          <ion-label>Adresse : {{ user.adresse }}</ion-label>
+        </ion-item>
+        <ion-item lines="none">
+          <ion-icon name="people-outline" slot="start"></ion-icon>
+          <ion-label>Amis : {{ user.ami.join(', ') }}</ion-label>
+        </ion-item>
+        <ion-item lines="none">
+          <ion-icon name="star-outline" slot="start"></ion-icon>
+          <ion-label>Membre Premium : 
+            <ion-badge color="success" *ngIf="user.membrePremium">Oui</ion-badge>
+            <ion-badge color="medium" *ngIf="!user.membrePremium">Non</ion-badge>
+          </ion-label>
+        </ion-item>
+        <ion-item lines="none">
+          <ion-icon name="document-text-outline" slot="start"></ion-icon>
+          <ion-label>Nombre de commandes : {{ user.nombreCommandesPassees }}</ion-label>
+        </ion-item>
+        <ion-item lines="none">
+          <ion-icon name="log-in-outline" slot="start"></ion-icon>
+          <ion-label>Nombre de connexions : {{ user.nombreConnexions }}</ion-label>
+        </ion-item>
+        <ion-item lines="none">
+          <ion-icon name="language-outline" slot="start"></ion-icon>
+          <ion-label>Langue préférée : {{ user.languePreferee }}</ion-label>
+        </ion-item>
+        <ion-item lines="none">
+          <ion-icon name="heart-outline" slot="start"></ion-icon>
+          <ion-label>Centres d'intérêt : {{ user.centreInteret.join(', ') }}</ion-label>
+        </ion-item>
+      </ion-list>
     </ion-card-content>
   </ion-card>
 </ion-content>
