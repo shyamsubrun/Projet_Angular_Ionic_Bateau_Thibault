@@ -11,6 +11,6 @@ export class PageTypeService {
   constructor(private http: HttpClient) { }
 
   getLocalData(): Observable<any> {
-    return this.http.get<any>('/assets/data/lis_tbateaux.json');
+    return this.http.get<any>('/assets/data/listBateaux.json');
   }
 }
