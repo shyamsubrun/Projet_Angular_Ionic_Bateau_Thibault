@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Liste des Bateaux</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <!-- Utiliser *ngFor pour itérer sur les bateaux récupérés -->
+    <ion-item *ngFor="let bateau of data">
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title (clic)="onToGolistBateau()">{{ bateau.nom }}</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <p><strong>Taille :</strong> {{ bateau.taille }}</p>
+          <p><strong>Type :</strong> {{ bateau.Type }}</p>
+          <p><strong>Nombre d'employés :</strong> {{ bateau.nbEmployer }}</p>
+          <p><strong>Type de pêche :</strong> {{ bateau.typedePache }}</p>
+          <p><strong>Spécialité :</strong> {{ bateau.specialite }}</p>
+          <p><strong>Lieu de pêche :</strong> {{ bateau.lieuDePache }}</p>
+          <p><strong>Ancienneté :</strong> {{ bateau.anciente }} ans</p>
+        </ion-card-content>
+      </ion-card>
+    </ion-item>
+  </ion-list>
+</ion-content>

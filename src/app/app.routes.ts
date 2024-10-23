@@ -9,7 +9,8 @@ export const routes: Routes = [
     path: '',
     redirectTo: 'home',
     pathMatch: 'full',
-  },  {
+  },
+  {
     path: 'parametre',
     loadComponent: () => import('./parametre/parametre.page').then( m => m.ParametrePage)
   },
@@ -21,5 +22,11 @@ export const routes: Routes = [
     path: 'profil',
     loadComponent: () => import('./profil/profil.page').then( m => m.ProfilPage)
   },
+  {
+    path: 'list-all',
+    loadComponent: () => import('./list-all/list-all.page').then( m => m.ListAllPage)
+  },
+
+];
 
 ];
