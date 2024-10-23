@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { NavigationExtras, Router } from '@angular/router';
-import { PageTypeService } from '../services/page-type.service';
+import { PageTypeService } from '../../services/page-type.service';
 import { HttpClientModule } from '@angular/common/http'; 
 import { IonContent, IonHeader, IonTitle, IonToolbar, IonList, IonItem, IonLabel, IonCard, IonCardHeader, IonCardContent, IonIcon, IonCardTitle } from '@ionic/angular/standalone';
 
