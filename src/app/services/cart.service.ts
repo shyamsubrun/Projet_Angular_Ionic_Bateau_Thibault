@@ -52,4 +52,9 @@ export class CartService {
   private updateTotalItems() {
     this.totalItemsSubject.next(this.getTotalItems());
   }
+
+  clearCart() {
+    this.items = []; // Vider le panier
+    this.updateTotalItems(); // Mettre à jour le nombre total d'articles
+  }
 }

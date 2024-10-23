@@ -26,6 +26,13 @@
         <p>Prix Total: {{ getTotalPrice() }} €</p>
       </ion-card-content>
     </ion-card>
+    <ion-content class="ion-padding">
+  
+
+  <ion-button expand="full" (click)="validateCart()">
+    Valider le Panier
+  </ion-button>
+</ion-content>
   </ng-container>
 
   <ng-container *ngIf="cartItems.length === 0">
