@@ -7,9 +7,7 @@ export interface Bateau {
   taille: string;
   Type: string;
   nbEmployer: number;
-    typedePache: string;   
-    
-    
+  typedePache: string;   
   spécialité: string;
   lieuDePache: string;
   ancienté: number;
@@ -25,7 +23,7 @@ export interface Restaurant {
   global_price: number;
 }
 
-export interface Recettes {
+export interface Recette {
   nom: string;
   ingredients: string[]; 
   instructions: string[]; 
