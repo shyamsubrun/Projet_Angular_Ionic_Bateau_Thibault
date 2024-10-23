@@ -3,6 +3,9 @@ import { Component, OnInit } from '@angular/core';
 import { ListsService } from '../../services/lists.service';
 import { CommonModule } from '@angular/common'; // Importer CommonModule
 import {IonHeader,IonToolbar,IonTitle,IonContent,IonList,IonCardSubtitle,IonCard,IonCardHeader,IonCardTitle,IonCardContent} from  '@ionic/angular/standalone';
+import { CartService } from 'src/app/services/cart.service';
+
+
 @Component({
   selector: 'app-produit',
   standalone: true,  // Gardez cette ligne
@@ -13,7 +16,7 @@ import {IonHeader,IonToolbar,IonTitle,IonContent,IonList,IonCardSubtitle,IonCard
 export class ProduitComponent implements OnInit {
   produits: any[] = [];  // Tableau pour stocker les produits
 
-  constructor(private listsService: ListsService) { }
+  constructor(private listsService: ListsService, private cartService: CartService) { }
 
   ngOnInit(): void {
     this.loadProduits();  // Charger les produits au démarrage
@@ -28,5 +31,16 @@ export class ProduitComponent implements OnInit {
         console.error('Erreur lors du chargement des produits', error);
       }
     );
+  }
+  addToCart(product: any) {
+    this.cartService.addToCart(product);
+  }
+
+  removeFromCart(productId: number) {
+    this.cartService.removeFromCart(productId);
+  }
+  getProductQuantity(productId: number): number {
+    const item = this.cartService['cartItems'].find(item => item.id === productId);
+    return item ? item.quantity : 0;
   }
 }
