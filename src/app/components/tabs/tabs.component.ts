@@ -22,4 +22,8 @@ export class TabsComponent  implements OnInit {
     this.router.navigate(['/parametre']);
   }
 
+  onGoToHome() {
+    this.router.navigate(['/home']);
+  }
+
 }
