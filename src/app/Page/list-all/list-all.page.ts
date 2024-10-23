@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { NavigationExtras, Router } from '@angular/router';
+import { NavigationExtras, Router ,ActivatedRoute} from '@angular/router';
 import { PageTypeService } from '../../services/page-type.service';
 import { ListsService } from 'src/app/services/lists.service';
 import { HttpClientModule } from '@angular/common/http'; 
@@ -39,25 +39,38 @@ export class ListAllPage implements OnInit {
   listBateaux!: Bateau[];
   listRestaurants!: Restaurant[];
   listRecettes!: Recette[];
-  listType!: Type;
+  listType!: string;
 
-  constructor(private router:Router, private pageTypeService:PageTypeService, private listsService: ListsService) { }
+  constructor(private router:Router, private activatedRoute: ActivatedRoute,private pageTypeService:PageTypeService, private listsService: ListsService) { }
 
   ngOnInit() {
-    this.loadData();
+    this.activatedRoute.queryParams.subscribe(params => {
+      this.listType = params['type'];
+      this.loadData();
+    });
   }
 
   loadData() {
-    this.getListBateaux()
-    this.getListRestaurants()
-    this.getListRecettes()
+    switch (this.listType) {
+      case 'bateaux':
+        this.getListBateaux();
+        break;
+      case 'restaurants':
+        this.getListRestaurants();
+        break;
+      case 'recettes':
+        this.getListRecettes();
+        break;
+      default:
+        console.error('Type non reconnu');
+    }
   }
 
   getListBateaux() {
   this.listsService.getListBateaux().subscribe(
     (response) => {
       this.listBateaux = response.bateaux;  // Les bateaux sont récupérés ici
-      this.listType = response.type; 
+      // this.listType = response.type; 
     },
     (error) => {
       console.error('Erreur lors de la récupération des données :', error);
@@ -68,7 +81,7 @@ export class ListAllPage implements OnInit {
     this.listsService.getListRestaurants().subscribe(
       (response) => {
         this.listRestaurants = response.restaurants
-        this.listType = response.type; 
+        // this.listType = response.type; 
         console.log(this.listRestaurants); 
       },
       (error) => {
@@ -80,7 +93,7 @@ export class ListAllPage implements OnInit {
     this.listsService.getListRecettes().subscribe(
       (response) => {
         this.listRecettes = response.recettes
-        this.listType = response.type; 
+        // this.listType = response.type; 
         console.log(this.listRecettes); 
       },
       (error) => {
