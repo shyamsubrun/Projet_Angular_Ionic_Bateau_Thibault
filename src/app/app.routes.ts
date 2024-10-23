@@ -1,4 +1,5 @@
 import { Routes } from '@angular/router';
+import { CartComponent } from './Page/cart/cart.component';
 
 export const routes: Routes = [
   {
@@ -33,6 +34,9 @@ export const routes: Routes = [
   {
     path: 'produit',
     loadComponent: () => import('./Page/produit/produit.component').then(m => m.ProduitComponent)
-  }
+  },
+  { path: 'cart',
+    component: CartComponent },
+
 ];
 

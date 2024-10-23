@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Mon Panier</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ng-container *ngIf="cartItems.length > 0">
+    <ion-list>
+      <ion-card *ngFor="let item of cartItems">
+        <ion-card-header>
+          <ion-card-title>{{ item.name }}</ion-card-title>
+          <ion-card-subtitle>Prix: {{ item.price }} € / {{ item.unit }}</ion-card-subtitle>
+        </ion-card-header>
+        <ion-card-content>
+          <p>Quantité: {{ item.quantity }}</p>
+          <button (click)="removeFromCart(item.id)">Retirer un article</button>
+        </ion-card-content>
+      </ion-card>
+    </ion-list>
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Total</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <p>Prix Total: {{ getTotalPrice() }} €</p>
+      </ion-card-content>
+    </ion-card>
+  </ng-container>
+
+  <ng-container *ngIf="cartItems.length === 0">
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Votre panier est vide</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        Ajoutez des produits pour les voir ici.
+      </ion-card-content>
+    </ion-card>
+  </ng-container>
+</ion-content>

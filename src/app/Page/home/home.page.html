@@ -8,12 +8,14 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>Bateau Thibault</ion-title>
-    <ion-button slot="end">
       <ion-button [routerLink]="['/parametre']">
         <ion-icon name="settings-outline"></ion-icon>
         Paramètre
       </ion-button>
-    </ion-button>
+      <ion-button routerLink="/cart">
+        Panier
+        <span *ngIf="totalItems > 0" class="badge">{{ totalItems }}s</span>
+      </ion-button>
   </ion-toolbar>
 </ion-header>
 <app-tabs></app-tabs>
