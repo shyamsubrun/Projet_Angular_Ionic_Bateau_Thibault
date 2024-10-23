@@ -1,8 +1,3 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>Paramètres</ion-title>
-  </ion-toolbar>
-</ion-header>
 
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
@@ -11,8 +6,20 @@
     </ion-toolbar>
   </ion-header>
 
-  <div id="container">
-    <ion-button (click)="onGoToListAll() ">Liste bateaux</ion-button>
-  </div>
+  
 </ion-content>
 
+
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Bateau Thibault</ion-title>
+    <ion-button slot="end">
+      <ion-button [routerLink]="['/parametre']">
+        <ion-icon name="settings-outline"></ion-icon>
+        Paramètre
+      </ion-button>
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<app-tabs></app-tabs>
