@@ -4,9 +4,9 @@ import { FormsModule } from '@angular/forms';
 import { IonAvatar,IonList,IonItem,IonIcon,IonLabel,IonCard,IonCardHeader,
           IonCardTitle,IonCardSubtitle,IonCardContent,IonContent, IonHeader,
            IonTitle, IonToolbar,IonImg } from '@ionic/angular/standalone';
-import { UserService } from '../services/user.service';
+import { UserService } from '../../services/user.service';
 import { HttpClientModule } from '@angular/common/http';
-import { AppComponent } from '../app.component';
+import { AppComponent } from '../../app.component';
 import { NavController } from '@ionic/angular';
 
 
