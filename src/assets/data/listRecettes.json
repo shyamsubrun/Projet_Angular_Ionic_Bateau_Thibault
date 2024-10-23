@@ -1,256 +1,254 @@
-{
-    "recettes": [
-        {
-        "nom": "Bouillabaisse",
-        "ingrédients": [
-            "500g de poissons variés (rouget, dorade)",
-            "300g de moules",
-            "300g de crevettes",
-            "1 oignon",
-            "2 tomates",
-            "1 poireau",
-            "2 gousses d'ail",
-            "1 litre de bouillon de poisson",
-            "1/2 verre de vin blanc",
-            "1 bouquet garni",
-            "huile d'olive",
-            "sel",
-            "poivre",
-            "safran"
-        ],
-        "instructions": [
-            "Dans une grande casserole, faire revenir l'oignon et l'ail hachés dans de l'huile d'olive.",
-            "Ajouter les tomates coupées et le poireau émincé, et faire revenir quelques minutes.",
-            "Verser le bouillon de poisson et le vin blanc, puis ajouter le bouquet garni.",
-            "Porter à ébullition, puis laisser mijoter pendant 20 minutes.",
-            "Ajouter les poissons, les moules et les crevettes, et cuire pendant 10 minutes supplémentaires.",
-            "Assaisonner avec le sel, le poivre, et le safran avant de servir."
-        ],
-        "tempsDePréparation": "30 minutes",
-        "tempsDeCuisson": "30 minutes",
-        "nombreDePortions": 4,
-        "allergènes": [
-            "Poissons",
-            "Crustacés",
-            "Sulfites"
-        ]
-        },
-        {
-        "nom": "Tartare de saumon",
-        "ingrédients": [
-            "300g de saumon frais",
-            "1 avocat",
-            "1 échalote",
-            "1 citron",
-            "coriandre fraîche",
-            "huile d'olive",
-            "sel",
-            "poivre"
-        ],
-        "instructions": [
-            "Couper le saumon en petits dés et le mettre dans un bol.",
-            "Ajouter l'avocat coupé en dés et l'échalote finement hachée.",
-            "Presser le citron et ajouter le jus au mélange.",
-            "Ajouter la coriandre ciselée, l'huile d'olive, le sel et le poivre.",
-            "Mélanger délicatement et servir frais."
-        ],
-        "tempsDePréparation": "15 minutes",
-        "tempsDeCuisson": "0 minutes",
-        "nombreDePortions": 2,
-        "allergènes": [
-            "Poissons"
-        ]
-        },
-        {
-        "nom": "Paella de fruits de mer",
-        "ingrédients": [
-            "400g de riz à paella",
-            "300g de moules",
-            "300g de crevettes",
-            "200g de calamars",
-            "1 oignon",
-            "2 gousses d'ail",
-            "1 poivron rouge",
-            "1 litre de bouillon de poisson",
-            "1 sachet de safran",
-            "huile d'olive",
-            "sel",
-            "poivre"
-        ],
-        "instructions": [
-            "Dans une grande poêle, faire revenir l'oignon, l'ail, et le poivron dans de l'huile d'olive.",
-            "Ajouter le riz et mélanger pour bien enrober les grains.",
-            "Verser le bouillon de poisson chaud et ajouter le safran.",
-            "Laisser mijoter pendant 10 minutes.",
-            "Ajouter les moules, les crevettes et les calamars, puis cuire jusqu'à ce que le riz soit tendre et les fruits de mer cuits.",
-            "Assaisonner avec du sel et du poivre avant de servir."
-        ],
-        "tempsDePréparation": "20 minutes",
-        "tempsDeCuisson": "30 minutes",
-        "nombreDePortions": 6,
-        "allergènes": [
-            "Poissons",
-            "Crustacés"
-        ]
-        },
-        {
-        "nom": "Sushi au thon",
-        "ingrédients": [
-            "200g de thon frais",
-            "200g de riz à sushi",
-            "3 feuilles de nori",
-            "1 avocat",
-            "vinaigre de riz",
-            "sucre",
-            "sel"
-        ],
-        "instructions": [
-            "Cuire le riz à sushi selon les instructions sur l'emballage.",
-            "Mélanger le vinaigre de riz, le sucre et le sel, puis l'incorporer au riz.",
-            "Couper le thon et l'avocat en fines lanières.",
-            "Placer une feuille de nori sur une natte de sushi, étaler le riz uniformément, puis ajouter le thon et l'avocat.",
-            "Rouler délicatement le sushi et couper en tranches."
-        ],
-        "tempsDePréparation": "30 minutes",
-        "tempsDeCuisson": "20 minutes",
-        "nombreDePortions": 2,
-        "allergènes": [
-            "Poissons"
-        ]
-        },
-        {
-        "nom": "Crevettes sautées à l'ail",
-        "ingrédients": [
-            "400g de crevettes décortiquées",
-            "4 gousses d'ail",
-            "1 piment rouge",
-            "1 citron",
-            "huile d'olive",
-            "persil frais",
-            "sel",
-            "poivre"
-        ],
-        "instructions": [
-            "Chauffer l'huile d'olive dans une poêle à feu moyen.",
-            "Ajouter l'ail haché et le piment rouge, puis faire revenir pendant 1 minute.",
-            "Ajouter les crevettes et cuire jusqu'à ce qu'elles soient roses.",
-            "Assaisonner avec du sel, du poivre, et du jus de citron.",
-            "Garnir de persil frais avant de servir."
-        ],
-        "tempsDePréparation": "10 minutes",
-        "tempsDeCuisson": "10 minutes",
-        "nombreDePortions": 4,
-        "allergènes": [
-            "Crustacés"
-        ]
-        },
-        {
-        "nom": "Gratin de fruits de mer",
-        "ingrédients": [
-            "200g de crevettes",
-            "200g de moules",
-            "200g de cabillaud",
-            "200ml de crème fraîche",
-            "100g de fromage râpé",
-            "1 échalote",
-            "huile d'olive",
-            "sel",
-            "poivre"
-        ],
-        "instructions": [
-            "Préchauffer le four à 180°C.",
-            "Dans une poêle, faire revenir l'échalote dans l'huile d'olive.",
-            "Ajouter les fruits de mer et cuire pendant 5 minutes.",
-            "Incorporer la crème fraîche et assaisonner avec du sel et du poivre.",
-            "Verser le mélange dans un plat à gratin, saupoudrer de fromage râpé, et enfourner pendant 20 minutes."
-        ],
-        "tempsDePréparation": "15 minutes",
-        "tempsDeCuisson": "20 minutes",
-        "nombreDePortions": 4,
-        "allergènes": [
-            "Crustacés",
-            "Lait"
-        ]
-        },
-        {
-        "nom": "Ceviche de dorade",
-        "ingrédients": [
-            "300g de dorade fraîche",
-            "1 citron vert",
-            "1 oignon rouge",
-            "1 piment jalapeño",
-            "coriandre fraîche",
-            "sel",
-            "poivre"
-        ],
-        "instructions": [
-            "Couper la dorade en petits dés et la mettre dans un bol.",
-            "Presser le citron vert sur le poisson et ajouter le sel.",
-            "Ajouter l'oignon rouge finement haché, le piment jalapeño émincé, et la coriandre ciselée.",
-            "Mélanger et laisser mariner au réfrigérateur pendant 30 minutes avant de servir."
-        ],
-        "tempsDePréparation": "10 minutes",
-        "tempsDeCuisson": "0 minutes",
-        "nombreDePortions": 2,
-        "allergènes": [
-            "Poissons"
-        ]
-        },
-        {
-        "nom": "Soupe de poisson",
-        "ingrédients": [
-            "500g de poissons variés",
-            "1 oignon",
-            "2 carottes",
-            "2 gousses d'ail",
-            "1 litre de bouillon de poisson",
-            "1 feuille de laurier",
-            "huile d'olive",
-            "sel",
-            "poivre"
-        ],
-        "instructions": [
-            "Faire revenir l'oignon et l'ail hachés dans une casserole avec de l'huile d'olive.",
-            "Ajouter les carottes coupées en rondelles et faire revenir 5 minutes.",
-            "Verser le bouillon de poisson, ajouter la feuille de laurier et laisser mijoter 20 minutes.",
-            "Ajouter les poissons et cuire pendant 10 minutes.",
-            "Assaisonner et servir chaud."
-        ],
-        "tempsDePréparation": "15 minutes",
-        "tempsDeCuisson": "30 minutes",
-        "nombreDePortions": 4,
-        "allergènes": [
-            "Poissons"
-        ]
-        },
-        {
-        "nom": "Pâtes aux fruits de mer",
-        "ingrédients": [
-            "300g de spaghettis",
-            "200g de moules",
-            "200g de crevettes",
-            "1 oignon",
-            "2 gousses d'ail",
-            "400g de tomates concassées",
-            "huile d'olive",
-            "sel",
-            "poivre",
-            "basilic frais"
-        ],
-        "instructions": [
-            "Cuire les spaghettis selon les instructions sur l'emballage.",
-            "Dans une poêle, faire revenir l'oignon et l'ail dans de l'huile d'olive.",
-            "Ajouter les tomates concassées et laisser mijoter 10 minutes.",
-            "Ajouter les moules et les crevettes, puis cuire jusqu'à ce qu'elles soient ouvertes.",
-            "Mélanger les pâtes avec la sauce et servir avec du basilic frais."
-        ],
-        "tempsDePréparation": "20 minutes",
-        "tempsDeCuisson": "20 minutes",
-        "nombreDePortions": 4,
-        "allergènes": [
-            "Crustacés",
-            "Gluten"
-        ]
-        }
+[
+    {
+    "nom": "Bouillabaisse",
+    "ingredients": [
+        "500g de poissons varies (rouget, dorade)",
+        "300g de moules",
+        "300g de crevettes",
+        "1 oignon",
+        "2 tomates",
+        "1 poireau",
+        "2 gousses d'ail",
+        "1 litre de bouillon de poisson",
+        "1/2 verre de vin blanc",
+        "1 bouquet garni",
+        "huile d'olive",
+        "sel",
+        "poivre",
+        "safran"
+    ],
+    "instructions": [
+        "Dans une grande casserole, faire revenir l'oignon et l'ail haches dans de l'huile d'olive.",
+        "Ajouter les tomates coupees et le poireau emince, et faire revenir quelques minutes.",
+        "Verser le bouillon de poisson et le vin blanc, puis ajouter le bouquet garni.",
+        "Porter à ebullition, puis laisser mijoter pendant 20 minutes.",
+        "Ajouter les poissons, les moules et les crevettes, et cuire pendant 10 minutes supplementaires.",
+        "Assaisonner avec le sel, le poivre, et le safran avant de servir."
+    ],
+    "tempsDePreparation": "30 minutes",
+    "tempsDeCuisson": "30 minutes",
+    "nombreDePortions": 4,
+    "allergenes": [
+        "Poissons",
+        "Crustaces",
+        "Sulfites"
     ]
-}
+    },
+    {
+    "nom": "Tartare de saumon",
+    "ingredients": [
+        "300g de saumon frais",
+        "1 avocat",
+        "1 echalote",
+        "1 citron",
+        "coriandre fraîche",
+        "huile d'olive",
+        "sel",
+        "poivre"
+    ],
+    "instructions": [
+        "Couper le saumon en petits des et le mettre dans un bol.",
+        "Ajouter l'avocat coupe en des et l'echalote finement hachee.",
+        "Presser le citron et ajouter le jus au melange.",
+        "Ajouter la coriandre ciselee, l'huile d'olive, le sel et le poivre.",
+        "Melanger delicatement et servir frais."
+    ],
+    "tempsDePreparation": "15 minutes",
+    "tempsDeCuisson": "0 minutes",
+    "nombreDePortions": 2,
+    "allergenes": [
+        "Poissons"
+    ]
+    },
+    {
+    "nom": "Paella de fruits de mer",
+    "ingredients": [
+        "400g de riz à paella",
+        "300g de moules",
+        "300g de crevettes",
+        "200g de calamars",
+        "1 oignon",
+        "2 gousses d'ail",
+        "1 poivron rouge",
+        "1 litre de bouillon de poisson",
+        "1 sachet de safran",
+        "huile d'olive",
+        "sel",
+        "poivre"
+    ],
+    "instructions": [
+        "Dans une grande poêle, faire revenir l'oignon, l'ail, et le poivron dans de l'huile d'olive.",
+        "Ajouter le riz et melanger pour bien enrober les grains.",
+        "Verser le bouillon de poisson chaud et ajouter le safran.",
+        "Laisser mijoter pendant 10 minutes.",
+        "Ajouter les moules, les crevettes et les calamars, puis cuire jusqu'à ce que le riz soit tendre et les fruits de mer cuits.",
+        "Assaisonner avec du sel et du poivre avant de servir."
+    ],
+    "tempsDePreparation": "20 minutes",
+    "tempsDeCuisson": "30 minutes",
+    "nombreDePortions": 6,
+    "allergenes": [
+        "Poissons",
+        "Crustaces"
+    ]
+    },
+    {
+    "nom": "Sushi au thon",
+    "ingredients": [
+        "200g de thon frais",
+        "200g de riz à sushi",
+        "3 feuilles de nori",
+        "1 avocat",
+        "vinaigre de riz",
+        "sucre",
+        "sel"
+    ],
+    "instructions": [
+        "Cuire le riz à sushi selon les instructions sur l'emballage.",
+        "Melanger le vinaigre de riz, le sucre et le sel, puis l'incorporer au riz.",
+        "Couper le thon et l'avocat en fines lanieres.",
+        "Placer une feuille de nori sur une natte de sushi, etaler le riz uniformement, puis ajouter le thon et l'avocat.",
+        "Rouler delicatement le sushi et couper en tranches."
+    ],
+    "tempsDePreparation": "30 minutes",
+    "tempsDeCuisson": "20 minutes",
+    "nombreDePortions": 2,
+    "allergenes": [
+        "Poissons"
+    ]
+    },
+    {
+    "nom": "Crevettes sautees à l'ail",
+    "ingredients": [
+        "400g de crevettes decortiquees",
+        "4 gousses d'ail",
+        "1 piment rouge",
+        "1 citron",
+        "huile d'olive",
+        "persil frais",
+        "sel",
+        "poivre"
+    ],
+    "instructions": [
+        "Chauffer l'huile d'olive dans une poêle à feu moyen.",
+        "Ajouter l'ail hache et le piment rouge, puis faire revenir pendant 1 minute.",
+        "Ajouter les crevettes et cuire jusqu'à ce qu'elles soient roses.",
+        "Assaisonner avec du sel, du poivre, et du jus de citron.",
+        "Garnir de persil frais avant de servir."
+    ],
+    "tempsDePreparation": "10 minutes",
+    "tempsDeCuisson": "10 minutes",
+    "nombreDePortions": 4,
+    "allergenes": [
+        "Crustaces"
+    ]
+    },
+    {
+    "nom": "Gratin de fruits de mer",
+    "ingredients": [
+        "200g de crevettes",
+        "200g de moules",
+        "200g de cabillaud",
+        "200ml de creme fraîche",
+        "100g de fromage râpe",
+        "1 echalote",
+        "huile d'olive",
+        "sel",
+        "poivre"
+    ],
+    "instructions": [
+        "Prechauffer le four à 180°C.",
+        "Dans une poêle, faire revenir l'echalote dans l'huile d'olive.",
+        "Ajouter les fruits de mer et cuire pendant 5 minutes.",
+        "Incorporer la creme fraîche et assaisonner avec du sel et du poivre.",
+        "Verser le melange dans un plat à gratin, saupoudrer de fromage râpe, et enfourner pendant 20 minutes."
+    ],
+    "tempsDePreparation": "15 minutes",
+    "tempsDeCuisson": "20 minutes",
+    "nombreDePortions": 4,
+    "allergenes": [
+        "Crustaces",
+        "Lait"
+    ]
+    },
+    {
+    "nom": "Ceviche de dorade",
+    "ingredients": [
+        "300g de dorade fraîche",
+        "1 citron vert",
+        "1 oignon rouge",
+        "1 piment jalapeño",
+        "coriandre fraîche",
+        "sel",
+        "poivre"
+    ],
+    "instructions": [
+        "Couper la dorade en petits des et la mettre dans un bol.",
+        "Presser le citron vert sur le poisson et ajouter le sel.",
+        "Ajouter l'oignon rouge finement hache, le piment jalapeño emince, et la coriandre ciselee.",
+        "Melanger et laisser mariner au refrigerateur pendant 30 minutes avant de servir."
+    ],
+    "tempsDePreparation": "10 minutes",
+    "tempsDeCuisson": "0 minutes",
+    "nombreDePortions": 2,
+    "allergenes": [
+        "Poissons"
+    ]
+    },
+    {
+    "nom": "Soupe de poisson",
+    "ingredients": [
+        "500g de poissons varies",
+        "1 oignon",
+        "2 carottes",
+        "2 gousses d'ail",
+        "1 litre de bouillon de poisson",
+        "1 feuille de laurier",
+        "huile d'olive",
+        "sel",
+        "poivre"
+    ],
+    "instructions": [
+        "Faire revenir l'oignon et l'ail haches dans une casserole avec de l'huile d'olive.",
+        "Ajouter les carottes coupees en rondelles et faire revenir 5 minutes.",
+        "Verser le bouillon de poisson, ajouter la feuille de laurier et laisser mijoter 20 minutes.",
+        "Ajouter les poissons et cuire pendant 10 minutes.",
+        "Assaisonner et servir chaud."
+    ],
+    "tempsDePreparation": "15 minutes",
+    "tempsDeCuisson": "30 minutes",
+    "nombreDePortions": 4,
+    "allergenes": [
+        "Poissons"
+    ]
+    },
+    {
+    "nom": "Pâtes aux fruits de mer",
+    "ingredients": [
+        "300g de spaghettis",
+        "200g de moules",
+        "200g de crevettes",
+        "1 oignon",
+        "2 gousses d'ail",
+        "400g de tomates concassees",
+        "huile d'olive",
+        "sel",
+        "poivre",
+        "basilic frais"
+    ],
+    "instructions": [
+        "Cuire les spaghettis selon les instructions sur l'emballage.",
+        "Dans une poêle, faire revenir l'oignon et l'ail dans de l'huile d'olive.",
+        "Ajouter les tomates concassees et laisser mijoter 10 minutes.",
+        "Ajouter les moules et les crevettes, puis cuire jusqu'à ce qu'elles soient ouvertes.",
+        "Melanger les pâtes avec la sauce et servir avec du basilic frais."
+    ],
+    "tempsDePreparation": "20 minutes",
+    "tempsDeCuisson": "20 minutes",
+    "nombreDePortions": 4,
+    "allergenes": [
+        "Crustaces",
+        "Gluten"
+    ]
+    }
+]

@@ -20,7 +20,7 @@ export class ListsService {
     );
   }
   getListRestaurants(): Observable<{restaurants : Restaurant[],type : Type}> {
-    return this.http.get<Restaurant[]>('/assets/data/listResturants.json').pipe(
+    return this.http.get<Restaurant[]>('/assets/data/listRestaurants.json').pipe(
       map((restaurants : Restaurant[]) => ({
         restaurants: restaurants,
         type: Type.Restaurants

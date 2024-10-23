@@ -23,23 +23,23 @@
   <ion-tab-bar slot="bottom">
     <ion-tab-button tab="home" (click)="onGoToHome()">
     <ion-icon name="home-outline"></ion-icon>      
-        Home
+        Accueil
     </ion-tab-button>
     <ion-tab-button tab="radio" (click)="onGoToParams()">
         <ion-icon name="reader-outline"></ion-icon>      
         Products
     </ion-tab-button>
-    <ion-tab-button tab="restaurants" (click)="onGoToParams()">
+    <ion-tab-button tab="restaurants" (click)="navigateToRestaurants()">
       <ion-icon name="restaurant-outline"></ion-icon>
       restaurants
     </ion-tab-button>
-    <ion-tab-button tab="Bateaux" (click)="onGoToParams()">
+    <ion-tab-button tab="Bateaux" (click)="navigateToBateaux()">
       <ion-icon name="boat-outline"></ion-icon>
       Bateaux
     </ion-tab-button>
-    <ion-tab-button tab="recipes" (click)="onGoToParams()">
+    <ion-tab-button tab="recipes" (click)="navigateToRecettes()">
       <ion-icon name="fast-food-outline"></ion-icon>        
-      recipes
+      Recettes
     </ion-tab-button>
   </ion-tab-bar>
 </ion-tabs>
