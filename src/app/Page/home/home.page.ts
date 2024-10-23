@@ -3,6 +3,8 @@ import { Router } from '@angular/router';
 import { IonIcon,IonList,IonToggle,IonItem,IonLabel,IonSelect,IonSelectOption,IonHeader, IonToolbar, IonTitle, IonContent, IonButton, IonFooter } from '@ionic/angular/standalone';
 import {RouterLink} from '@angular/router';
 import { TabsComponent } from 'src/app/components/tabs/tabs.component';  
+import { CartService } from '../../services/cart.service';
+import { CommonModule } from '@angular/common'; // Importer CommonModule
 
 @Component({
   selector: 'app-home',
@@ -10,14 +12,19 @@ import { TabsComponent } from 'src/app/components/tabs/tabs.component';
   styleUrls: ['home.page.scss'],
   standalone: true,
 
-  imports: [IonFooter, TabsComponent,RouterLink,IonHeader, IonToolbar, IonTitle, IonContent, IonButton, IonIcon, IonList, IonToggle,
+  imports: [CommonModule,IonFooter, TabsComponent,RouterLink,IonHeader, IonToolbar, IonTitle, IonContent, IonButton, IonIcon, IonList, IonToggle,
     IonItem, IonLabel, IonSelect, IonSelectOption, IonHeader, IonToolbar, IonTitle, IonContent],
 })
 export class HomePage {
-  constructor(private router: Router) { }
+  totalItems: number = 0; 
+
+  constructor(private router: Router,private cartService: CartService) { }
   
   onGoToListAll() {
     console.log('TEST FROMonGoToListAll');
     this.router.navigate(['/list-all']);
+    this.cartService.totalItems$.subscribe(count => {
+      this.totalItems = count;
+    });
   }
 }
