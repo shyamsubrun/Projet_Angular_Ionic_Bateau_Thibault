@@ -5,7 +5,7 @@ import { NavigationExtras, Router ,ActivatedRoute} from '@angular/router';
 import { PageTypeService } from '../../services/page-type.service';
 import { ListsService } from 'src/app/services/lists.service';
 import { HttpClientModule } from '@angular/common/http'; 
-import { IonContent, IonHeader, IonTitle, IonToolbar, IonList, IonItem, IonLabel, IonCard, IonCardHeader, IonCardContent, IonIcon, IonCardTitle } from '@ionic/angular/standalone';
+import { IonContent, IonHeader, IonTitle, IonToolbar, IonList, IonItem, IonLabel, IonCard, IonCardHeader, IonCardContent, IonIcon, IonCardTitle,IonCardSubtitle } from '@ionic/angular/standalone';
 import { Bateau, Restaurant, Recette, Type } from 'src/app/models/bateau.model';
 
 
@@ -32,7 +32,8 @@ import { Bateau, Restaurant, Recette, Type } from 'src/app/models/bateau.model';
     IonCardTitle,
     IonIcon,
     IonCardContent,
-    IonCardTitle
+    IonCardTitle,
+    IonCardSubtitle
   ]
 })
 export class ListAllPage implements OnInit {
@@ -69,8 +70,8 @@ export class ListAllPage implements OnInit {
   getListBateaux() {
   this.listsService.getListBateaux().subscribe(
     (response) => {
-      this.listBateaux = response.bateaux;  // Les bateaux sont récupérés ici
-      // this.listType = response.type; 
+      this.listBateaux = response.bateaux;
+      console.log(this.listBateaux); 
     },
     (error) => {
       console.error('Erreur lors de la récupération des données :', error);
@@ -81,7 +82,6 @@ export class ListAllPage implements OnInit {
     this.listsService.getListRestaurants().subscribe(
       (response) => {
         this.listRestaurants = response.restaurants
-        // this.listType = response.type; 
         console.log(this.listRestaurants); 
       },
       (error) => {
@@ -93,7 +93,6 @@ export class ListAllPage implements OnInit {
     this.listsService.getListRecettes().subscribe(
       (response) => {
         this.listRecettes = response.recettes
-        // this.listType = response.type; 
         console.log(this.listRecettes); 
       },
       (error) => {

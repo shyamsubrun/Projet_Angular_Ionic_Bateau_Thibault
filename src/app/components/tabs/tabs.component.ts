@@ -25,5 +25,16 @@ export class TabsComponent  implements OnInit {
   onGoToHome() {
     this.router.navigate(['/home']);
   }
+  navigateToBateaux() {
+    this.router.navigate(['/list-all'], { queryParams: { type: 'bateaux' } });
+  }
+
+  navigateToRestaurants() {
+    this.router.navigate(['/list-all'], { queryParams: { type: 'restaurants' } });
+  }
+
+  navigateToRecettes() {
+    this.router.navigate(['/list-all'], { queryParams: { type: 'recettes' } });
+  }
 
 }

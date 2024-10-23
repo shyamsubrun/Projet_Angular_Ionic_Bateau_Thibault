@@ -8,9 +8,9 @@ export interface Bateau {
   Type: string;
   nbEmployer: number;
   typedePache: string;   
-  spécialité: string;
+  specialite: string;
   lieuDePache: string;
-  ancienté: number;
+  anciente: number;
 }
 
 export interface Restaurant {
