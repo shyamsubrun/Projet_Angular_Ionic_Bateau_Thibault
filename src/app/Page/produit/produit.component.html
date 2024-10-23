@@ -21,6 +21,12 @@
           <p>Remise: {{ produit.discount }} %</p>
           <p>Commentaires: {{ produit.comments }}</p>
           <p>Propriétaire: {{ produit.owner }}</p>
+          
+          <div>
+            <button (click)="removeFromCart(produit.id)">-</button>
+            <span>{{ getProductQuantity(produit.id) }}</span>
+            <button (click)="addToCart(produit)">+</button>
+          </div>
         </ion-card-content>
       </ion-card>
     </ion-list>
