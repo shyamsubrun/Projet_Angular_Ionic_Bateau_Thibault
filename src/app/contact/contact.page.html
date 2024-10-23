@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Contact</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content *ngIf="contact">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>{{ contact.nomDuBateau }}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>Téléphone: {{ contact.telephone }}</p>
+      <p>Email: {{ contact.email }}</p>
+      <p>Adresse: {{ contact.adresse }}</p>
+      <p>Site Web: <a href="{{ contact.siteWeb }}" target="_blank">{{ contact.siteWeb }}</a></p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
