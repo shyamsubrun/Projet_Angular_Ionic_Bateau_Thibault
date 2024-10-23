@@ -1,0 +1,21 @@
+{
+  "user": {
+    "id": 1,
+    "nom": "Dupont",
+    "prenom": "Jean",
+    "age": 34,
+    "adresse": "123 Rue de la Liberté, Port Louis, Maurice",
+    "nombreCommandesPassees": 45,
+    "nombreConnexions": 120,
+    "nomDuCommerce": "Le Bateau Gourmand",
+    "typeDeCommerce": "Restaurant de fruits de mer",
+    "membrePremium": true,
+    "ami": ["Marc", "Sophie", "Nadia"],
+    "dateInscription": "2022-05-18",
+    "derniereConnexion": "2024-10-22T14:30:00Z",
+    "telephone": "+230 1234 5678",
+    "email": "jean.dupont@example.com",
+    "languePreferee": "Français",
+    "centreInteret": ["Cuisine", "Navigation", "Photographie"]
+  }
+}

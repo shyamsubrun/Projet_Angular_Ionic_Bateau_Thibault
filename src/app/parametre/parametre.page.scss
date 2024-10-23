@@ -1,0 +1,21 @@
+.user-header {
+    display: flex;
+    align-items: center;
+  }
+  
+  .user-info {
+    margin-left: 15px;
+  }
+  
+  ion-avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+  
+  .username {
+    font-size: 1.2em;
+    font-weight: bold;
+  }
+  
