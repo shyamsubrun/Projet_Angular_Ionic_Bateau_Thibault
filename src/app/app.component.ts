@@ -1,17 +1,17 @@
 import { Component } from '@angular/core';
 
-import { IonApp, IonRouterOutlet, IonTitle, IonLabel, IonContent, IonHeader, IonToolbar, IonList, IonItem, IonCard, IonCardHeader, IonIcon, IonCardContent, IonButton, IonButtons } from '@ionic/angular/standalone';
+import { IonButton,IonApp, IonRouterOutlet, IonTitle, IonLabel, IonContent, IonHeader, IonToolbar, IonList, IonItem, IonCard, IonCardHeader, IonIcon, IonCardContent } from '@ionic/angular/standalone';
 
 import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 
-
+import { HomePage } from './home/home.page'; 
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
   standalone: true,
 
-  imports: [RouterModule,IonButtons, IonButton, IonCardContent, IonIcon, IonCardHeader, IonCard, IonItem, IonList, IonToolbar, IonHeader, IonContent, IonLabel, IonTitle, IonApp, IonRouterOutlet],
+  imports: [IonButton,HomePage,RouterModule, IonButton, IonCardContent, IonIcon, IonCardHeader, IonCard, IonItem, IonList, IonToolbar, IonHeader, IonContent, IonLabel, IonTitle, IonApp, IonRouterOutlet],
 
 
 })
