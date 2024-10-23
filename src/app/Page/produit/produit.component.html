@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Liste des produits
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ng-container *ngIf="produits && produits.length > 0">
+    <ion-list>
+      <ion-card *ngFor="let produit of produits">
+        <ion-card-header>
+          <ion-card-title>{{ produit.name }}</ion-card-title>
+          <ion-card-subtitle>Catégorie: {{ produit.category }}</ion-card-subtitle>
+        </ion-card-header>
+        <ion-card-content>
+          <p>Prix: {{ produit.price }} € / {{ produit.unit }}</p>
+          <p>Disponibilité: {{ produit.availability ? 'Disponible' : 'Indisponible' }}</p>
+          <p>En soldes: {{ produit.sale ? 'Oui' : 'Non' }}</p>
+          <p>Remise: {{ produit.discount }} %</p>
+          <p>Commentaires: {{ produit.comments }}</p>
+          <p>Propriétaire: {{ produit.owner }}</p>
+        </ion-card-content>
+      </ion-card>
+    </ion-list>
+  </ng-container>
+
+  <ng-container *ngIf="!produits || produits.length === 0">
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Aucune donnée à afficher</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        Veuillez ajouter des produits pour les afficher ici.
+      </ion-card-content>
+    </ion-card>
+  </ng-container>
+</ion-content>

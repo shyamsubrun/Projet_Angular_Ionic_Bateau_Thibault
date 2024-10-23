@@ -14,7 +14,8 @@ import { IonTab, IonHeader, IonTabBar, IonContent, IonToolbar, IonTitle,IonIcon,
 })
 export class TabsComponent  implements OnInit {
   constructor(private router:Router) {
-    addIcons({homeOutline,readerOutline,restaurantOutline,boatOutline,fastFoodOutline,libraryOutline,searchOutline,search,library,radio,playCircle});
+    addIcons({homeOutline,readerOutline,restaurantOutline,boatOutline,
+      fastFoodOutline,libraryOutline,searchOutline,search,library,radio,playCircle});
   }
   ngOnInit() { }
 
@@ -35,6 +36,10 @@ export class TabsComponent  implements OnInit {
 
   navigateToRecettes() {
     this.router.navigate(['/list-all'], { queryParams: { type: 'recettes' } });
+  }
+
+  navigateToProduits() {
+    this.router.navigate(['/produit']);
   }
 
 }

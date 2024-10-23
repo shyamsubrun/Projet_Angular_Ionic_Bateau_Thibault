@@ -35,4 +35,8 @@ export class ListsService {
       }))
     );
   }
+
+  getListProduits(): Observable<any> {
+    return this.http.get<any>('assets/data/listProduits.json');  // Retourne les données JSON
+  }
 }
