@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { IonApp, IonRouterOutlet, IonTitle, IonLabel, IonContent, IonHeader, IonToolbar, IonList, IonItem, IonCard, IonCardHeader, IonIcon, IonCardContent } from '@ionic/angular/standalone';
+import { IonApp, IonRouterOutlet, IonTitle, IonLabel, IonContent, IonHeader, IonToolbar, IonList, IonItem, IonCard, IonCardHeader, IonIcon, IonCardContent, IonButton, IonButtons } from '@ionic/angular/standalone';
 
 import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
@@ -11,7 +11,7 @@ import { HttpClientModule } from '@angular/common/http';
   templateUrl: 'app.component.html',
   standalone: true,
 
-  imports: [IonCardContent, IonIcon, IonCardHeader, IonCard, IonItem, IonList, IonToolbar, IonHeader, IonContent, IonLabel, IonTitle, IonApp, IonRouterOutlet],
+  imports: [RouterModule,IonButtons, IonButton, IonCardContent, IonIcon, IonCardHeader, IonCard, IonItem, IonList, IonToolbar, IonHeader, IonContent, IonLabel, IonTitle, IonApp, IonRouterOutlet],
 
 
 })

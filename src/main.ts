@@ -7,7 +7,6 @@ import { AppComponent } from './app/app.component';
 import { HttpClientModule, provideHttpClient } from '@angular/common/http';
 
 
-import { HttpClientModule, provideHttpClient } from '@angular/common/http';
 
 
 bootstrapApplication(AppComponent, {
