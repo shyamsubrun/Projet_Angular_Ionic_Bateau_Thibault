@@ -111,4 +111,15 @@ export class ListAllPage implements OnInit {
     }
     this.router.navigate(['/info-item'], navigationExtras);
   }
+
+  getRatingClass(rating: number): string {
+    if (rating > 9) {
+      return 'rating-high'; // Classe pour les notes supérieures à 9
+    } else if (rating >= 8) {
+      return 'rating-medium'; // Classe pour les notes entre 8 et 9
+    } else {
+      return 'rating-low'; // Classe pour les notes en dessous de 8
+    }
+  }
+  
 }
