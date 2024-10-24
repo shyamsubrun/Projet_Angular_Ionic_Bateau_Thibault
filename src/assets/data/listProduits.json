@@ -83,18 +83,7 @@
         "comments": "Pêche à la corde",
         "owner": "tig"
     },
-    {
-        "id": 7,
-        "name": "Huitres N°2 St Vaast",
-        "category": 1,
-        "price": 9.5,
-        "unit": "Dz",
-        "availability": true,
-        "sale": false,
-        "discount": 0.0,
-        "comments": "",
-        "owner": "tig"
-    },
+    
     {
         "id": 8,
         "name": "Huitres N°2 St Vaast",
