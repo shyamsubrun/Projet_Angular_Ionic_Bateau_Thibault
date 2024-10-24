@@ -3,10 +3,10 @@ import { Router } from '@angular/router';
 
 import { IonIcon, IonList, IonToggle, IonItem, IonLabel, IonSelect, IonSelectOption, IonHeader, IonToolbar, IonTitle, IonContent, IonButton, IonFooter } from '@ionic/angular/standalone';
 import { RouterLink } from '@angular/router';
-import { TabsComponent } from 'src/app/components/tabs/tabs.component';  
+import { TabsComponent } from 'src/app/tabs/tabs.component';  
+import { CommonModule } from '@angular/common'; 
 
 import { CartService } from '../../services/cart.service';
-import { CommonModule } from '@angular/common'; 
 import { RouterModule } from '@angular/router';
 
 
