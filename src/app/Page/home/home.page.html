@@ -1,5 +1,14 @@
 
 <app-header></app-header>
+  <ion-toolbar>
+    <ion-searchbar [(ngModel)]="searchTerm" (ionInput)="filterItems()" placeholder="Rechercher un bateau..."></ion-searchbar>
+  </ion-toolbar>
+  <ion-buttons>
+      <ion-button (click)="navigateToInfo('all')">All</ion-button>
+      <ion-button (click)="navigateToInfo(0)">Poisson</ion-button>
+      <ion-button (click)="navigateToInfo(1)">Crustacé</ion-button>
+      <ion-button (click)="navigateToInfo(2)">Coquillage</ion-button>
+    </ion-buttons>
 
 <ion-content [fullscreen]="true">
   <!-- Résultats filtrés uniquement si searchTerm n'est pas vide -->
