@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { IonAvatar,IonList,IonItem,IonIcon,IonLabel,IonCard,IonCardHeader,
           IonCardTitle,IonCardSubtitle,IonCardContent,IonContent, IonHeader,
-          IonTitle, IonToolbar,IonImg } from '@ionic/angular/standalone';
+          IonTitle, IonToolbar,IonImg,IonButtons,IonButton } from '@ionic/angular/standalone';
 import { UserService } from '../../services/user.service';
 import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from '../../app.component';
