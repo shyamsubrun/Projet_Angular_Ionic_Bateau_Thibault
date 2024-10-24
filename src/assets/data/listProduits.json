@@ -141,20 +141,6 @@
         "provenance": "Chine"
     },
     {
-        "id": 15,
-        "name": "Huîtres N°2 OR St Vaast",
-        "category": 1,
-        "price": 48.0,
-        "unit": "4 Dz",
-        "availability": true,
-        "sale": false,
-        "discount": 0.0,
-        "comments": "Médaille d'or salon agriculture",
-        "owner": "tig",
-        "url": "assets/photo/produits/10.webp",
-        "provenance": "Maroc"
-    },
-    {
         "id": 16,
         "name": "Huîtres N°2 St Vaast",
         "category": 1,

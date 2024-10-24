@@ -3,7 +3,6 @@
     <ion-title>Bateau Thibault</ion-title>
     
     <ion-buttons slot="end">
-      
       <ion-button [routerLink]="['/parametre']" fill="clear">
         <ion-icon slot="icon-only" name="settings-outline"></ion-icon>
       </ion-button>
@@ -14,19 +13,33 @@
           {{ totalItems }}
         </ion-badge>
       </ion-button>
-      
     </ion-buttons>
-    
   </ion-toolbar>
+  
+  <ion-toolbar>
+    <ion-searchbar [(ngModel)]="searchTerm" (ionInput)="filterItems()" placeholder="Rechercher un bateau..."></ion-searchbar>
+  </ion-toolbar>
+  <ion-buttons>
+      <ion-button (click)="navigateToInfo('all')">All</ion-button>
+      <ion-button (click)="navigateToInfo(0)">Poisson</ion-button>
+      <ion-button (click)="navigateToInfo(1)">Crustacé</ion-button>
+      <ion-button (click)="navigateToInfo(2)">Coquillage</ion-button>
+    </ion-buttons>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-  
-  <div class="ion-padding">
-  </div>
+  <!-- Résultats filtrés uniquement si searchTerm n'est pas vide -->
+  <ion-list *ngIf="searchTerm && filteredProduits.length > 0; else noResults">
+    <ion-item *ngFor="let produit of filteredProduits">
+      {{ produit.name }} <!-- Affichage du nom du bateau filtré -->
+    </ion-item>
+  </ion-list>
+
+  <!-- Message si aucun résultat trouvé ou si la recherche est vide -->
+  <ng-template #noResults>
+    <div class="ion-padding">
+      <p *ngIf="!searchTerm">Veuillez entrer un terme de recherche pour voir les résultats.</p>
+      <p *ngIf="searchTerm.length>=2 && filteredProduits.length === 0">Aucun bateau ne correspond à votre recherche.</p>
+    </div>
+  </ng-template>
 </ion-content>
