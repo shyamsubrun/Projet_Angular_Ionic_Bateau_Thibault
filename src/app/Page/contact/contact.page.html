@@ -5,6 +5,11 @@
     </ion-title>
   </ion-toolbar>
 </ion-header>
+    <ion-buttons slot="start">
+        <ion-button (click)="goBack()">
+          <ion-icon slot="icon-only" name="arrow-back"></ion-icon>
+        </ion-button>
+     </ion-buttons>
 
 <ion-content class="ion-padding">
   <ng-container *ngIf="infoType === 'bateau'">
@@ -82,6 +87,21 @@
         </ion-card-content>
       </ion-card>
     </ng-container>
+  <ion-content *ngIf="infoType === 'contact'">
+    <ion-card>
+      <ion-card-header>
+        <img src={{item.url}} alt="">
+
+        <ion-card-title>{{ item.nomDuBateau }}</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <p>Téléphone: {{ item.telephone }}</p>
+        <p>Email: {{ item.email }}</p>
+        <p>Adresse: {{ item.adresse }}</p>
+        <p>Site Web: <a href="{{ item.siteWeb }}" target="_blank">{{ item.siteWeb }}</a></p>
+      </ion-card-content>
+    </ion-card>
+  </ion-content>
 
   <!-- <ng-container *ngIf="!listBateaux && !listRestaurants && !listRecettes">
     <ion-card>
@@ -94,18 +114,6 @@
     </ion-card>
   </ng-container> -->
 </ion-content>
-<ion-content *ngIf="infoType === 'contact'">
-  <ion-card>
-    <ion-card-header>
-      <img src={{item.url}} alt="">
 
-      <ion-card-title>{{ item.nomDuBateau }}</ion-card-title>
-    </ion-card-header>
-    <ion-card-content>
-      <p>Téléphone: {{ item.telephone }}</p>
-      <p>Email: {{ item.email }}</p>
-      <p>Adresse: {{ item.adresse }}</p>
-      <p>Site Web: <a href="{{ item.siteWeb }}" target="_blank">{{ item.siteWeb }}</a></p>
-    </ion-card-content>
-  </ion-card>
-</ion-content>
+
+

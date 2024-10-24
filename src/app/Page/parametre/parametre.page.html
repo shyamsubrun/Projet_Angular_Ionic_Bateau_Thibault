@@ -7,14 +7,19 @@
 <ion-content>
   <ion-card *ngIf="user">
     <ion-card-header class="user-header">
-        <ion-img src="/assets/img_profile/default_avatar.jpg" alt="Photo de profil"/>
+        <ion-img src="/assets/photo/img_profile/default_avatar.jpg" alt="Photo de profil"/>
       <div class="user-info">
         <ion-card-title class="username">{{ user.prenom }} {{ user.nom }}</ion-card-title>
         <ion-card-subtitle>{{ user.nomDuCommerce }} - {{ user.typeDeCommerce }}</ion-card-subtitle>
       </div>
     </ion-card-header>
-
+    
     <ion-card-content>
+      <ion-buttons slot="start">
+        <ion-button (click)="goBack()">
+          <ion-icon slot="icon-only" name="arrow-back"></ion-icon>
+        </ion-button>
+     </ion-buttons>
       <ion-list>
         <ion-item>
           <ion-icon name="star-outline" slot="start"></ion-icon>
