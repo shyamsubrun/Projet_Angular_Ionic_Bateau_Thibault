@@ -1,8 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { IonIcon,IonList,IonToggle,IonItem,IonLabel,IonSelect,IonSelectOption,IonHeader, IonToolbar, IonTitle, IonContent, IonButton, IonFooter } from '@ionic/angular/standalone';
-import {RouterLink} from '@angular/router';
-import { TabsComponent } from 'src/app/tabs/tabs.component';  
+
+import { IonIcon, IonList, IonToggle, IonItem, IonLabel, IonSelect, IonSelectOption, IonHeader, IonToolbar, IonTitle, IonContent, IonButton, IonFooter } from '@ionic/angular/standalone';
+import { RouterLink } from '@angular/router';
+import { TabsComponent } from 'src/app/components/tabs/tabs.component';  
+
 import { CartService } from '../../services/cart.service';
 import { CommonModule } from '@angular/common'; 
 import { RouterModule } from '@angular/router';
@@ -15,19 +17,23 @@ import { RouterModule } from '@angular/router';
   styleUrls: ['home.page.scss'],
   standalone: true,
 
+
   imports: [RouterModule,CommonModule,IonFooter, TabsComponent,RouterLink,IonHeader, IonToolbar, IonTitle, IonContent, IonButton, IonIcon, IonList, IonToggle,
     IonItem, IonLabel, IonSelect, IonSelectOption, IonHeader, IonToolbar, IonTitle, IonContent],
+
 })
-export class HomePage {
+export class HomePage implements OnInit {
   totalItems: number = 0; 
 
-  constructor(private router: Router,private cartService: CartService) { }
-  
-  onGoToListAll() {
-    console.log('TEST FROMonGoToListAll');
-    this.router.navigate(['/list-all']);
+  constructor(private router: Router, private cartService: CartService) { }
+
+  ngOnInit() {
     this.cartService.totalItems$.subscribe(count => {
       this.totalItems = count;
     });
+  }
+
+  onGoToListAll() {
+    this.router.navigate(['/list-all']);
   }
 }
