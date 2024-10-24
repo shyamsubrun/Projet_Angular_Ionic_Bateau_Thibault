@@ -6,7 +6,7 @@ import { ListsService } from 'src/app/services/lists.service';
 import { HttpClientModule } from '@angular/common/http'; 
 import { IonContent, IonHeader, IonTitle, IonToolbar, IonList, IonItem, IonLabel, IonCard, IonCardHeader, IonCardContent, IonIcon, IonCardTitle,IonCardSubtitle } from '@ionic/angular/standalone';
 import { Bateau, Restaurant, Recette, Type } from 'src/app/models/bateau.model';
-
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-list-all',
@@ -14,6 +14,7 @@ import { Bateau, Restaurant, Recette, Type } from 'src/app/models/bateau.model';
   styleUrls: ['./list-all.page.scss'],
   standalone: true,
   imports: [ 
+    RouterModule,
     HttpClientModule,
     IonContent,
     IonHeader,

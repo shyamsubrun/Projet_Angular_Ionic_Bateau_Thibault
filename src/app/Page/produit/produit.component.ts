@@ -5,12 +5,12 @@ import { CommonModule } from '@angular/common'; // Importer CommonModule
 import {IonHeader,IonToolbar,IonTitle,IonContent,IonList,IonCardSubtitle,IonCard,IonCardHeader,IonCardTitle,IonCardContent} from  '@ionic/angular/standalone';
 import { CartService } from 'src/app/services/cart.service';
 import { NavigationExtras, Router ,ActivatedRoute} from '@angular/router';
-
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-produit',
   standalone: true,  // Gardez cette ligne
-  imports: [IonHeader,IonToolbar,IonTitle,IonContent,IonList,IonCardSubtitle,IonCard,IonCardHeader,IonCardTitle,IonCardContent,CommonModule], // Ajoutez cette ligne
+  imports: [RouterModule,IonHeader,IonToolbar,IonTitle,IonContent,IonList,IonCardSubtitle,IonCard,IonCardHeader,IonCardTitle,IonCardContent,CommonModule], // Ajoutez cette ligne
   templateUrl: './produit.component.html',
   styleUrls: ['./produit.component.scss']
 })

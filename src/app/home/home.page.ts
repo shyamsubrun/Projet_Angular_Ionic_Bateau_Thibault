@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonIcon, IonList, IonToggle, IonItem, IonLabel, IonSelect, IonSelectOption, IonHeader, IonToolbar, IonTitle, IonContent, IonFooter,IonCardSubtitle } from '@ionic/angular/standalone';
-import {TabsComponent} from '../components/tabs/tabs.component'
+import {TabsComponent} from '../tabs/tabs.component'
 
 @Component({
   selector: 'app-home',
