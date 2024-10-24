@@ -1,12 +1,10 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>
-      Liste des produits
-    </ion-title>
-  </ion-toolbar>
+  <app-header></app-header>
 </ion-header>
 
 <ion-content class="ion-padding">
+    <p>Vous êtes dans produits</p>
+
   <ng-container *ngIf="produits && produits.length > 0">
     <ion-list>
       <ion-card *ngFor="let produit of produits">

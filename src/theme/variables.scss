@@ -1,2 +1,19 @@
 // For information on how to create your own theme, please see:
 // http://ionicframework.com/docs/theming/
+:root {
+  --ion-color-tab-active: #3880ff; /* Couleur personnalisée pour les onglets actifs */
+  --ion-color-tab-inactive: #8e8e93; /* Couleur personnalisée pour les onglets inactifs */
+}
+
+ion-tab-button {
+  --color: var(--ion-color-tab-inactive);
+}
+
+ion-tab-button.ion-selected {
+  --color: var(--ion-color-tab-active);
+}
+
+ion-tab-button.ion-selected ion-icon,
+ion-tab-button.ion-selected ion-label {
+  --color: var(--ion-color-tab-active);
+}

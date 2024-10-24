@@ -76,4 +76,5 @@ export class CartService {
     const storedCart = localStorage.getItem('cart');
     return storedCart ? JSON.parse(storedCart) : [];
   }
+   
 }

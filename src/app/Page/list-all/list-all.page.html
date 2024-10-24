@@ -1,12 +1,9 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>
-      Liste des {{ listType }}
-    </ion-title>
-  </ion-toolbar>
+  <app-header></app-header>
 </ion-header>
 
 <ion-content class="ion-padding">
+  <p>Vous êtes dans {{ listType }}</p>
   <ng-container *ngIf="listType === 'bateaux'">
     <ion-list>
       <ion-card *ngFor="let bateau of listBateaux" (click)="navigateToInfo(bateau,'bateau')">

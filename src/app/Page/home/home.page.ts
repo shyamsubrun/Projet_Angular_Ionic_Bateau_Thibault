@@ -1,14 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-
 import { IonIcon,IonList,IonToggle,IonItem,IonLabel,IonSelect,IonSelectOption,IonHeader, IonToolbar, IonTitle, IonContent, IonButton, IonFooter, IonButtons, IonBadge } from '@ionic/angular/standalone';
 import {RouterLink} from '@angular/router';
-
 import { TabsComponent } from 'src/app/tabs/tabs.component';  
 import { CommonModule } from '@angular/common'; 
-
 import { CartService } from '../../services/cart.service';
 import { RouterModule } from '@angular/router';
+import { HeaderComponent } from 'src/app/components/header/header.component';
 
 @Component({
   selector: 'app-home',
@@ -17,6 +15,7 @@ import { RouterModule } from '@angular/router';
   standalone: true,
 
   imports: [
+    HeaderComponent,
     IonBadge,
     IonButtons,
     RouterModule,
