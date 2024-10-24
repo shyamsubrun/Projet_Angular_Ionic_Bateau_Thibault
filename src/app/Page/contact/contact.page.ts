@@ -27,19 +27,8 @@ export class ContactPage  {
       const navigation = this.router.getCurrentNavigation();
       if (navigation?.extras?.state) {
         this.infoType = navigation.extras.state['type'];
-        if (this.infoType == "contact") {
-          this.loadContactData();
-        } else this.item = navigation.extras.state['item'];
+        this.item = navigation.extras.state['item'];
       }
     });
-  }
-  loadContactData() {
-    this.http.get('assets/data/listContact.json').subscribe(data => {
-      this.item = data;
-    });
-  }
-
-  goBack() {
-    this.navCtr.back();
   }
 }

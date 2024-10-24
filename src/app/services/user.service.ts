@@ -13,4 +13,7 @@ export class UserService {
   getUserInfo(): Observable<any> {
     return this.http.get<any>(this.userUrl);
   }
+  getinfoThibut(): Observable<any> {
+    return this.http.get<any>('assets/data/listContact.json');
+  }
 }
