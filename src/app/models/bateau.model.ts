@@ -12,6 +12,10 @@ export interface Bateau {
   lieuDePache: string;
   anciente: number;
   url: string;
+  description : string;
+  capacite_peche: number;
+  poids: number;
+  nom_capitaine: string;
 }
 
 export interface Restaurant {
@@ -23,6 +27,11 @@ export interface Restaurant {
   rating: number;
   global_price: number;
   url: string;
+  history : string;
+  chef : string ; 
+  type : string;
+  avis : number;
+
 }
 
 export interface Recette {
