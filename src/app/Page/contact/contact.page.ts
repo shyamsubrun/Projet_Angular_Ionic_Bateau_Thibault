@@ -19,7 +19,7 @@ import { NavController } from '@ionic/angular';
 export class ContactPage  {
   item!:any
   infoType!: string
-  constructor(private http: HttpClient,private activatedRoute:ActivatedRoute, private router : Router, private navCtr:NavController) {
+  constructor(private http: HttpClient,private navCtrl: NavController,private activatedRoute:ActivatedRoute, private router : Router, private navCtr:NavController) {
   }
   ngOnInit() {
     this.activatedRoute.queryParams.subscribe(params => {
@@ -30,5 +30,8 @@ export class ContactPage  {
         this.item = navigation.extras.state['item'];
       }
     });
+  }
+  goBack() {
+    this.navCtrl.back();
   }
 }
