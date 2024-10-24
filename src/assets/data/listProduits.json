@@ -10,7 +10,8 @@
         "discount": 0.0,
         "comments": "Pêche à la corde",
         "owner": "tig",
-        "url": "assets/photo/produits/Aile_de_raie.jpg"
+        "url": "assets/photo/produits/Aile_de_raie.jpg",
+        "provenance": "France"
     },
     {
         "id": 9,
@@ -23,7 +24,8 @@
         "discount": 0.0,
         "comments": "Hors saison,  pêche aux casiers",
         "owner": "tig",
-        "url": "assets/photo/produits/Araignées.jpg"
+        "url": "assets/photo/produits/Araignées.jpg",
+        "provenance": "Congo"
     },
     {
         "id": 3,
@@ -36,7 +38,8 @@
         "discount": 0.0,
         "comments": "Plus de 1.5kg le poisson",
         "owner": "tig",
-        "url": "assets/photo/produits/Bar_de_ligne.jpg"
+        "url": "assets/photo/produits/Bar_de_ligne.jpg",
+        "provenance": "Maurice"
     },
     {
         "id": 2,
@@ -49,7 +52,8 @@
         "discount": 0.0,
         "comments": "Environ 550-700g la pièce",
         "owner": "tig",
-        "url": "assets/photo/produits/Bar_de_ligne_portion.jpg"
+        "url": "assets/photo/produits/Bar_de_ligne_portion.jpg",
+        "provenance": "Amerique"
     },
     {
         "id": 10,
@@ -62,7 +66,8 @@
         "discount": 0.0,
         "comments": "Hors saison, pêche à l'épuisette",
         "owner": "tig",
-        "url": "assets/photo/produits/Bouquets_cuits.jpg"
+        "url": "assets/photo/produits/Bouquets_cuits.jpg",
+        "provenance": "Turquie"
     },
     {
         "id": 1,
@@ -75,7 +80,8 @@
         "discount": 0.0,
         "comments": "environ 300g",
         "owner": "tig",
-        "url": "assets/photo/produits/Filet_Bar_de_ligne.webp"
+        "url": "assets/photo/produits/Filet_Bar_de_ligne.webp",
+        "provenance": "Brésil"
     },
     {
         "id": 5,
@@ -88,7 +94,8 @@
         "discount": 0.0,
         "comments": "Pêche à la corde",
         "owner": "tig",
-        "url": "assets/photo/produits/Filet_Julienne.jpg"
+        "url": "assets/photo/produits/Filet_Julienne.jpg",
+        "provenance": "Grèce"
     },
     
     {
@@ -102,7 +109,8 @@
         "discount": 0.0,
         "comments": "",
         "owner": "tig",
-        "url": "assets/photo/produits/Huîtres_N_2_OR_St_Vaast.jpg"
+        "url": "assets/photo/produits/Huîtres_N_2_OR_St_Vaast.jpg",
+        "provenance": "Zambie"
     },
     {
         "id": 13,
@@ -115,7 +123,8 @@
         "discount": 0.0,
         "comments": "Médaille d'or Salon Agriculture",
         "owner": "tig",
-        "url": "assets/photo/produits/Huitres_N_2St_Vaast.jpg"
+        "url": "assets/photo/produits/Huitres_N_2St_Vaast.jpg",
+        "provenance": "Wakanda"
     },
     {
         "id": 14,
@@ -128,20 +137,8 @@
         "discount": 0.0,
         "comments": "Médaille d'or salon agriculture",
         "owner": "tig",
-        "url": "assets/photo/produits/Huitres_N_2St_Vaast.jpg"
-    },
-    {
-        "id": 15,
-        "name": "Huîtres N°2 OR St Vaast",
-        "category": 1,
-        "price": 48.0,
-        "unit": "4 Dz",
-        "availability": true,
-        "sale": false,
-        "discount": 0.0,
-        "comments": "Médaille d'or salon agriculture",
-        "owner": "tig",
-        "url": "assets/photo/produits/10.webp"
+        "url": "assets/photo/produits/Huitres_N_2St_Vaast.jpg",
+        "provenance": "Chine"
     },
     {
         "id": 16,
@@ -154,7 +151,8 @@
         "discount": 0.0,
         "comments": "",
         "owner": "tig",
-        "url": "assets/photo/produits/Huitres_N_2St_Vaast.jpg"
+        "url": "assets/photo/produits/Huitres_N_2St_Vaast.jpg",
+        "provenance": "Algérie"
     },
     {
         "id": 4,
@@ -167,7 +165,8 @@
         "discount": 0.0,
         "comments": "Environ 550-700g la portion",
         "owner": "tig",
-        "url": "assets/photo/produits/Lieu_jaune_de_ligne.jpg"
+        "url": "assets/photo/produits/Lieu_jaune_de_ligne.jpg",
+        "provenance": "Syrie"
     },
     {
         "id": 6,
@@ -180,6 +179,149 @@
         "discount": 5.0,
         "comments": "",
         "owner": "tig",
-        "url": "assets/photo/produits/Moules_de_peche.jpg"
-    }
-]
+        "url": "assets/photo/produits/Moules_de_peche.jpg",
+        "provenance": "Madagascar"
+    },
+    
+        {
+            "id": 1,
+            "name": "Crevettes roses",
+            "category": 2,
+            "price": 15.0,
+            "unit": "kg",
+            "availability": true,
+            "sale": false,
+            "discount": 0.0,
+            "comments": "Idéales pour les salades",
+            "owner": "tig",
+            "url": "assets/photo/produits/crevettes_roses.jpg",
+        "provenance": "Seychelle"
+        },
+        {
+            "id": 2,
+            "name": "Homard",
+            "category": 0,
+            "price": 25.0,
+            "unit": "kg",
+            "availability": true,
+            "sale": true,
+            "discount": 10.0,
+            "comments": "Pêché frais",
+            "owner": "tig",
+            "url": "assets/photo/produits/homard.jpg",
+        "provenance": "Portugal"
+        },
+        {
+            "id": 3,
+            "name": "Sardines grillées",
+            "category": 1,
+            "price": 8.0,
+            "unit": "kg",
+            "availability": true,
+            "sale": false,
+            "discount": 0.0,
+            "comments": "Parfaites pour les barbecues",
+            "owner": "tig",
+            "url": "assets/photo/produits/sardines_grillees.jpg",
+        "provenance": "Egypte"
+        },
+        {
+            "id": 4,
+            "name": "Calamars",
+            "category": 2,
+            "price": 12.0,
+            "unit": "kg",
+            "availability": true,
+            "sale": false,
+            "discount": 0.0,
+            "comments": "À préparer en friture",
+            "owner": "tig",
+            "url": "assets/photo/produits/calamars.jpg",
+        "provenance": "Rome"
+        },
+        {
+            "id": 5,
+            "name": "Thon rouge",
+            "category": 0,
+            "price": 20.0,
+            "unit": "kg",
+            "availability": true,
+            "sale": true,
+            "discount": 5.0,
+            "comments": "Excellente qualité",
+            "owner": "tig",
+            "url": "assets/photo/produits/thon_rouge.jpg",
+        "provenance": "Espagne"
+        },
+        {
+            "id": 6,
+            "name": "Moules de pêche",
+            "category": 1,
+            "price": 7.0,
+            "unit": "kg",
+            "availability": true,
+            "sale": true,
+            "discount": 5.0,
+            "comments": "",
+            "owner": "tig",
+            "url": "assets/photo/produits/moules_de_peche.jpg",
+        "provenance": "Cameroune"
+        },
+        {
+            "id": 7,
+            "name": "Coquilles Saint-Jacques",
+            "category": 1,
+            "price": 30.0,
+            "unit": "kg",
+            "availability": true,
+            "sale": false,
+            "discount": 0.0,
+            "comments": "À déguster crues ou cuites",
+            "owner": "tig",
+            "url": "assets/photo/produits/coquilles_saint_jacques.jpg",
+        "provenance": "Allemagne"
+        },
+        {
+            "id": 8,
+            "name": "Poissons de roche",
+            "category": 0,
+            "price": 18.0,
+            "unit": "kg",
+            "availability": true,
+            "sale": false,
+            "discount": 0.0,
+            "comments": "Parfait pour la cuisine méditerranéenne",
+            "owner": "tig",
+            "url": "assets/photo/produits/poissons_de_roche.jpg",
+        "provenance": "Quatar"
+        },
+        {
+            "id": 9,
+            "name": "Palourdes",
+            "category": 1,
+            "price": 10.0,
+            "unit": "kg",
+            "availability": true,
+            "sale": true,
+            "discount": 2.0,
+            "comments": "Délicieuses à la vapeur",
+            "owner": "tig",
+            "url": "assets/photo/produits/palourdes.jpg",
+        "provenance": "Dubai"
+        },
+        {
+            "id": 10,
+            "name": "Langoustines",
+            "category": 2,
+            "price": 22.0,
+            "unit": "kg",
+            "availability": true,
+            "sale": false,
+            "discount": 0.0,
+            "comments": "À cuisiner avec du beurre et de l'ail",
+            "owner": "tig",
+            "url": "assets/photo/produits/langoustines.jpg",
+        "provenance": "Inde"
+        }
+    ]
+    

@@ -1,1 +1,20 @@
+
 <app-header></app-header>
+
+<ion-content [fullscreen]="true">
+  <!-- Résultats filtrés uniquement si searchTerm n'est pas vide -->
+  <ion-list *ngIf="searchTerm && filteredProduits.length > 0; else noResults">
+    <ion-item *ngFor="let produit of filteredProduits">
+      {{ produit.name }} <!-- Affichage du nom du bateau filtré -->
+    </ion-item>
+  </ion-list>
+
+  <!-- Message si aucun résultat trouvé ou si la recherche est vide -->
+  <ng-template #noResults>
+    <div class="ion-padding">
+      <p *ngIf="!searchTerm">Veuillez entrer un terme de recherche pour voir les résultats.</p>
+      <p *ngIf="searchTerm.length>=2 && filteredProduits.length === 0">Aucun bateau ne correspond à votre recherche.</p>
+    </div>
+  </ng-template>
+</ion-content>
+

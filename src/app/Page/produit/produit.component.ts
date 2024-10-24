@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ListsService } from '../../services/lists.service';
-import { CommonModule } from '@angular/common'; 
 import {IonHeader,IonToolbar,IonTitle,IonContent,IonList,IonCardSubtitle,IonCard,IonCardHeader,IonCardTitle,IonCardContent, IonButtons, IonIcon, IonBadge } from  '@ionic/angular/standalone';
+import { CommonModule } from '@angular/common'; // Importer CommonModule
 import { CartService } from 'src/app/services/cart.service';
 import { NavigationExtras, Router ,ActivatedRoute} from '@angular/router';
 import { RouterModule } from '@angular/router';
@@ -28,15 +28,29 @@ import { HeaderComponent } from "../../components/header/header.component";
     IonCardContent,
     CommonModule
   ], 
+  standalone: true,  // Gardez cette ligne
   templateUrl: './produit.component.html',
   styleUrls: ['./produit.component.scss']
 })
 export class ProduitComponent implements OnInit {
-  produits: any[] = [];  
-  constructor(private listsService: ListsService, private cartService: CartService,private router :Router) { }
+  produits: any[] = [];
+  filtreProduits: any[] = [];
+  category!: number | 'all'
+
+  constructor(private listsService: ListsService, private cartService: CartService,private router :Router,private activatedRoute :ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.loadProduits();  
+    this.loadProduits();
+    this.activatedRoute.queryParams.subscribe(params => {
+      const navigation = this.router.getCurrentNavigation();
+      if (navigation?.extras?.state) {
+        this.loadfiltre(navigation)
+      }
+    });
+  }
+  loadfiltre(navigation : any) {
+    this.category = navigation.extras.state['category'];
+    this.filterByCategory(this.category)
   }
 
   loadProduits(): void {
@@ -70,5 +84,13 @@ export class ProduitComponent implements OnInit {
       }
     }
     this.router.navigate(['/info-item'], navigationExtras);
+  }
+
+  filterByCategory(category: number | 'all') {
+  if (category === 'all') {
+    this.filtreProduits = this.produits;
+  } else {
+    this.filtreProduits = this.produits.filter(produit => produit.category === category);
+  }
   }
 }
