@@ -3,150 +3,182 @@
         "id": 1,
         "name": "Le Requin Doré",
         "description": "Un cadre chaleureux où vous pourrez déguster des spécialités marines aux saveurs locales.",
+        "history": "Fondé en 1995 par une famille de pêcheurs, Le Requin Doré est devenu une référence à Marseille pour ses plats typiques de la Méditerranée, notamment sa célèbre bouillabaisse.",
+        "chef": "Chef Jean-Luc Martin",
+        "type": "Restaurant gastronomique",
         "city": "Marseille, 12 Rue du Vieux Port, 13002",
         "signature_dish": "Bouillabaisse de poisson",
         "rating": 9.5,
         "global_price": 45.0,
-        "url": "assets/photo/restaurants/photo1.jpg"
+        "url": "assets/photo/restaurants/photo1.jpg",
+        "avis" : 140
     },
     {
         "id": 2,
         "name": "L'Écume des Mers",
         "description": "Un restaurant élégant avec vue sur la mer, spécialisé dans les fruits de mer frais.",
+        "history": "Inauguré en 2008, L'Écume des Mers propose une expérience culinaire unique en plein cœur de Nice, avec une vue panoramique sur la Promenade des Anglais.",
+        "chef": "Chef Claire Dubois",
+        "type": "Restaurant gastronomique",
         "city": "Nice, 15 Promenade des Anglais, 06000",
         "signature_dish": "Plateau de fruits de mer",
         "rating": 8.8,
         "global_price": 55.0,
-        "url": "assets/photo/restaurants/photo2.jpg"
+        "url": "assets/photo/restaurants/photo2.jpg",
+        "avis" : 354
     },
     {
         "id": 3,
         "name": "Le Marin Gourmand",
         "description": "Ambiance décontractée et cuisine généreuse à base de produits de la mer.",
+        "history": "Depuis 2010, Le Marin Gourmand à Bordeaux est le lieu idéal pour une sortie en famille, avec une cuisine généreuse inspirée par les richesses de l'Atlantique.",
+        "chef": "Chef Philippe Moreau",
+        "type": "Restaurant bistronomique",
         "city": "Bordeaux, 23 Quai des Chartrons, 33300",
         "signature_dish": "Grillade de calamars",
         "rating": 8.2,
         "global_price": 38.0,
-        "url": "assets/photo/restaurants/photo3.jpg"
+        "url": "assets/photo/restaurants/photo3.jpg",
+        "avis" : 426
     },
     {
         "id": 4,
         "name": "L'Huîtrière",
         "description": "Restaurant gastronomique spécialisé dans les huîtres et coquillages.",
+        "history": "Ouvert en 1998, L'Huîtrière est devenu un incontournable de Cancale, célèbre pour ses huîtres de qualité et son accueil chaleureux.",
+        "chef": "Chef Marie Leroy",
+        "type": "Restaurant gastronomique",
         "city": "Cancale, 7 Rue des Rimains, 35260",
         "signature_dish": "Huîtres de Cancale",
         "rating": 9.0,
         "global_price": 60.0,
-        "url": "assets/photo/restaurants/photo4.jpg"
+        "url": "assets/photo/restaurants/photo4.jpg",
+        "avis" : 4855
     },
     {
         "id": 5,
         "name": "Le Dôme Bleu",
         "description": "Cuisine créative et raffinée, mettant en valeur les produits de la mer.",
+        "history": "Depuis 2005, Le Dôme Bleu enchante les papilles des Rochelais avec ses plats innovants et une ambiance élégante.",
+        "chef": "Chef Antoine Dupont",
+        "type": "Restaurant gastronomique",
         "city": "La Rochelle, 10 Rue Saint-Nicolas, 17000",
         "signature_dish": "Tartare de thon rouge",
         "rating": 8.7,
         "global_price": 50.0,
-        "url": "assets/photo/restaurants/photo5.jpg"
+        "url": "assets/photo/restaurants/photo5.jpg",
+        "avis" : 147
     },
     {
         "id": 6,
         "name": "Le Phare du Goût",
         "description": "Un restaurant familial où la pêche locale est à l'honneur.",
+        "history": "Créé en 2012 par un couple de passionnés de la mer, Le Phare du Goût est une adresse incontournable à Port Louis pour les amateurs de cuisine authentique.",
+        "chef": "Chef Julien Renaud",
+        "type": "Restaurant traditionnel",
         "city": "Port Louis, 5 Rue de la Liberté, 97117",
         "signature_dish": "Cari de poisson",
         "rating": 7.9,
         "global_price": 35.0,
-        "url": "assets/photo/restaurants/photo6.jpg"
+        "url": "assets/photo/restaurants/photo6.jpg",
+        "avis" : 159
     },
     {
         "id": 7,
         "name": "L'Océan Vert",
         "description": "Un cadre zen pour une cuisine marine éco-responsable.",
+        "history": "Ouvert en 2015 à Nantes, L'Océan Vert est pionnier dans la cuisine durable, offrant des plats préparés avec des ingrédients issus de la pêche responsable.",
+        "chef": "Chef Laura Mercier",
+        "type": "Restaurant éco-responsable",
         "city": "Nantes, 22 Quai de la Fosse, 44100",
         "signature_dish": "Saint-Jacques rôties",
         "rating": 8.6,
         "global_price": 48.0,
-        "url": "assets/photo/restaurants/photo7.jpg"
+        "url": "assets/photo/restaurants/photo7.jpg",
+        "avis" : 357
     },
     {
         "id": 8,
         "name": "La Criée du Cap",
         "description": "Ambiance conviviale pour déguster des poissons grillés à la perfection.",
+        "history": "Situé à Cap d'Agde, ce restaurant familial a ouvert ses portes en 2000, proposant une ambiance décontractée et une cuisine simple mais savoureuse.",
+        "chef": "Chef Alain Boucher",
+        "type": "Restaurant traditionnel",
         "city": "Cap d'Agde, 19 Rue de la Criée, 34300",
         "signature_dish": "Sardines grillées",
         "rating": 8.1,
         "global_price": 32.0,
-        "url": "assets/photo/restaurants/photo8.jpg"
+        "url": "assets/photo/restaurants/photo8.jpg",
+        "avis" : 256
     },
     {
         "id": 9,
         "name": "Le Rocher Marin",
         "description": "Un restaurant en bord de mer avec une vue imprenable sur les falaises.",
+        "history": "Ouvert en 2010, Le Rocher Marin à Étretat attire les gourmets avec sa cuisine raffinée et sa vue époustouflante sur les célèbres falaises.",
+        "chef": "Chef Victor Lefèvre",
+        "type": "Restaurant gastronomique",
         "city": "Étretat, 9 Chemin des Falaises, 76790",
         "signature_dish": "Filet de bar à la plancha",
         "rating": 8.9,
         "global_price": 52.0,
-        "url": "assets/photo/restaurants/photo9.jpg"
+        "url": "assets/photo/restaurants/photo9.jpg",
+        "avis" : 351
     },
     {
         "id": 10,
         "name": "La Marée Royale",
         "description": "Un cadre chic et raffiné pour une cuisine marine de haute qualité.",
+        "history": "Installé en plein cœur de Paris depuis 1990, La Marée Royale est un établissement haut de gamme où les amateurs de fruits de mer se régalent.",
+        "chef": "Chef Isabelle Duval",
+        "type": "Restaurant gastronomique",
         "city": "Paris, 28 Rue de Rivoli, 75004",
         "signature_dish": "Homard thermidor",
         "rating": 9.4,
         "global_price": 70.0,
-        "url": "assets/photo/restaurants/photo1.jpg"
+        "url": "assets/photo/restaurants/photo1.jpg",
+        "avis" : 620
     },
     {
         "id": 11,
         "name": "Les Voiles Blanches",
         "description": "Une cuisine de la mer légère et inventive.",
+        "history": "Depuis son ouverture en 2005, Les Voiles Blanches à Toulon a su s'imposer comme une référence pour ses recettes légères inspirées de la Méditerranée.",
+        "chef": "Chef Patrick Gaillard",
+        "type": "Restaurant bistronomique",
         "city": "Toulon, 13 Quai de la Corse, 83000",
         "signature_dish": "Soupe de poisson provençale",
         "rating": 8.3,
         "global_price": 42.0,
-        "url": "assets/photo/restaurants/photo1.jpg"
+        "url": "assets/photo/restaurants/photo1.jpg",
+        "avis" : 346
     },
     {
         "id": 12,
         "name": "Le Trident",
         "description": "Un restaurant moderne qui revisite les classiques de la mer.",
+        "history": "Situé à Montpellier depuis 2013, Le Trident propose une cuisine moderne et revisitée, alliant tradition et innovation.",
+        "chef": "Chef Sophie Bernard",
+        "type": "Restaurant bistronomique",
         "city": "Montpellier, 17 Place de la Comédie, 34000",
         "signature_dish": "Ceviche de dorade",
         "rating": 8.5,
         "global_price": 46.0,
-        "url": "assets/photo/restaurants/photo2.jpg"
+        "url": "assets/photo/restaurants/photo2.jpg",
+        "avis" : 615
     },
     {
         "id": 13,
-        "name": "La Vague Dorée",
-        "description": "Ambiance cosy pour une expérience culinaire autour des produits marins.",
-        "city": "Lorient, 4 Rue de la Vague, 56100",
-        "signature_dish": "Langoustines rôties",
-        "rating": 8.4,
-        "global_price": 47.0,
-        "url": "assets/photo/restaurants/photo3.jpg"
-    },
-    {
-        "id": 14,
-        "name": "Le Chant des Marins",
-        "description": "Restaurant chaleureux où la cuisine marine est à l'honneur.",
-        "city": "Dieppe, 11 Quai Henri IV, 76200",
+        "name": "La Vague Gourmande",
+        "description": "Restaurant traditionnel mettant en avant les produits locaux de la mer.",
+        "history": "Ouvert depuis 2017 à Saint-Malo, La Vague Gourmande est une adresse incontournable pour déguster les produits de la mer locaux dans une ambiance conviviale.",
+        "chef": "Chef André Pelletier",
+        "type": "Restaurant traditionnel",
+        "city": "Saint-Malo, 21 Rue de la Cité, 35400",
         "signature_dish": "Moules marinières",
         "rating": 8.0,
-        "global_price": 33.0,
-        "url": "assets/photo/restaurants/photo4.jpg"
-    },
-    {
-        "id": 15,
-        "name": "Les Saveurs de l'Océan",
-        "description": "Une cuisine fraîche et locale avec une vue sur l'océan.",
-        "city": "Biarritz, 20 Avenue de la Grande Plage, 64200",
-        "signature_dish": "Sole meunière",
-        "rating": 9.1,
-        "global_price": 58.0,
-        "url": "assets/photo/restaurants/photo6.jpg"
+        "global_price": 30.0,
+        "url": "assets/photo/restaurants/photo3.jpg",
+        "avis" : 985
     }
 ]

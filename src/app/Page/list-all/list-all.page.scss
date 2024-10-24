@@ -1,0 +1,150 @@
+.custom-font {
+    font-family: 'Roboto', sans-serif; /* Remplacez par la police de votre choix */
+    font-size: 14px; /* Ajustez la taille de la police selon vos besoins */
+    color: #e74c3c; /* Rouge vif pour une couleur frappante */
+    font-weight: bold; /* Rend le texte plus visible */
+  }
+
+  .restaurant-card {
+    margin-bottom: 10px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  
+  
+  ion-card-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  ion-card-subtitle {
+    font-size: 0.9rem;
+    color: #777;
+  }
+  
+  ion-card-content p {
+    margin: 5px 0;
+    font-size: 0.9rem;
+    color: #555;
+  }
+  .image-container {
+    position: relative;
+    width: 100%;
+  }
+  
+  .restaurant-image {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+  }
+  
+
+  .card-header {
+    display: flex;
+    flex-direction: column; /* Colonne pour le titre et la ville */
+  }
+  
+  .header-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Aligne le titre et les avis sur la même ligne */
+  }
+  
+  .avis-text {
+    font-style: italic;
+    font-size: 0.85rem;
+    color: #666;
+    margin-left: 8px; /* Espacement entre le titre et le texte des avis */
+  }
+
+  .rating-high {
+    color: green; /* Vert pour les notes > 9 */
+  }
+  
+
+  .rating-badge {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background: rgba(255, 165, 0, 0.9); /* Couleur orange semi-transparente */
+    color: #fff;
+    padding: 5px 10px; /* Ajoute de l'espace autour de la note */
+    border-radius: 8px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  .rating-high {
+    background-color: lightgreen; /* Fond vert clair pour les notes > 9 */
+    border: 2px solid green; /* Bordure verte */
+    color: green; /* Couleur du texte */
+  }
+  
+  .rating-medium {
+    background-color: lightyellow; /* Fond jaune clair pour les notes entre 8 et 9 */
+    border: 2px solid orange; /* Bordure orange */
+    color: orange; /* Couleur du texte */
+  }
+  
+  .rating-low {
+    background-color: lightcoral; /* Fond rouge clair pour les notes < 8 */
+    border: 2px solid red; /* Bordure rouge */
+    color: red; /* Couleur du texte */
+  }
+  
+  .star-icon {
+    margin-right: 4px; /* Espacement entre l'icône et le texte */
+  }
+  //=================================================
+
+  .short-description {
+    font-size: 14px; /* Réduit la taille de la police */
+    line-height: 1.4; /* Ajuste l'interligne pour un meilleur espacement */
+    margin: 4px 0; /* Réduit l'espace entre les paragraphes */
+  }
+  
+
+  .image-container {
+    position: relative; /* Permet de positionner la banderole par rapport à l'image */
+  }
+  
+  .recette-image {
+    width: 100%; /* Assure que l'image prend toute la largeur du conteneur */
+    border-radius: 8px; /* Ajoute un arrondi aux coins de l'image */
+    height: auto; /* Garde les proportions de l'image */
+
+  }
+  
+  .portion-badge {
+    position: absolute; /* Positionne la banderole par rapport à l'image */
+    top: 10px; /* Position verticale à 10 pixels du haut */
+    right: 10px; /* Position horizontale à 10 pixels de la droite */
+    background-color: rgba(255, 255, 255, 0.8); /* Fond blanc avec transparence */
+    color: #000; /* Couleur du texte */
+    padding: 5px 10px; /* Espace autour du texte */
+    border-radius: 12px; /* Arrondit les coins de la banderole */
+    font-weight: bold; /* Texte en gras */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Ajoute une ombre légère */
+  }
+  .header-content {
+    display: flex; /* Utilise un flexbox pour aligner les éléments */
+    justify-content: space-between; /* Espace entre le titre et le temps de cuisson */
+    align-items: center; /* Centre verticalement les éléments */
+  }
+  
+  .cooking-time {
+    display: flex; /* Utilise un flexbox pour aligner l'icône et le texte */
+    align-items: center; /* Centre verticalement l'icône et le texte */
+  }
+  
+  .cooking-icon {
+    margin-right: 5px; /* Espace entre l'icône et le texte */
+  }
+  

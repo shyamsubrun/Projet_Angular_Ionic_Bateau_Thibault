@@ -15,26 +15,25 @@
 </ion-header>
 
 <ion-content class="ion-padding">
+
+
+
   <ng-container *ngIf="produits && produits.length > 0">
     <ion-list>
       <ion-card *ngFor="let produit of filtreProduits">
     <div (click)="navigateToInfo(produit, 'produit')" style="cursor: pointer;">
         <ion-card-header>
-          <img src={{produit.url}} alt="">
+          <img src={{produit.url}} class="restaurant-image">
           <ion-card-title>{{ produit.name }}</ion-card-title>
-          <ion-card-subtitle>Catégorie: {{ produit.category }}</ion-card-subtitle>
 
         </ion-card-header>
         <ion-card-content>
             <p>Prix: {{ produit.price }} € / {{ produit.unit }}</p>
-            <p>Disponibilité: {{ produit.availability ? 'Disponible' : 'Indisponible' }}</p>
-            <p>En soldes: {{ produit.sale ? 'Oui' : 'Non' }}</p>
-            <p>Remise: {{ produit.discount }} %</p>
-            <p>Commentaires: {{ produit.comments }}</p>
-            <p>Propriétaire: {{ produit.owner }}</p>
+            <p>{{ produit.availability ? 'Disponible' : 'Indisponible' }}</p>
+            <p>En soldes : {{ produit.sale ? 'Oui' : 'Non' }}</p>
+            <p>Origine: {{ produit.provenance }}</p>
         </ion-card-content>
     </div>
-    
     <div>
         <button (click)="removeFromCart(produit.id)">-</button>
         <span>{{ getProductQuantity(produit.id) }}</span>
