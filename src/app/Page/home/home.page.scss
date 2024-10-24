@@ -46,4 +46,68 @@ ion-badge {
   transform: translate(50%, -50%);
   font-size: 0.75rem;
 }
+ion-content {
+  --background: #f9f9f9; /* Fond léger pour le contenu */
+  padding: 16px;
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333; /* Couleur du texte */
+  margin-bottom: 20px;
+  text-align: center; /* Centrer le titre */
+}
+
+swiper-container {
+  margin: 0 auto; /* Centrer le swiper */
+  max-width: 800px; /* Limiter la largeur du swiper */
+}
+
+swiper-slide {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Colonnes flexibles */
+  gap: 10px; /* Espace entre les cartes */
+}
+
+ion-card {
+  height: 200px; /* Hauteur fixe pour les cartes */
+  border-radius: 10px; /* Coins arrondis */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre légère */
+  overflow: hidden; /* Éviter que le contenu dépasse */
+  display: flex;
+  flex-direction: column; /* Pour empiler l'image et le texte */
+  justify-content: space-between; /* Espacement égal entre les éléments */
+}
+
+
+ion-card img {
+  width: 100%; /* S'assurer que l'image prend toute la largeur */
+  height: 120px; /* Hauteur fixe pour les images */
+  object-fit: cover; /* Couvrir tout l'espace sans déformer l'image */
+}
+
+ion-card-header {
+  text-align: center; /* Centrer le texte dans l'en-tête de la carte */
+}
+
+ion-card-title {
+  font-size: 16px; /* Taille du titre */
+  color: #007bff; /* Couleur du titre */
+  margin: 0; /* Supprimer les marges par défaut */
+}
+
+ion-card-subtitle {
+  font-size: 14px; /* Taille du sous-titre */
+  color: #666; /* Couleur du sous-titre */
+  margin: 0; /* Supprimer les marges par défaut */
+}
+
+ion-button {
+  margin-top: 10px; /* Espace au-dessus du bouton */
+  background-color: #007bff; /* Couleur du bouton */
+  color: #fff; /* Couleur du texte du bouton */
+  border-radius: 5px; /* Coins arrondis pour le bouton */
+}
+
 

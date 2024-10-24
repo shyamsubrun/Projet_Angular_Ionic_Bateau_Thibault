@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, CUSTOM_ELEMENTS_SCHEMA, OnInit } from '@angular/core';
 
 import { HeaderComponent } from 'src/app/components/header/header.component';
 import { NavigationExtras, Router ,ActivatedRoute} from '@angular/router';
@@ -10,7 +10,9 @@ import { CartService } from '../../services/cart.service';
 import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms'; 
 import { ListsService } from 'src/app/services/lists.service';
+import {register} from 'swiper/element/bundle';
 
+register()
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
@@ -44,12 +46,15 @@ import { ListsService } from 'src/app/services/lists.service';
     IonContent,
     IonSearchbar, FormsModule,
   ],
+  schemas:[CUSTOM_ELEMENTS_SCHEMA]
 })
 export class HomePage implements OnInit {
+  listRecettes : any[] = [];
   totalItems: number = 0; 
   searchTerm: string = '';
   produits: any[] = [];
   filteredProduits: any[] = [];
+  produitsEnPromotion: any[] = [];
 
   constructor(private router: Router, private cartService: CartService, private listsService: ListsService) { }
 
@@ -61,6 +66,7 @@ export class HomePage implements OnInit {
 
     // Charger les produits lors de l'initialisation
     this.loadProduits();
+    this.getListRecettes();
   }
 
   // Naviguer vers la page 'list-all'
@@ -84,9 +90,22 @@ export class HomePage implements OnInit {
       (data) => {
         this.produits = data;
         this.filteredProduits = data;
+        this.produitsEnPromotion = this.produits.filter(produit => produit.discount>0); 
       },
       (error) => {
         console.error('Erreur lors du chargement des produits', error);
+      }
+    );
+  }
+  getListRecettes() {
+    this.listsService.getListRecettes().subscribe(
+      (response) => {
+        this.listRecettes = response.recettes
+        this.filterRecettesByPromotion();
+        console.log(this.listRecettes); 
+      },
+      (error) => {
+        console.error('Erreur lors de la récupération des données :', error);
       }
     );
   }
@@ -97,5 +116,14 @@ export class HomePage implements OnInit {
       }
     }
     this.router.navigate(['/produit'], navigationExtras);
+  }
+  filterRecettesByPromotion() {
+    this.listRecettes = this.listRecettes.filter((recette) => 
+      recette.ingredients.some((ingredient: string) =>
+        this.produitsEnPromotion.some((produitPromo) => 
+          ingredient.toLowerCase().includes(produitPromo.name.toLowerCase())
+        )
+      )
+    );
   }
 }

@@ -36,6 +36,36 @@
         "url": "assets/photo/recettes/Bouillabaisse.jpg"
     },
     {
+    "nom": "Moules à la Provençale",
+    "ingredients": [
+        "1kg de moules de pêche (Madagascar)",
+        "2 tomates",
+        "1 oignon",
+        "2 gousses d'ail",
+        "1 bouquet de persil",
+        "1 verre de vin blanc",
+        "Huile d'olive",
+        "Sel",
+        "Poivre"
+    ],
+    "instructions": [
+        "Nettoyer les moules en les frottant sous l'eau froide.",
+        "Dans une grande poêle, faire revenir l'oignon haché dans de l'huile d'olive.",
+        "Ajouter l'ail et les tomates coupées en dés, laisser mijoter quelques minutes.",
+        "Verser le vin blanc et laisser réduire.",
+        "Ajouter les moules, couvrir et cuire pendant 5-7 minutes jusqu'à ce qu'elles s'ouvrent.",
+        "Assaisonner avec sel, poivre et parsemer de persil frais avant de servir."
+    ],
+    "tempsDePreparation": "15 minutes",
+    "tempsDeCuisson": "10 minutes",
+    "nombreDePortions": 4,
+    "allergenes": [
+        "Mollusques",
+        "Sulfites"
+    ],
+    "url": "assets/photo/recettes/Moules_la_Provençale.jpg"
+},
+    {
     "nom": "Tartare de saumon",
     "ingredients": [
         "300g de saumon frais",
@@ -94,7 +124,39 @@
         "Crustaces"
     ],
         "url": "assets/photo/recettes/Paella_de_fruits_de_mer.webp"
-    },
+    },{
+    "nom": "Risotto au Homard",
+    "ingredients": [
+        "1 homard (Portugal)",
+        "300g de riz arborio",
+        "1 oignon",
+        "1 litre de bouillon de légumes",
+        "50g de parmesan râpé",
+        "50g de beurre",
+        "1 verre de vin blanc",
+        "Sel",
+        "Poivre"
+    ],
+    "instructions": [
+        "Cuire le homard dans de l'eau bouillante pendant 8 minutes, retirer la chair et réserver.",
+        "Dans une poêle, faire revenir l'oignon haché dans du beurre.",
+        "Ajouter le riz et cuire jusqu'à ce qu'il devienne translucide.",
+        "Déglacer avec le vin blanc, puis ajouter le bouillon louche par louche, en remuant continuellement.",
+        "Lorsque le riz est cuit, ajouter le parmesan, la chair du homard, sel et poivre.",
+        "Servir immédiatement."
+    ],
+    "tempsDePreparation": "20 minutes",
+    "tempsDeCuisson": "30 minutes",
+    "nombreDePortions": 4,
+    "allergenes": [
+        "Crustacés",
+        "Lactose",
+        "Sulfites"
+    ],
+    "url": "assets/photo/recettes/Risotto_au_Homard.jpg"
+}
+
+    ,
     {
     "nom": "Sushi au thon",
     "ingredients": [
@@ -120,7 +182,36 @@
         "Poissons"
     ],
         "url": "assets/photo/recettes/Sushi_au_thon.jpg"
-    },
+    },{
+    "nom": "Thon Rouge Grillé au Sésame",
+    "ingredients": [
+        "4 pavés de thon rouge (Espagne)",
+        "2 cuillères à soupe de graines de sésame",
+        "1 citron",
+        "2 cuillères à soupe de sauce soja",
+        "Huile d'olive",
+        "Sel",
+        "Poivre"
+    ],
+    "instructions": [
+        "Presser le citron et mélanger avec la sauce soja et un peu d'huile d'olive.",
+        "Tremper les pavés de thon dans cette marinade pendant 15 minutes.",
+        "Saupoudrer les pavés de graines de sésame de chaque côté.",
+        "Faire griller dans une poêle chaude avec un peu d'huile d'olive pendant 2-3 minutes de chaque côté.",
+        "Servir immédiatement avec une salade ou des légumes grillés."
+    ],
+    "tempsDePreparation": "15 minutes",
+    "tempsDeCuisson": "6 minutes",
+    "nombreDePortions": 4,
+    "allergenes": [
+        "Poisson",
+        "Sésame",
+        "Sulfites"
+    ],
+    "url": "assets/photo/recettes/thon_Rouge_Sesame.jpg"
+}
+
+    ,
     {
     "nom": "Crevettes sautees à l'ail",
     "ingredients": [
@@ -202,6 +293,36 @@
     ],
         "url": "assets/photo/recettes/Ceviche_de_dorade.jpg"
     },
+{
+    "nom": "Moules de Pêche au Curry",
+    "ingredients": [
+        "1kg de moules de pêche (Cameroun)",
+        "1 oignon",
+        "2 gousses d'ail",
+        "1 cuillère à soupe de curry en poudre",
+        "200ml de crème fraîche",
+        "Huile d'olive",
+        "Sel",
+        "Poivre"
+    ],
+    "instructions": [
+        "Nettoyer les moules sous l'eau froide.",
+        "Faire revenir l'oignon et l'ail dans de l'huile d'olive.",
+        "Ajouter le curry et mélanger.",
+        "Verser les moules et cuire jusqu'à ce qu'elles s'ouvrent.",
+        "Ajouter la crème fraîche et laisser mijoter quelques minutes.",
+        "Assaisonner avec sel et poivre, servir chaud."
+    ],
+    "tempsDePreparation": "10 minutes",
+    "tempsDeCuisson": "10 minutes",
+    "nombreDePortions": 4,
+    "allergenes": [
+        "Mollusques",
+        "Lactose"
+    ],
+    "url": "assets/photo/recettes/Moules_au_Curry.jpg"
+},
+
     {
     "nom": "Soupe de poisson",
     "ingredients": [
@@ -259,5 +380,33 @@
         "Gluten"
     ],
         "url": "assets/photo/recettes/Pâtes_aux_fruits_de_mer.webp"
-    }
+    },{
+    "nom": "Spaghetti aux Palourdes",
+    "ingredients": [
+        "500g de palourdes (Dubai)",
+        "400g de spaghetti",
+        "2 gousses d'ail",
+        "1 bouquet de persil",
+        "1 verre de vin blanc",
+        "Huile d'olive",
+        "Sel",
+        "Poivre"
+    ],
+    "instructions": [
+        "Faire cuire les spaghetti dans une grande casserole d'eau salée.",
+        "Dans une poêle, faire revenir l'ail dans de l'huile d'olive.",
+        "Ajouter les palourdes et verser le vin blanc, couvrir et cuire jusqu'à ce qu'elles s'ouvrent.",
+        "Égoutter les pâtes et mélanger avec les palourdes, le persil ciselé, sel et poivre.",
+        "Servir immédiatement."
+    ],
+    "tempsDePreparation": "15 minutes",
+    "tempsDeCuisson": "10 minutes",
+    "nombreDePortions": 4,
+    "allergenes": [
+        "Mollusques",
+        "Sulfites"
+    ],
+    "url": "assets/photo/recettes/Spaghetti_aux_Palourdes.jpg"
+}
+
 ]
