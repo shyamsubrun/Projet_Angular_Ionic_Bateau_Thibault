@@ -1,24 +1,15 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>
-      Liste des produits
-    </ion-title>
-  </ion-toolbar>
-  <ion-toolbar>
+  <app-header></app-header>
+</ion-header>
+<ion-content class="ion-padding">
+  <p>Vous êtes dans produits</p>
+  <ng-container *ngIf="produits && produits.length > 0">
     <ion-buttons>
       <ion-button (click)="filterByCategory('all')">All</ion-button>
       <ion-button (click)="filterByCategory(0)">Poisson</ion-button>
       <ion-button (click)="filterByCategory(1)">Crustacé</ion-button>
       <ion-button (click)="filterByCategory(2)">Coquillage</ion-button>
     </ion-buttons>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content class="ion-padding">
-
-
-
-  <ng-container *ngIf="produits && produits.length > 0">
     <ion-list>
       <ion-card *ngFor="let produit of filtreProduits">
     <div (click)="navigateToInfo(produit, 'produit')" style="cursor: pointer;">
