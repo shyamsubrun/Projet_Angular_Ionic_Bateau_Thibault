@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { IonAvatar,IonList,IonItem,IonIcon,IonLabel,IonCard,IonCardHeader,
           IonCardTitle,IonCardSubtitle,IonCardContent,IonContent, IonHeader,
-           IonTitle, IonToolbar,IonImg } from '@ionic/angular/standalone';
+           IonTitle, IonToolbar,IonImg, IonButton, IonButtons } from '@ionic/angular/standalone';
 import { UserService } from '../../services/user.service';
 import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from '../../app.component';
@@ -15,7 +15,25 @@ import { NavController } from '@ionic/angular';
   templateUrl: './parametre.page.html',
   styleUrls: ['./parametre.page.scss'],
   standalone: true,
-  imports: [IonImg,IonAvatar,IonList,IonItem,IonIcon,IonLabel,IonCard,IonCardHeader,IonCardTitle,IonCardSubtitle,IonCardContent,IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule]
+  imports: [IonButtons, 
+    IonButton,
+    IonImg,
+    IonAvatar,
+    IonList,
+    IonItem,
+    IonIcon,
+    IonLabel,
+    IonCard,
+    IonCardHeader,
+    IonCardTitle,
+    IonCardSubtitle,
+    IonCardContent,
+    IonContent,
+    IonHeader,
+    IonTitle,
+    IonToolbar,
+    CommonModule,
+    FormsModule]
 })
 export class ParametrePage implements OnInit {
   user: any;
@@ -27,12 +45,15 @@ export class ParametrePage implements OnInit {
     });
   }
 
-  
   goToProfil() {
     this.navCtrl.navigateForward('/profil');
   }
   
   goToContact() {
     this.navCtrl.navigateForward('/contact');
+  }
+
+  goBack() {
+    this.navCtrl.back();
   }
 }

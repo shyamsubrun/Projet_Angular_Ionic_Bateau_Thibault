@@ -13,8 +13,13 @@
         <ion-card-subtitle>{{ user.nomDuCommerce }} - {{ user.typeDeCommerce }}</ion-card-subtitle>
       </div>
     </ion-card-header>
-
+    
     <ion-card-content>
+      <ion-buttons slot="start">
+        <ion-button (click)="goBack()">
+          <ion-icon slot="icon-only" name="arrow-back"></ion-icon>
+        </ion-button>
+     </ion-buttons>
       <ion-list>
         <ion-item>
           <ion-icon name="star-outline" slot="start"></ion-icon>

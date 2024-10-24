@@ -2,18 +2,14 @@
   <ion-toolbar>
     <ion-title>Bateau Thibault</ion-title>
     
-    <!-- Regroupez les boutons dans ion-buttons avec slot="end" pour les aligner à droite -->
     <ion-buttons slot="end">
       
-      <!-- Bouton Paramètre -->
       <ion-button [routerLink]="['/parametre']" fill="clear">
         <ion-icon slot="icon-only" name="settings-outline"></ion-icon>
       </ion-button>
       
-      <!-- Bouton Panier avec Badge -->
       <ion-button [routerLink]="['/cart']" fill="clear" class="cart-button">
         <ion-icon slot="icon-only" name="basket-outline"></ion-icon>
-        <!-- Utilisation de ion-badge pour le compteur -->
         <ion-badge slot="end" color="danger" *ngIf="totalItems > 0">
           {{ totalItems }}
         </ion-badge>
@@ -32,6 +28,5 @@
   </ion-header>
   
   <div class="ion-padding">
-    <!-- Votre contenu ici -->
   </div>
 </ion-content>
