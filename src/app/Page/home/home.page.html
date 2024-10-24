@@ -12,18 +12,42 @@
 
 <ion-content [fullscreen]="true">
   <!-- Résultats filtrés uniquement si searchTerm n'est pas vide -->
-  <ion-list *ngIf="searchTerm && filteredProduits.length > 0; else noResults">
+  <ion-list *ngIf="searchTerm && filteredProduits.length > 0">
     <ion-item *ngFor="let produit of filteredProduits">
       {{ produit.name }} <!-- Affichage du nom du bateau filtré -->
     </ion-item>
   </ion-list>
+  <ion-content>
+  <h2>Offrs de jour</h2>
+  <swiper-container>
+    <swiper-slide *ngFor="let produit  of produitsEnPromotion">
+      <ion-card>
+        <img [src]="produit.url" alt="{{ produit.name }}" />
+        <ion-card-header>
+          <ion-card-title>{{ produit.name }}</ion-card-title>
+          <ion-card-subtitle>{{ produit.price | currency }}</ion-card-subtitle>
+        </ion-card-header>
+      </ion-card>
+    </swiper-slide>
+  </swiper-container>
+  <swiper-container>
+  <swiper-slide *ngFor="let recette of listRecettes">
+    <ion-card>
+      <img [src]="recette.url" />
+      <ion-card-title>{{ recette.nom }}</ion-card-title>
+      <ion-card-subtitle>{{ recette.tempsDePreparation }} - {{ recette.tempsDeCuisson }}</ion-card-subtitle>
+    </ion-card>
+  </swiper-slide>
+</swiper-container>
+</ion-content>
 
+  
   <!-- Message si aucun résultat trouvé ou si la recherche est vide -->
-  <ng-template #noResults>
+  <!-- <ng-template #noResults>
     <div class="ion-padding">
       <p *ngIf="!searchTerm">Veuillez entrer un terme de recherche pour voir les résultats.</p>
       <p *ngIf="searchTerm.length>=2 && filteredProduits.length === 0">Aucun bateau ne correspond à votre recherche.</p>
     </div>
-  </ng-template>
+  </ng-template> -->
 </ion-content>
 
