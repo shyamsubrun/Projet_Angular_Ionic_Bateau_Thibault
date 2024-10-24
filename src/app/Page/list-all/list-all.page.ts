@@ -101,8 +101,6 @@ export class ListAllPage implements OnInit {
     );
   }
   navigateToInfo(item: any, type: string) {
-    console.log("this is from all-âge" + JSON.stringify(item, null, 2))
-    console.log(item)
     let navigationExtras: NavigationExtras = {
       state: {
         item: item,
