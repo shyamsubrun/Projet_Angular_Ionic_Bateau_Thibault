@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+
+import { HeaderComponent } from 'src/app/components/header/header.component';
 import { NavigationExtras, Router ,ActivatedRoute} from '@angular/router';
 import { IonIcon, IonList, IonToggle, IonItem, IonLabel, IonSelect, IonSelectOption, IonHeader, IonToolbar, IonTitle, IonContent, IonButton, IonFooter, IonButtons, IonBadge, IonSearchbar } from '@ionic/angular/standalone';
 import { RouterLink } from '@angular/router';
@@ -9,7 +11,6 @@ import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms'; 
 import { ListsService } from 'src/app/services/lists.service';
 
-
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
@@ -17,6 +18,7 @@ import { ListsService } from 'src/app/services/lists.service';
   standalone: true,
 
   imports: [
+    HeaderComponent,
     IonBadge,
     IonButtons,
     RouterModule,

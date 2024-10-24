@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-toolbar>
+     <ion-title>Bateau de Thibault</ion-title>
+    <ion-buttons slot="end">
+      <ion-button [routerLink]="['/parametre']" fill="clear">
+        <ion-icon slot="icon-only" name="settings-outline"></ion-icon>
+      </ion-button>
+      
+      <ion-button [routerLink]="['/cart']" fill="clear" class="cart-button">
+        <ion-icon slot="icon-only" name="basket-outline"></ion-icon>
+        <ion-badge slot="end" color="danger" *ngIf="totalItems > 0">
+          {{ totalItems }}
+        </ion-badge>
+      </ion-button>
+    </ion-buttons>
+    
+  </ion-toolbar>
+</ion-header>

@@ -7,13 +7,14 @@ import { HttpClientModule } from '@angular/common/http';
 import { IonContent, IonHeader, IonTitle, IonToolbar, IonList, IonItem, IonLabel, IonCard, IonCardHeader, IonCardContent, IonIcon, IonCardTitle,IonCardSubtitle } from '@ionic/angular/standalone';
 import { Bateau, Restaurant, Recette, Type } from 'src/app/models/bateau.model';
 import { RouterModule } from '@angular/router';
+import { HeaderComponent } from "../../components/header/header.component";
 
 @Component({
   selector: 'app-list-all',
   templateUrl: './list-all.page.html',
   styleUrls: ['./list-all.page.scss'],
   standalone: true,
-  imports: [ 
+  imports: [
     RouterModule,
     HttpClientModule,
     IonContent,
@@ -33,8 +34,9 @@ import { RouterModule } from '@angular/router';
     IonIcon,
     IonCardContent,
     IonCardTitle,
-    IonCardSubtitle
-  ]
+    IonCardSubtitle,
+    HeaderComponent
+]
 })
 export class ListAllPage implements OnInit {
   listBateaux!: Bateau[];

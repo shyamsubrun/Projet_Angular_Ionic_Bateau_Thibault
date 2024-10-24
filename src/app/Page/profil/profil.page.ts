@@ -5,7 +5,6 @@ import { IonBadge,IonAvatar,IonList,IonItem,IonIcon,IonLabel,IonCardSubtitle,Ion
 import { HttpClient } from '@angular/common/http';
 import { NavController } from '@ionic/angular';
 
-
 @Component({
   selector: 'app-profil',
   templateUrl: './profil.page.html',
