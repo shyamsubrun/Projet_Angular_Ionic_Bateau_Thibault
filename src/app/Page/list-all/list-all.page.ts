@@ -2,12 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { NavigationExtras, Router ,ActivatedRoute} from '@angular/router';
-import { PageTypeService } from '../../services/page-type.service';
 import { ListsService } from 'src/app/services/lists.service';
 import { HttpClientModule } from '@angular/common/http'; 
 import { IonContent, IonHeader, IonTitle, IonToolbar, IonList, IonItem, IonLabel, IonCard, IonCardHeader, IonCardContent, IonIcon, IonCardTitle,IonCardSubtitle } from '@ionic/angular/standalone';
 import { Bateau, Restaurant, Recette, Type } from 'src/app/models/bateau.model';
-
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-list-all',
@@ -15,6 +14,7 @@ import { Bateau, Restaurant, Recette, Type } from 'src/app/models/bateau.model';
   styleUrls: ['./list-all.page.scss'],
   standalone: true,
   imports: [ 
+    RouterModule,
     HttpClientModule,
     IonContent,
     IonHeader,
@@ -42,7 +42,7 @@ export class ListAllPage implements OnInit {
   listRecettes!: Recette[];
   listType!: string;
 
-  constructor(private router:Router, private activatedRoute: ActivatedRoute,private pageTypeService:PageTypeService, private listsService: ListsService) { }
+  constructor(private router:Router, private activatedRoute: ActivatedRoute, private listsService: ListsService) { }
 
   ngOnInit() {
     this.activatedRoute.queryParams.subscribe(params => {
@@ -99,5 +99,16 @@ export class ListAllPage implements OnInit {
         console.error('Erreur lors de la récupération des données :', error);
       }
     );
+  }
+  navigateToInfo(item: any, type: string) {
+    console.log("this is from all-âge" + JSON.stringify(item, null, 2))
+    console.log(item)
+    let navigationExtras: NavigationExtras = {
+      state: {
+        item: item,
+        type: type
+      }
+    }
+    this.router.navigate(['/info-item'], navigationExtras);
   }
 }

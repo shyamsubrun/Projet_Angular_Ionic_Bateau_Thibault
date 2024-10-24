@@ -9,7 +9,7 @@
 <ion-content class="ion-padding">
   <ng-container *ngIf="listType === 'bateaux'">
     <ion-list>
-      <ion-card *ngFor="let bateau of listBateaux">
+      <ion-card *ngFor="let bateau of listBateaux" (click)="navigateToInfo(bateau,'bateau')">
         <ion-card-header>
           <ion-card-title>{{ bateau.nom }}</ion-card-title>
           <ion-card-subtitle>{{ bateau.taille }} - {{ bateau.Type }}</ion-card-subtitle>
@@ -25,9 +25,9 @@
     </ion-list>
   </ng-container>
 
-  <ng-container *ngIf="listType === 'restaurants'">
+  <ng-container *ngIf="listType === 'restaurants'" >
     <ion-list>
-      <ion-card *ngFor="let restaurant of listRestaurants">
+      <ion-card *ngFor="let restaurant of listRestaurants" (click)="navigateToInfo(restaurant,'restaurant')">
         <ion-card-header>
           <ion-card-title>{{ restaurant.name }}</ion-card-title>
           <ion-card-subtitle>{{ restaurant.city }}</ion-card-subtitle>
@@ -44,7 +44,7 @@
 
   <ng-container *ngIf="listType === 'recettes'">
     <ion-list>
-      <ion-card *ngFor="let recette of listRecettes">
+      <ion-card *ngFor="let recette of listRecettes" (click)="navigateToInfo(recette,'recette')">
         <ion-card-header>
           <ion-card-title>{{ recette.nom }}</ion-card-title>
           <ion-card-subtitle>Temps de preparation: {{ recette.tempsDePreparation }}</ion-card-subtitle>

@@ -9,7 +9,7 @@
 <ion-content class="ion-padding">
   <ng-container *ngIf="produits && produits.length > 0">
     <ion-list>
-      <ion-card *ngFor="let produit of produits">
+      <ion-card *ngFor="let produit of produits" (click)="navigateToInfo(produit,'produit')">
         <ion-card-header>
           <ion-card-title>{{ produit.name }}</ion-card-title>
           <ion-card-subtitle>Catégorie: {{ produit.category }}</ion-card-subtitle>
