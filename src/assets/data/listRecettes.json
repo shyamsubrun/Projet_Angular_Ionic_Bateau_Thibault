@@ -32,7 +32,8 @@
         "Poissons",
         "Crustaces",
         "Sulfites"
-    ]
+    ],
+        "url": "assets/photo/recettes/Bouillabaisse.jpg"
     },
     {
     "nom": "Tartare de saumon",
@@ -58,7 +59,8 @@
     "nombreDePortions": 2,
     "allergenes": [
         "Poissons"
-    ]
+    ],
+        "url": "assets/photo/recettes/Tartare_de_saumon.jpg"
     },
     {
     "nom": "Paella de fruits de mer",
@@ -90,7 +92,8 @@
     "allergenes": [
         "Poissons",
         "Crustaces"
-    ]
+    ],
+        "url": "assets/photo/recettes/Paella_de_fruits_de_mer.webp"
     },
     {
     "nom": "Sushi au thon",
@@ -115,7 +118,8 @@
     "nombreDePortions": 2,
     "allergenes": [
         "Poissons"
-    ]
+    ],
+        "url": "assets/photo/recettes/Sushi_au_thon.jpg"
     },
     {
     "nom": "Crevettes sautees à l'ail",
@@ -141,7 +145,8 @@
     "nombreDePortions": 4,
     "allergenes": [
         "Crustaces"
-    ]
+    ],
+        "url": "assets/photo/recettes/Crevettes_sautees_l_ail.jpg"
     },
     {
     "nom": "Gratin de fruits de mer",
@@ -169,7 +174,8 @@
     "allergenes": [
         "Crustaces",
         "Lait"
-    ]
+    ],
+        "url": "assets/photo/recettes/Gratin_de_fruits_de_mer.jpg"
     },
     {
     "nom": "Ceviche de dorade",
@@ -193,7 +199,8 @@
     "nombreDePortions": 2,
     "allergenes": [
         "Poissons"
-    ]
+    ],
+        "url": "assets/photo/recettes/Ceviche_de_dorade.jpg"
     },
     {
     "nom": "Soupe de poisson",
@@ -220,7 +227,8 @@
     "nombreDePortions": 4,
     "allergenes": [
         "Poissons"
-    ]
+    ],
+        "url": "assets/photo/recettes/Soupe_de_poisson.jpg"
     },
     {
     "nom": "Pâtes aux fruits de mer",
@@ -249,6 +257,7 @@
     "allergenes": [
         "Crustaces",
         "Gluten"
-    ]
+    ],
+        "url": "assets/photo/recettes/Pâtes_aux_fruits_de_mer.webp"
     }
 ]

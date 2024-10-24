@@ -7,7 +7,8 @@
     "typedePache": "Pêche durable",
     "specialite": "Poissons",
     "lieuDePache": "Mer du Nord",
-    "anciente": 10
+    "anciente": 10,
+    "url": "assets/photo/bateaux/Le_Marin_Courageux.jpg"
     },
     {
     "nom": "La Perle des Mers",
@@ -17,7 +18,8 @@
     "typedePache": "Pêche artisanale respectueuse",
     "specialite": "Coquillages",
     "lieuDePache": "Atlantique",
-    "anciente": 5
+    "anciente": 5,
+    "url": "assets/photo/bateaux/La_Perle_des_Mers.jpg"
     },
     {
     "nom": "Le Roi des Oceans",
@@ -27,8 +29,10 @@
     "typedePache": "Pêche ecoresponsable",
     "specialite": "Crustaces",
     "lieuDePache": "Mediterranee",
-    "anciente": 12
+    "anciente": 12,
+    "url": "assets/photo/bateaux/Le_Roi_des_Oceans.jpg"
     },
+    
     {
     "nom": "Le Vent du Large",
     "taille": "25 mètres",
@@ -37,7 +41,8 @@
     "typedePache": "Pêche bio certifiee",
     "specialite": "Poissons",
     "lieuDePache": "Manche",
-    "anciente": 7
+    "anciente": 7,
+    "url": "assets/photo/bateaux/Le_Vent_du_Large.jpg"
     },
     {
     "nom": "L'ecume Blanche",
@@ -47,8 +52,10 @@
     "typedePache": "Pêche selective",
     "specialite": "Coquillages",
     "lieuDePache": "Mer Baltique",
-    "anciente": 4
+    "anciente": 4,
+    "url": "assets/photo/bateaux/L_ecume_Blanche.jpg"
     },
+   
     {
     "nom": "Le Tresor Bleu",
     "taille": "35 mètres",
@@ -57,7 +64,8 @@
     "typedePache": "Pêche equitable",
     "specialite": "Crustaces",
     "lieuDePache": "Ocean Indien",
-    "anciente": 15
+    "anciente": 15,
+    "url": "assets/photo/bateaux/Le_Tresor_Bleu.jpg"
     },
     {
     "nom": "Le Capitaine Solitaire",
@@ -67,6 +75,8 @@
     "typedePache": "Pêche artisanale durable",
     "specialite": "Poissons",
     "lieuDePache": "Ocean Pacifique",
-    "anciente": 8
+    "anciente": 8,
+    "url": "assets/photo/bateaux/Le_Capitaine_Solitaire.jpg"
     }
+    
 ]

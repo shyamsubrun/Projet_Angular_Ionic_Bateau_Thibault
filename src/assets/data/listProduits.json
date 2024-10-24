@@ -9,7 +9,8 @@
         "sale": false,
         "discount": 0.0,
         "comments": "Pêche à la corde",
-        "owner": "tig"
+        "owner": "tig",
+        "url": "assets/photo/produits/Aile_de_raie.jpg"
     },
     {
         "id": 9,
@@ -21,7 +22,8 @@
         "sale": false,
         "discount": 0.0,
         "comments": "Hors saison,  pêche aux casiers",
-        "owner": "tig"
+        "owner": "tig",
+        "url": "assets/photo/produits/Araignées.jpg"
     },
     {
         "id": 3,
@@ -33,7 +35,8 @@
         "sale": false,
         "discount": 0.0,
         "comments": "Plus de 1.5kg le poisson",
-        "owner": "tig"
+        "owner": "tig",
+        "url": "assets/photo/produits/Bar_de_ligne.jpg"
     },
     {
         "id": 2,
@@ -45,7 +48,8 @@
         "sale": false,
         "discount": 0.0,
         "comments": "Environ 550-700g la pièce",
-        "owner": "tig"
+        "owner": "tig",
+        "url": "assets/photo/produits/Bar_de_ligne_portion.jpg"
     },
     {
         "id": 10,
@@ -57,7 +61,8 @@
         "sale": false,
         "discount": 0.0,
         "comments": "Hors saison, pêche à l'épuisette",
-        "owner": "tig"
+        "owner": "tig",
+        "url": "assets/photo/produits/Bouquets_cuits.jpg"
     },
     {
         "id": 1,
@@ -69,7 +74,8 @@
         "sale": false,
         "discount": 0.0,
         "comments": "environ 300g",
-        "owner": "tig"
+        "owner": "tig",
+        "url": "assets/photo/produits/Filet_Bar_de_ligne.webp"
     },
     {
         "id": 5,
@@ -81,7 +87,8 @@
         "sale": false,
         "discount": 0.0,
         "comments": "Pêche à la corde",
-        "owner": "tig"
+        "owner": "tig",
+        "url": "assets/photo/produits/Filet_Julienne.jpg"
     },
     
     {
@@ -94,7 +101,8 @@
         "sale": false,
         "discount": 0.0,
         "comments": "",
-        "owner": "tig"
+        "owner": "tig",
+        "url": "assets/photo/produits/Huîtres_N_2_OR_St_Vaast.jpg"
     },
     {
         "id": 13,
@@ -106,7 +114,8 @@
         "sale": false,
         "discount": 0.0,
         "comments": "Médaille d'or Salon Agriculture",
-        "owner": "tig"
+        "owner": "tig",
+        "url": "assets/photo/produits/Huitres_N_2St_Vaast.jpg"
     },
     {
         "id": 14,
@@ -118,7 +127,8 @@
         "sale": false,
         "discount": 0.0,
         "comments": "Médaille d'or salon agriculture",
-        "owner": "tig"
+        "owner": "tig",
+        "url": "assets/photo/produits/Huitres_N_2St_Vaast.jpg"
     },
     {
         "id": 15,
@@ -130,7 +140,8 @@
         "sale": false,
         "discount": 0.0,
         "comments": "Médaille d'or salon agriculture",
-        "owner": "tig"
+        "owner": "tig",
+        "url": "assets/photo/produits/10.webp"
     },
     {
         "id": 16,
@@ -142,7 +153,8 @@
         "sale": false,
         "discount": 0.0,
         "comments": "",
-        "owner": "tig"
+        "owner": "tig",
+        "url": "assets/photo/produits/Huitres_N_2St_Vaast.jpg"
     },
     {
         "id": 4,
@@ -154,7 +166,8 @@
         "sale": false,
         "discount": 0.0,
         "comments": "Environ 550-700g la portion",
-        "owner": "tig"
+        "owner": "tig",
+        "url": "assets/photo/produits/Lieu_jaune_de_ligne.jpg"
     },
     {
         "id": 6,
@@ -166,6 +179,7 @@
         "sale": true,
         "discount": 5.0,
         "comments": "",
-        "owner": "tig"
+        "owner": "tig",
+        "url": "assets/photo/produits/Moules_de_peche.jpg"
     }
 ]

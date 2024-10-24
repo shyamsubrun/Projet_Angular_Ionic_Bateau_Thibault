@@ -11,6 +11,7 @@ export interface Bateau {
   specialite: string;
   lieuDePache: string;
   anciente: number;
+  url: string;
 }
 
 export interface Restaurant {
@@ -21,6 +22,7 @@ export interface Restaurant {
   signature_dish: string;
   rating: number;
   global_price: number;
+  url: string;
 }
 
 export interface Recette {
@@ -31,6 +33,7 @@ export interface Recette {
   tempsDeCuisson: string; 
   nombreDePortions: number; 
   allergenes: string[]; 
+  url: string;
 }
 
 export enum Type{

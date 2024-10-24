@@ -11,6 +11,8 @@
     <ion-list>
       <ion-card *ngFor="let bateau of listBateaux" (click)="navigateToInfo(bateau,'bateau')">
         <ion-card-header>
+          <img src={{bateau.url}} alt="">
+
           <ion-card-title>{{ bateau.nom }}</ion-card-title>
           <ion-card-subtitle>{{ bateau.taille }} - {{ bateau.Type }}</ion-card-subtitle>
         </ion-card-header>
@@ -29,6 +31,7 @@
     <ion-list>
       <ion-card *ngFor="let restaurant of listRestaurants" (click)="navigateToInfo(restaurant,'restaurant')">
         <ion-card-header>
+          <img src={{restaurant.url}} alt="">
           <ion-card-title>{{ restaurant.name }}</ion-card-title>
           <ion-card-subtitle>{{ restaurant.city }}</ion-card-subtitle>
         </ion-card-header>
@@ -46,6 +49,8 @@
     <ion-list>
       <ion-card *ngFor="let recette of listRecettes" (click)="navigateToInfo(recette,'recette')">
         <ion-card-header>
+          <img src={{recette.url}} alt="">
+
           <ion-card-title>{{ recette.nom }}</ion-card-title>
           <ion-card-subtitle>Temps de preparation: {{ recette.tempsDePreparation }}</ion-card-subtitle>
         </ion-card-header>

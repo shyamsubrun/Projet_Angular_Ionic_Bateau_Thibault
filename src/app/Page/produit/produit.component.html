@@ -12,8 +12,10 @@
       <ion-card *ngFor="let produit of produits">
     <div (click)="navigateToInfo(produit, 'produit')" style="cursor: pointer;">
         <ion-card-header>
-            <ion-card-title>{{ produit.name }}</ion-card-title>
-            <ion-card-subtitle>Catégorie: {{ produit.category }}</ion-card-subtitle>
+          <img src={{produit.url}} alt="">
+          <ion-card-title>{{ produit.name }}</ion-card-title>
+          <ion-card-subtitle>Catégorie: {{ produit.category }}</ion-card-subtitle>
+
         </ion-card-header>
         <ion-card-content>
             <p>Prix: {{ produit.price }} € / {{ produit.unit }}</p>

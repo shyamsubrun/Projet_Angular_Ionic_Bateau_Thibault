@@ -7,7 +7,9 @@
         "price": 3.5,
         "type": "épicerie",
         "availability": "Ouvert du lundi au samedi",
-        "phone": "+33 1 45 67 89 01"
+        "phone": "+33 1 45 67 89 01",
+        "url": "assets/photo/points_relais/1.jpg"
+
     },
     {
         "id": 2,
@@ -17,7 +19,8 @@
         "price": 4.0,
         "type": "machine",
         "availability": "Ouvert tous les jours sauf dimanche",
-        "phone": "+33 4 78 45 12 34"
+        "phone": "+33 4 78 45 12 34",
+        "url": "assets/photo/points_relais/2.jpg"
     },
     {
         "id": 3,
@@ -27,7 +30,8 @@
         "price": 3.0,
         "type": "resto",
         "availability": "Ouvert en semaine et samedi matin",
-        "phone": "+33 4 91 22 33 44"
+        "phone": "+33 4 91 22 33 44",
+        "url": "assets/photo/points_relais/3.jpg"
     },
     {
         "id": 4,
@@ -37,7 +41,8 @@
         "price": 5.0,
         "type": "machine",
         "availability": "Ouvert tous les jours",
-        "phone": "+33 2 98 22 33 55"
+        "phone": "+33 2 98 22 33 55",
+        "url": "assets/photo/points_relais/4.jpg"
     },
     {
         "id": 5,
@@ -47,7 +52,8 @@
         "price": 2.5,
         "type": "épicerie",
         "availability": "Ouvert du lundi au samedi",
-        "phone": "+33 2 31 45 67 89"
+        "phone": "+33 2 31 45 67 89",
+        "url": "assets/photo/points_relais/5.jpg"
     },
     {
         "id": 6,
@@ -57,7 +63,8 @@
         "price": 4.2,
         "type": "épicerie",
         "availability": "Ouvert tous les jours sauf dimanche",
-        "phone": "+33 1 55 66 77 88"
+        "phone": "+33 1 55 66 77 88",
+        "url": "assets/photo/points_relais/6.webp"
     },
     {
         "id": 7,
@@ -67,7 +74,8 @@
         "price": 3.8,
         "type": "resto",
         "availability": "Ouvert tous les jours",
-        "phone": "+33 4 67 12 34 56"
+        "phone": "+33 4 67 12 34 56",
+        "url": "assets/photo/points_relais/7.webp"
     },
     {
         "id": 8,
@@ -77,7 +85,8 @@
         "price": 3.0,
         "type": "machine",
         "availability": "Ouvert du lundi au samedi",
-        "phone": "+33 3 20 15 67 89"
+        "phone": "+33 3 20 15 67 89",
+        "url": "assets/photo/points_relais/8.jpg"
     },
     {
         "id": 9,
@@ -87,7 +96,8 @@
         "price": 2.8,
         "type": "épicerie",
         "availability": "Ouvert en semaine et samedi matin",
-        "phone": "+33 1 42 11 22 33"
+        "phone": "+33 1 42 11 22 33",
+        "url": "assets/photo/points_relais/9.jpg"
     },
     {
         "id": 10,
@@ -97,6 +107,7 @@
         "price": 3.2,
         "type": "resto",
         "availability": "Ouvert du lundi au samedi",
-        "phone": "+33 5 59 33 44 55"
+        "phone": "+33 5 59 33 44 55",
+        "url": "assets/photo/points_relais/10.webp"
     }
 ]
