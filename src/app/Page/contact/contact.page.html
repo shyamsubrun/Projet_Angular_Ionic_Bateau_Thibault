@@ -1,19 +1,102 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>Contact</ion-title>
+    <ion-title>
+      Info de  {{ infoType }}
+    </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content *ngIf="contact">
+<ion-content class="ion-padding">
+  <ng-container *ngIf="infoType === 'bateau'">
+    <ion-list>
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>{{ item.nom }}</ion-card-title>
+          <ion-card-subtitle>{{ item.taille }} - {{ item.Type }}</ion-card-subtitle>
+        </ion-card-header>
+        <ion-card-content>
+          <p>Nombre d'employes: {{ item.nbEmployer }}</p>
+          <p>Type de Pêche: {{ item.typedePache }}</p>
+          <p>Specialite: {{ item.specialite }}</p>
+          <p>Lieu de Pêche: {{ item.lieuDePache }}</p>
+          <p>Anciennete: {{ item.anciente }} ans</p>
+        </ion-card-content>
+      </ion-card>
+    </ion-list>
+  </ng-container>
+
+  <ng-container *ngIf="infoType === 'restaurant'">
+    <ion-list>
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>{{ item.name }}</ion-card-title>
+          <ion-card-subtitle>{{ item.city }}</ion-card-subtitle>
+        </ion-card-header>
+        <ion-card-content>
+          <p>{{ item.description }}</p>
+          <p>Plat Signature: {{ item.signature_dish }}</p>
+          <p>Note: {{ item.rating }} / 5</p>
+          <p>Prix Global: {{ item.global_price }} €</p>
+        </ion-card-content>
+      </ion-card>
+    </ion-list>
+  </ng-container>
+
+  <ng-container *ngIf="infoType === 'recette'">
+    <ion-list>
+      <ion-card >
+        <ion-card-header>
+          <ion-card-title>{{ item.nom }}</ion-card-title>
+          <ion-card-subtitle>Temps de preparation: {{ item.tempsDePreparation }}</ion-card-subtitle>
+        </ion-card-header>
+        <ion-card-content>
+          <p>Ingredients: {{ item.ingredients.join(', ') }}</p>
+          <p>Instructions: {{ item.instructions.join(' | ') }}</p>
+          <p>Temps de cuisson: {{ item.tempsDeCuisson }}</p>
+          <p>Nombre de portions: {{ item.nombreDePortions }}</p>
+          <p>Allergenes: {{ item.allergenes.join(', ') }}</p>
+        </ion-card-content>
+      </ion-card>
+    </ion-list>
+  </ng-container>
+  <ng-container *ngIf="infoType === 'produit'">
+    <ion-card>
+        <ion-card-header>
+          <ion-card-title>{{ item.name }}</ion-card-title>
+          <ion-card-subtitle>Catégorie: {{ item.category }}</ion-card-subtitle>
+        </ion-card-header>
+        <ion-card-content>
+          <p>Prix: {{ item.price }} € / {{ item.unit }}</p>
+          <p>Disponibilité: {{ item.availability ? 'Disponible' : 'Indisponible' }}</p>
+          <p>En soldes: {{ item.sale ? 'Oui' : 'Non' }}</p>
+          <p>Remise: {{ item.discount }} %</p>
+          <p>Commentaires: {{ item.comments }}</p>
+          <p>Propriétaire: {{ item.owner }}</p>
+        </ion-card-content>
+      </ion-card>
+    </ng-container>
+
+  <!-- <ng-container *ngIf="!listBateaux && !listRestaurants && !listRecettes">
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Aucune donnee à afficher</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        Veuillez selectionner une categorie pour afficher les donnees.
+      </ion-card-content>
+    </ion-card>
+  </ng-container> -->
+</ion-content>
+<ion-content *ngIf="infoType === 'contact'">
   <ion-card>
     <ion-card-header>
-      <ion-card-title>{{ contact.nomDuBateau }}</ion-card-title>
+      <ion-card-title>{{ item.nomDuBateau }}</ion-card-title>
     </ion-card-header>
     <ion-card-content>
-      <p>Téléphone: {{ contact.telephone }}</p>
-      <p>Email: {{ contact.email }}</p>
-      <p>Adresse: {{ contact.adresse }}</p>
-      <p>Site Web: <a href="{{ contact.siteWeb }}" target="_blank">{{ contact.siteWeb }}</a></p>
+      <p>Téléphone: {{ item.telephone }}</p>
+      <p>Email: {{ item.email }}</p>
+      <p>Adresse: {{ item.adresse }}</p>
+      <p>Site Web: <a href="{{ item.siteWeb }}" target="_blank">{{ item.siteWeb }}</a></p>
     </ion-card-content>
   </ion-card>
 </ion-content>
