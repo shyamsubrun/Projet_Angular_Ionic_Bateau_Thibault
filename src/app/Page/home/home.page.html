@@ -16,7 +16,7 @@
 
 <ion-content [fullscreen]="true">
   <ion-list *ngIf="searchTerm && filteredProduits.length > 0">
-    <ion-item *ngFor="let produit of filteredProduits">
+    <ion-item *ngFor="let produit of filteredProduits" (click)="navigateToInfo(produit, 'produit')">
       {{ produit.name }} 
     </ion-item>
   </ion-list>
