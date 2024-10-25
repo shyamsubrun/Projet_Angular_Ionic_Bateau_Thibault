@@ -96,6 +96,49 @@ li::marker {
 }
 
 
+
+.quantity-controls {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: rgba(255, 255, 255, 0.6); /* Fond semi-transparent */
+  border-radius: 20px;
+  padding: 5px 10px;
+}
+
+.decrement-btn,
+.increment-btn {
+  width: 20px;
+  height: 20px;
+  border: none;
+  border-radius: 50%;
+  background-color: #2600ff;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.1s ease-in-out;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+
+  &:active {
+    transform: scale(0.9);
+  }
+  .quantity {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: rgb(0, 0, 0);
+}
+}
+
 .info-recette-details {
   margin: 20px 0;
 }
@@ -210,3 +253,4 @@ ul li, ol li {
 strong {
   color: #000; /* Couleur pour les étiquettes en gras */
 }
+
