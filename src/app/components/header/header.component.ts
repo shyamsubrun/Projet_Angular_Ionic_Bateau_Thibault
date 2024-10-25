@@ -46,6 +46,10 @@ export class HeaderComponent  implements OnInit {
   constructor(private cartService: CartService, private navCtr:NavController, private router:Router) {}
 
   ngOnInit() {
+
+     this.cartService.totalItems$.subscribe(total => {
+      this.totalItems = total; // Mise à jour du totalItems lorsque le panier change
+    });
        this.router.events
       .pipe(
         filter((event): event is NavigationEnd => event instanceof NavigationEnd) // Typage pour s'assurer que seul NavigationEnd passe
