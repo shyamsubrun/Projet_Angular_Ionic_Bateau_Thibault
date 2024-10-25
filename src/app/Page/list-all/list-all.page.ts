@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { NavigationExtras, Router ,ActivatedRoute} from '@angular/router';
 import { ListsService } from 'src/app/services/lists.service';
 import { HttpClientModule } from '@angular/common/http'; 
-import { IonContent, IonHeader, IonTitle, IonToolbar, IonList, IonItem, IonLabel, IonCard, IonCardHeader, IonCardContent, IonIcon, IonCardTitle,IonCardSubtitle, IonButtons } from '@ionic/angular/standalone';
+import { IonContent, IonHeader, IonTitle, IonToolbar, IonList, IonItem, IonLabel, IonCard, IonCardHeader, IonCardContent, IonIcon, IonCardTitle,IonCardSubtitle, IonButtons, IonButton } from '@ionic/angular/standalone';
 import { Bateau, Restaurant, Recette, Type } from 'src/app/models/bateau.model';
 import { RouterModule } from '@angular/router';
 import { HeaderComponent } from "../../components/header/header.component";
@@ -14,7 +14,7 @@ import { HeaderComponent } from "../../components/header/header.component";
   templateUrl: './list-all.page.html',
   styleUrls: ['./list-all.page.scss'],
   standalone: true,
-  imports: [IonButtons, 
+  imports: [IonButton, IonButtons, 
     RouterModule,
     HttpClientModule,
     IonContent,
