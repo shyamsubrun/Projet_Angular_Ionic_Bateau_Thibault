@@ -9,6 +9,15 @@
   </ion-toolbar>
 </ion-header>
 
+  <ion-card>
+      <ion-card-header>
+        <ion-card-title>Total</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <p>Prix Total: {{ getTotalPrice() }} €</p>
+      </ion-card-content>
+    </ion-card>
+
 <ion-content class="ion-padding">
   <ng-container *ngIf="cartItems.length > 0">
     <ion-list>
@@ -46,14 +55,7 @@
       </ion-card-content>
     </ion-card>
 
-    <ion-card>
-      <ion-card-header>
-        <ion-card-title>Total</ion-card-title>
-      </ion-card-header>
-      <ion-card-content>
-        <p>Prix Total: {{ getTotalPrice() }} €</p>
-      </ion-card-content>
-    </ion-card>
+    
 
     <div *ngIf="errormessage" class="error-message">
       {{ errormessage }}

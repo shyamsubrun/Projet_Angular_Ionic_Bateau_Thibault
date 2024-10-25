@@ -1,28 +1,38 @@
 <ion-header>
   <app-header></app-header>
-</ion-header>
-<ion-content class="ion-padding">
-  <ng-container *ngIf="produits && produits.length > 0">
-    <ion-toolbar>
+  <ion-toolbar style="display: fixed; top:0;">
       <ion-searchbar [(ngModel)]="searchTerm" (ionInput)="filterItems()" placeholder="Rechercher un bateau..."></ion-searchbar>
     </ion-toolbar>
     <ion-buttons>
-      <ion-button 
-        [ngClass]="{'active': category === 'all'}" 
-        (click)="filterByCategory('all')">All</ion-button>
-      
-      <ion-button 
-        [ngClass]="{'active': category === 0}" 
-        (click)="filterByCategory(0)">Poisson</ion-button>
-      
-      <ion-button 
-        [ngClass]="{'active': category === 1}" 
-        (click)="filterByCategory(1)">Crustacé</ion-button>
-      
-      <ion-button 
-        [ngClass]="{'active': category === 2}" 
-        (click)="filterByCategory(2)">Coquillage</ion-button>
-    </ion-buttons>
+  <ion-button 
+    [ngClass]="{'active': category === 'all'}" 
+    (click)="filterByCategory('all')">
+    All
+  </ion-button>
+  
+  <ion-button 
+    [ngClass]="{'active': category === 0}" 
+    (click)="filterByCategory(0)">
+    Poisson
+  </ion-button>
+  
+  <ion-button 
+    [ngClass]="{'active': category === 1}" 
+    (click)="filterByCategory(1)">
+    Crustacé
+  </ion-button>
+  
+  <ion-button 
+    [ngClass]="{'active': category === 2}" 
+    (click)="filterByCategory(2)">
+    Coquillage
+  </ion-button>
+</ion-buttons>
+
+</ion-header>
+<ion-content class="ion-padding">
+  <ng-container *ngIf="produits && produits.length > 0">
+    
 
 <ion-list>
   <ion-card *ngFor="let produit of filtreProduits" class="product-card">

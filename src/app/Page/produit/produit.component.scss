@@ -14,8 +14,8 @@
 }
 
 .product-image-container {
-  width: 170px; /* Contrôle la largeur maximale */
-  height: 120px; /* Contrôle la hauteur maximale */
+  width: 170px; 
+  height: 120px; 
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -26,7 +26,7 @@
 .restaurant-image {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Maintient la taille de l'image en couvrant l'espace */
+  object-fit: cover; 
   display: block;
 }
 
@@ -64,7 +64,7 @@
   display: flex;
   align-items: center;
   gap: 10px;
-  background-color: rgba(255, 255, 255, 0.6); /* Fond semi-transparent */
+  background-color: rgba(255, 255, 255, 0.6); 
   border-radius: 20px;
   padding: 5px 10px;
 }
@@ -98,6 +98,150 @@
   color: rgb(0, 0, 0);
 }
 }
+
+/* Style commun pour tous les boutons */
+ion-button {
+  margin: 5px;
+  border-radius: 12px;
+  padding: 5px 20px;
+  background-color: #f0f0f0; 
+  color: #333; 
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  font-weight: 600;
+  text-transform: uppercase;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+/* Effet de survol */
+ion-button:hover {
+  transform: translateY(-2px); 
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Style du bouton actif */
+ion-button.active {
+  background-color: #4a90e2; 
+  color: white; 
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); 
+}
+
+/* Animation lors du clic */
+ion-button:active {
+  transform: scale(0.98); 
+}
+
+/* Responsive: assure que les boutons s'adaptent aux petits écrans */
+@media (max-width: 768px) {
+  ion-button {
+    padding: 8px 16px;
+    font-size: 0.7rem;
+  }
+}
+
+/* Conteneur principal */
+.info-section {
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeIn 0.8s ease-out;
+  margin: 20px 0;
+}
+
+/* Animation de fade-in */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Style de l'image */
+.info-image-container {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.info-image {
+  border-radius: 12px;
+  max-width: 100%;
+  height: auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.info-image:hover {
+  transform: scale(1.05);
+}
+
+/* Titre et sous-titre */
+.info-title {
+  font-size: 2rem;
+  color: #333;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.info-subtitle {
+  font-size: 1.2rem;
+  color: #888;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Détails avec icônes */
+.info-details {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 5px;
+}
+
+.info-item ion-icon {
+  margin-right: 10px;
+  color: #4a90e2;
+  font-size: 1.2rem;
+}
+
+.info-item strong {
+  color: #333;
+  font-weight: 600;
+}
+
+/* Effet de survol sur les détails */
+.info-section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsivité */
+@media (max-width: 768px) {
+  .info-title {
+    font-size: 1.6rem;
+  }
+  
+  .info-subtitle {
+    font-size: 1rem;
+  }
+  
+  .info-item {
+    font-size: 0.9rem;
+  }
+}
+
+
 
 
 
