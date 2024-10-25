@@ -44,11 +44,13 @@ Les champs de données incluent :
 
 ### Captures d'écrans
 
-![image](https://github.com/user-attachments/assets/96220096-b1fa-4878-b975-b9908728c8ce)    ![image](https://github.com/user-attachments/assets/4f238807-3889-4df7-9b34-36651af13c07)
 
-![image](https://github.com/user-attachments/assets/be5f6968-c318-4637-a5aa-b2198053a70f)
+![image](https://github.com/user-attachments/assets/d40c9636-e840-42da-8bac-f148b93e1b03)
 
+![image](https://github.com/user-attachments/assets/265cac07-d0e6-4908-9548-4ef1a9f98fd0)
 
+![image](https://github.com/user-attachments/assets/ae04cc29-0499-4359-b1e2-b0f619520b36)
 
+![image](https://github.com/user-attachments/assets/26d7c6ce-4208-4edb-9328-dc0a9e811c2e)
 
 
