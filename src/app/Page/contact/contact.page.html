@@ -70,24 +70,37 @@
       </ion-card>
     </ion-list>
   </ng-container>
+
+
   <ng-container *ngIf="infoType === 'produit'">
     <ion-card>
-        <ion-card-header>
-          <img src={{item.url}} alt="">
+      <ion-card-header>
+        <img [src]="item.url" alt="{{ item.name }}" class="recette-image"/>
+  
+        <ion-card-title>{{ item.name }}</ion-card-title>
+        <ion-card-subtitle>Catégorie: {{ item.category }}</ion-card-subtitle>
+      </ion-card-header>
+      <ion-card-content>
+        <p>Prix: {{ item.price }} € / {{ item.unit }}</p>
+        <p>Disponibilité: {{ item.availability ? 'Disponible' : 'Indisponible' }}</p>
+        <p>En soldes: {{ item.sale ? 'Oui' : 'Non' }}</p>
+        <p>Remise: {{ item.discount }} %</p>
+        <p>Commentaires: {{ item.comments }}</p>
+        <p>Propriétaire: {{ item.owner }}</p>
+  
+        <!-- Section pour la gestion du panier -->
+        <div class="quantity-controls">
+          <button class="decrement-btn" (click)="removeFromCart(item.id)" [disabled]="getProductQuantity(item.id) === 0">-</button>
+          <span class="quantity">{{ getProductQuantity(item.id) }}</span>
+          <button class="increment-btn" (click)="addToCart(item)" [disabled]="!item.availability">+</button>
+        </div>
+      </ion-card-content>
+    </ion-card>
+  </ng-container>
+  
 
-          <ion-card-title>{{ item.name }}</ion-card-title>
-          <ion-card-subtitle>Catégorie: {{ item.category }}</ion-card-subtitle>
-        </ion-card-header>
-        <ion-card-content>
-          <p>Prix: {{ item.price }} € / {{ item.unit }}</p>
-          <p>Disponibilité: {{ item.availability ? 'Disponible' : 'Indisponible' }}</p>
-          <p>En soldes: {{ item.sale ? 'Oui' : 'Non' }}</p>
-          <p>Remise: {{ item.discount }} %</p>
-          <p>Commentaires: {{ item.comments }}</p>
-          <p>Propriétaire: {{ item.owner }}</p>
-        </ion-card-content>
-      </ion-card>
-    </ng-container>
+
+
   <ion-content *ngIf="infoType === 'contact'">
     <ion-card>
       <ion-card-header>

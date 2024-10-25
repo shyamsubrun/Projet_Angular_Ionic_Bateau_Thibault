@@ -2,7 +2,6 @@
   <app-header></app-header>
 </ion-header>
 <ion-content class="ion-padding">
-  <p>Vous êtes dans produits</p>
   <ng-container *ngIf="produits && produits.length > 0">
     <ion-toolbar>
       <ion-searchbar [(ngModel)]="searchTerm" (ionInput)="filterItems()" placeholder="Rechercher un bateau..."></ion-searchbar>
