@@ -8,7 +8,7 @@
       <ion-button (click)="navigateToInfo(0)">Poisson</ion-button>
       <ion-button (click)="navigateToInfo(1)">Crustacé</ion-button>
       <ion-button (click)="navigateToInfo(2)">Coquillage</ion-button>
-    </ion-buttons>
+  </ion-buttons>
 
 <ion-content [fullscreen]="true">
   <ion-list *ngIf="searchTerm && filteredProduits.length > 0">
@@ -29,6 +29,7 @@
       </ion-card>
     </swiper-slide>
   </swiper-container>
+      <hr/>
   <h2>Recettes du jour</h2>
   <swiper-container [pagination]="false" [navigation]="false" [slidesPerView]="swiperConfig.slidesPerView" [spaceBetween]="swiperConfig.spaceBetween">
     <swiper-slide *ngFor="let recette of listRecettes">

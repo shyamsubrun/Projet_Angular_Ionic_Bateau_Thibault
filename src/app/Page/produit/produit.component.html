@@ -26,8 +26,8 @@
 
 <ion-list>
   <ion-card *ngFor="let produit of filtreProduits" class="product-card">
-    <div class="product-container">
-      <ion-label class="product-image-container" (click)="navigateToInfo(produit, 'produit')" style="cursor: pointer;">
+    <div class="product-container" (click)="navigateToInfo(produit, 'produit')" style="cursor: pointer;" >
+      <ion-label class="product-image-container" >
         <img src="{{ produit.url }}" class="restaurant-image">
       </ion-label>
 
@@ -60,14 +60,14 @@
         </div>
       -->
         <!-- Boutons d'incrémentation et de décrémentation--> 
-        <div class="quantity-controls">
+      </ion-card-content>
+      </div>
+      <div class="quantity-controls">
           <button class="decrement-btn" (click)="removeFromCart(produit.id)">-</button>
           <span class="quantity">{{ getProductQuantity(produit.id) }}</span>
           <button class="increment-btn" (click)="addToCart(produit)">+</button>
         </div>
-        
-      </ion-card-content>
-    </div>
+    
   </ion-card>
 </ion-list>
   </ng-container>
