@@ -10,7 +10,8 @@ import { CartService } from '../../services/cart.service';
 import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms'; 
 import { ListsService } from 'src/app/services/lists.service';
-import {register} from 'swiper/element/bundle';
+import { register } from 'swiper/element/bundle';
+import Swiper from 'swiper';
 
 register()
 @Component({
@@ -57,7 +58,14 @@ export class HomePage implements OnInit {
   produitsEnPromotion: any[] = [];
 
   constructor(private router: Router, private cartService: CartService, private listsService: ListsService) { }
-
+  swiperConfig: any = {
+    slidesPerView: 3, // Modifiez le nombre d'éléments visibles
+    spaceBetween: 2,  // Espace entre les slides
+    pagination: {
+      clickable: true,
+    },
+    navigation: true, // Si vous voulez des flèches de navigation
+  };
   ngOnInit() {
     // Abonnez-vous au nombre d'articles dans le panier
     this.cartService.totalItems$.subscribe(count => {
@@ -76,14 +84,14 @@ export class HomePage implements OnInit {
 
   // Filtrer les produits selon le terme de recherche
   filterItems() {
-  if (this.searchTerm.length >= 2) {
-    this.filteredProduits = this.produits.filter(produit => 
-      produit.name.toLowerCase().includes(this.searchTerm.toLowerCase())
-    );
-  } else {
-    this.filteredProduits = []; 
+    if (this.searchTerm.length >= 2) {
+      this.filteredProduits = this.produits.filter(produit => 
+        produit.name.toLowerCase().includes(this.searchTerm.toLowerCase())
+      );
+    } else {
+      this.filteredProduits = []; 
+    }
   }
-}
 
   loadProduits(): void {
     this.listsService.getListProduits().subscribe(

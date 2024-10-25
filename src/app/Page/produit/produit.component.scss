@@ -1,3 +1,4 @@
+
 .product-card {
   display: flex;
   flex-direction: column;
@@ -63,3 +64,18 @@
   font-weight: bold;
   color: rgb(0, 0, 0);
 }
+
+ion-button {
+  background-color: #f0f0f0; /* Fond par défaut pour tous les boutons */
+  color: #333; /* Couleur du texte */
+  border: none;
+  border-radius: 5px;
+  margin: 0 5px;
+}
+
+ion-button.active {
+  background-color: #4CAF50; /* Couleur de fond pour le bouton actif */
+  color: white; /* Couleur du texte pour le bouton actif */
+  border: 2px solid #388E3C; /* Contour ou autre style pour l'actif */
+}
+

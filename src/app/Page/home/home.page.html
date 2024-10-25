@@ -17,9 +17,9 @@
     </ion-item>
   </ion-list>
   <ion-content>
-  <h2>Offrs de jour</h2>
-  <swiper-container>
-    <swiper-slide *ngFor="let produit  of produitsEnPromotion">
+  <h2>Offres du jour</h2>
+  <swiper-container [pagination]="true" [navigation]="true" [slidesPerView]="swiperConfig.slidesPerView" [spaceBetween]="swiperConfig.spaceBetween">
+    <swiper-slide *ngFor="let produit of produitsEnPromotion">
       <ion-card>
         <img [src]="produit.url" alt="{{ produit.name }}" width="300" />
         <ion-card-header>
@@ -29,15 +29,16 @@
       </ion-card>
     </swiper-slide>
   </swiper-container>
-  <swiper-container>
-  <swiper-slide *ngFor="let recette of listRecettes">
-    <ion-card>
-      <img [src]="recette.url" />
-      <ion-card-title>{{ recette.nom }}</ion-card-title>
-      <ion-card-subtitle>{{ recette.tempsDePreparation }} - {{ recette.tempsDeCuisson }}</ion-card-subtitle>
-    </ion-card>
-  </swiper-slide>
-</swiper-container>
+  <h2>Recettes du jour</h2>
+  <swiper-container [pagination]="true" [navigation]="true" [slidesPerView]="swiperConfig.slidesPerView" [spaceBetween]="swiperConfig.spaceBetween">
+    <swiper-slide *ngFor="let recette of listRecettes">
+      <ion-card>
+        <img [src]="recette.url" />
+        <ion-card-title>{{ recette.nom }}</ion-card-title>
+        <ion-card-subtitle>{{ recette.tempsDePreparation }} - {{ recette.tempsDeCuisson }}</ion-card-subtitle>
+      </ion-card>
+    </swiper-slide>
+  </swiper-container>
 </ion-content>
 
   
