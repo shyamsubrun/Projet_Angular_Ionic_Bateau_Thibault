@@ -46,43 +46,60 @@
   </ng-container>
 
   <ng-container *ngIf="infoType === 'recette'">
-    <div class="info-section">
-      <div class="info-image-container">
-        <img class="info-image" [src]="item.url" alt="{{ item.nom }}">
-      </div>
-      <h2 class="info-title">{{ item.nom }}</h2>
-      <!-- Ajout de la section de difficulté, kcal et portions -->
-      <div class="info-recette-details">
-        <div class="ligne-infos">
-          <span>difficulté : <strong>{{ item.niveauDeDifficulte }}</strong></span>
-          <span> - </span>
-          <span>Kcal/100g : <strong>{{ item.calories }}</strong></span>
-          <span> - </span>
-          <span> Quantité <strong>{{ item.nombreDePortions }}</strong></span>
-        </div>
-        <div class="ligne-infos">
-          <span>préparation <strong>{{ extractNumber(item.tempsDePreparation) }}</strong></span>
-          <span> - </span>
-          <span>cuisson <strong>{{ extractNumber(item.tempsDeCuisson) }}</strong></span>
-          <span> - </span>
-          <span>Temps total : <strong>{{ getTotalTime(item.tempsDePreparation, item.tempsDeCuisson)}}</strong></span>
-        </div>
-        <p><strong>Allergènes:</strong> {{ item.allergenes.join(', ') }}</p>
-      </div>
+  <div class="info-section">
+    <div class="info-image-container">
+      <img class="info-image" [src]="item.url" alt="{{ item.nom }}">
+    </div>
+    <h2 class="info-title">{{ item.nom }}</h2>
 
-      <div class="info-details">
-        <p><strong>Ingrédients:</strong></p>
-        <ul>
-          <li *ngFor="let ingredient of item.ingredients">{{ ingredient }}</li>
-        </ul>
-        <p><strong>Instructions:</strong></p>
-          <ol>
-            <li *ngFor="let instruction of item.instructions">{{ instruction }}</li>
-          </ol>
-        
+    <!-- Ajout de la section Difficulté, Kcal/100g, Quantité -->
+    <div class="info-recette-details">
+      <div class="recette-summary">
+        <div class="recette-item">
+          <ion-icon name="bar-chart-outline" class="recette-icon"></ion-icon>
+          <span>Difficulté: <strong>{{ item.niveauDeDifficulte }}</strong></span>
+        </div>
+       <div class="recette-item">
+          <ion-icon name="flame-outline" class="kcal-icon"></ion-icon>
+          <span>Kcal/100g: <strong>{{ item.calories }}</strong></span>
+        </div>
+
+
+        <div class="recette-item">
+          <ion-icon name="people-outline" class="recette-icon"></ion-icon>
+          <span>Quantité: <strong>{{ item.nombreDePortions }}</strong></span>
+        </div>
+      </div>
+      <div class="recette-summary">
+        <div class="recette-item">
+          <ion-icon name="time-outline" class="recette-icon"></ion-icon>
+          <span>Préparation: <strong>{{ extractNumber(item.tempsDePreparation) }} min</strong></span>
+        </div>
+        <div class="recette-item">
+            <ion-icon name="flame-outline" class="recette-icon"></ion-icon>
+          <span>Cuisson: <strong>{{ extractNumber(item.tempsDeCuisson) }} min</strong></span>
+        </div>
+        <div class="recette-item">
+          <ion-icon name="hourglass-outline" class="recette-icon"></ion-icon>
+          <span>Temps total: <strong>{{ getTotalTime(item.tempsDePreparation, item.tempsDeCuisson) }} min</strong></span>
+        </div>
       </div>
     </div>
-  </ng-container>
+
+    <div class="info-details">
+      <p><strong>Ingrédients:</strong></p>
+      <ul>
+        <li *ngFor="let ingredient of item.ingredients">{{ ingredient }}</li>
+      </ul>
+      <p><strong>Instructions:</strong></p>
+      <ol>
+        <li *ngFor="let instruction of item.instructions">{{ instruction }}</li>
+      </ol>
+    </div>
+  </div>
+</ng-container>
+
+
 
   <ng-container *ngIf="infoType === 'produit'">
     <div class="info-section">
