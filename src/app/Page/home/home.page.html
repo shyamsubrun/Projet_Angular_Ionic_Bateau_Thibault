@@ -1,15 +1,18 @@
 
 <app-header></app-header>
-  <ion-toolbar>
-    <ion-searchbar [(ngModel)]="searchTerm" (ionInput)="filterItems()" placeholder="Rechercher un bateau..."></ion-searchbar>
-    <ion-buttons>
-      <ion-button class="custom-button" (click)="navigateToInfo1('all')">All</ion-button>
-      <ion-button class="custom-button" (click)="navigateToInfo1(0)">Poisson</ion-button>
-      <ion-button class="custom-button" (click)="navigateToInfo1(1)">Crustacé</ion-button>
-      <ion-button class="custom-button" (click)="navigateToInfo1(2)">Coquillage</ion-button>
-    </ion-buttons>
-  </ion-toolbar>
   
+<ion-toolbar class="toolbar-section">
+  <ion-searchbar [(ngModel)]="searchTerm" (ionInput)="filterItems()" placeholder="Rechercher un bateau..."></ion-searchbar>
+  
+  <ion-buttons>
+    <ion-button class="custom-button" (click)="navigateToInfo1('all')">All</ion-button>
+    <ion-button class="custom-button" (click)="navigateToInfo1(0)">Poisson</ion-button>
+    <ion-button class="custom-button" (click)="navigateToInfo1(1)">Crustacé</ion-button>
+    <ion-button class="custom-button" (click)="navigateToInfo1(2)">Coquillage</ion-button>
+  </ion-buttons>
+</ion-toolbar>
+
+
 
 <ion-content [fullscreen]="true">
   <ion-list *ngIf="searchTerm && filteredProduits.length > 0">

@@ -146,4 +146,46 @@
   .cooking-icon {
     margin-right: 5px; /* Espace entre l'icône et le texte */
   }
+
+  /* Conteneur du fil d'Ariane */
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  color: #666;
+  font-weight: 500;
+  margin: 10px 0;
+}
+
+/* Icône de la maison */
+.breadcrumb ion-icon {
+  color: #4a90e2;
+  font-size: 1.2rem;
+  margin-right: 8px;
+}
+
+/* Lien du fil d'Ariane */
+.breadcrumb a {
+  color: #4a90e2;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.breadcrumb a:hover {
+  color: #333;
+}
+
+/* Séparateur */
+.breadcrumb-separator {
+  margin: 0 8px;
+  color: #999;
+}
+
+/* Partie active du fil d'Ariane */
+.breadcrumb span {
+  color: #333;
+  font-weight: bold;
+}
+
   
