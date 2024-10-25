@@ -35,22 +35,3 @@
 /* @import "@ionic/angular/css/palettes/dark.always.css"; */
 /* @import "@ionic/angular/css/palettes/dark.class.css"; */
 @import '@ionic/angular/css/palettes/dark.system.css';
-
-/* Couleur par défaut pour tous les onglets */
-ion-tab-button {
-  --color: #8e8e93; /* Gris par défaut */
-}
-
-/* Couleur pour l'onglet actif */
-ion-tab-button.ion-selected {
-  --color: #3880ff; /* Bleu pour l'onglet actif */
-}
-
-/* Optionnel : personnalisation supplémentaire des icônes et labels */
-ion-tab-button.ion-selected ion-icon {
-  --color: #3880ff;
-}
-
-ion-tab-button.ion-selected ion-label {
-  --color: #3880ff;
-}

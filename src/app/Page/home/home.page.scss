@@ -1,6 +1,5 @@
 #container {
   text-align: center;
-
   position: absolute;
   left: 0;
   right: 0;
@@ -47,7 +46,7 @@ ion-badge {
   font-size: 0.75rem;
 }
 ion-content {
-  --background: #f9f9f9; /* Fond léger pour le contenu */
+  background: #f9f9f9; /* Fond léger pour le contenu */
   padding: 16px;
 }
 
@@ -56,7 +55,7 @@ h2 {
   font-weight: bold;
   color: #333; /* Couleur du texte */
   margin-bottom: 20px;
-  text-align: center; /* Centrer le titre */
+  text-align: left; /* Centrer le titre */
 }
 
 swiper-container {
@@ -67,7 +66,6 @@ swiper-container {
 swiper-slide {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Colonnes flexibles */
-  gap: 3px; /* Espace entre les cartes */
 }
 
 ion-card {
@@ -77,9 +75,8 @@ ion-card {
   overflow: hidden; /* Éviter que le contenu dépasse */
   display: flex;
   flex-direction: column; /* Pour empiler l'image et le texte */
-  justify-content: space-between; /* Espacement égal entre les éléments */
+  justify-content: space-around; /* Espacement égal entre les éléments */
 }
-
 
 ion-card img {
   width: 100%; /* S'assurer que l'image prend toute la largeur */
