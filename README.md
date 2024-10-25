@@ -45,12 +45,8 @@ Les champs de données incluent :
 ### Captures d'écrans
 
 
-![image](https://github.com/user-attachments/assets/d40c9636-e840-42da-8bac-f148b93e1b03)
+![image](https://github.com/user-attachments/assets/d40c9636-e840-42da-8bac-f148b93e1b03)  ![image](https://github.com/user-attachments/assets/265cac07-d0e6-4908-9548-4ef1a9f98fd0)
 
-![image](https://github.com/user-attachments/assets/265cac07-d0e6-4908-9548-4ef1a9f98fd0)
-
-![image](https://github.com/user-attachments/assets/ae04cc29-0499-4359-b1e2-b0f619520b36)
-
-![image](https://github.com/user-attachments/assets/26d7c6ce-4208-4edb-9328-dc0a9e811c2e)
+![image](https://github.com/user-attachments/assets/ae04cc29-0499-4359-b1e2-b0f619520b36)  ![image](https://github.com/user-attachments/assets/26d7c6ce-4208-4edb-9328-dc0a9e811c2e)
 
 
