@@ -1,8 +1,65 @@
+.product-card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 16px;
+}
+
+.product-image-container {
+  width: 100%;
+  max-height: 150px;
+  overflow: hidden;
+  position: relative;
+}
+
 .restaurant-image {
-    width: 100%;
-    height: 150px;
-    object-fit: cover;
-    border-top-left-radius: 12px;
-    border-top-right-radius: 12px;
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  display: block;
+}
+
+.quantity-controls {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: rgba(255, 255, 255, 0.6); /* Fond semi-transparent */
+  border-radius: 20px;
+  padding: 5px 10px;
+}
+
+.decrement-btn,
+.increment-btn {
+  width: 30px;
+  height: 30px;
+  border: none;
+  border-radius: 50%;
+  background-color: #3a1fd3;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.1s ease-in-out;
+
+  &:hover {
+    transform: scale(1.1);
   }
-  
+
+  &:active {
+    transform: scale(0.9);
+  }
+}
+
+.quantity {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: rgb(0, 0, 0);
+}

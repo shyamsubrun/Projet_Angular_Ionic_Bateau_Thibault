@@ -1,5 +1,10 @@
 <ion-header>
   <ion-toolbar>
+    <ion-buttons slot="start">
+        <ion-button (click)="goBack()">
+          <ion-icon slot="icon-only" name="arrow-back"></ion-icon>
+        </ion-button>
+     </ion-buttons>
     <ion-title>Paramètres</ion-title>
   </ion-toolbar>
 </ion-header>
@@ -15,11 +20,6 @@
     </ion-card-header>
     
     <ion-card-content>
-      <ion-buttons slot="start">
-        <ion-button (click)="goBack()">
-          <ion-icon slot="icon-only" name="arrow-back"></ion-icon>
-        </ion-button>
-     </ion-buttons>
       <ion-list>
         <ion-item>
           <ion-icon name="star-outline" slot="start"></ion-icon>

@@ -4,6 +4,12 @@ import { CartService } from '../../services/cart.service';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router'; 
+import { NavController } from '@ionic/angular';
+import { Router, ActivatedRoute, NavigationEnd  } from '@angular/router';
+import { filter } from 'rxjs/operators';
+
+
+
 
 @Component({
   selector: 'app-header',
@@ -33,12 +39,27 @@ import { RouterModule } from '@angular/router';
 export class HeaderComponent  implements OnInit {
   title: string = 'Titre';
   totalItems: number = 0;
+  public isHomePage: boolean = false;
 
-  constructor(private cartService: CartService) {}
+
+  constructor(private cartService: CartService, private navCtr:NavController, private router:Router) {}
 
   ngOnInit() {
     this.cartService.getCartItems().subscribe(() => {
       this.totalItems = this.cartService.getTotalItems();
     });
+  
+    this.router.events
+      .pipe(
+        filter(event => event instanceof NavigationEnd)
+      )
+      .subscribe((event) => {
+        const navigationEndEvent = event as NavigationEnd;
+        this.isHomePage = navigationEndEvent.urlAfterRedirects === '/home';
+      });
+  }
+
+  goBack() {
+    this.router.navigate(['../']); 
   }
 }

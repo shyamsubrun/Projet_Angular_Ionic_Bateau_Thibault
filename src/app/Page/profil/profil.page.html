@@ -1,14 +1,14 @@
 <ion-header>
   <ion-toolbar color="primary">
-    <ion-title>Profil</ion-title>
-  </ion-toolbar>
-</ion-header>
     <ion-buttons slot="start">
         <ion-button (click)="goBack()">
           <ion-icon slot="icon-only" name="arrow-back"></ion-icon>
         </ion-button>
      </ion-buttons>
-
+    <ion-title>Profil</ion-title>
+  </ion-toolbar>
+</ion-header>
+    
 <ion-content *ngIf="user" class="profile-content">
   
   <ion-card class="profile-card">
