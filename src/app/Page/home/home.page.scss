@@ -15,15 +15,14 @@
 #container p {
   font-size: 16px;
   line-height: 22px;
-
   color: #8c8c8c;
-
   margin: 0;
 }
 
 #container a {
   text-decoration: none;
 }
+
 .badge {
   background-color: red;
   color: white;
@@ -31,8 +30,6 @@
   padding: 2px 5px;
   margin-left: 5px;
 }
-
-/* src/app/tabs/tabs.page.scss */
 
 .cart-button {
   position: relative;
@@ -45,61 +42,87 @@ ion-badge {
   transform: translate(50%, -50%);
   font-size: 0.75rem;
 }
+
 ion-content {
-  background: #f9f9f9; /* Fond léger pour le contenu */
+  --background: #f9f9f9;
   padding: 16px;
 }
 
 h2 {
   font-size: 24px;
   font-weight: bold;
-  color: #333; /* Couleur du texte */
+  color: #333;
   margin-bottom: 20px;
-  text-align: left; /* Centrer le titre */
+  text-align: center;
 }
 
 swiper-container {
-  margin: 0 auto; /* Centrer le swiper */
-  max-width: 800px; /* Limiter la largeur du swiper */
+  margin: 0 auto;
+  max-width: 600px;
+  
 }
 
 swiper-slide {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Colonnes flexibles */
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 10px;
 }
 
 ion-card {
-  height: 200px; /* Hauteur fixe pour les cartes */
-  border-radius: 10px; /* Coins arrondis */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre légère */
-  overflow: hidden; /* Éviter que le contenu dépasse */
+  width: 200px;
+  height: 150px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
   display: flex;
-  flex-direction: column; /* Pour empiler l'image et le texte */
-  justify-content: space-around; /* Espacement égal entre les éléments */
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s ease;
 }
 
 ion-card img {
-  width: 100%; /* S'assurer que l'image prend toute la largeur */
-  height: 120px; /* Hauteur fixe pour les images */
-  object-fit: cover; /* Couvrir tout l'espace sans déformer l'image */
+  width: 100%;
+  height: 80px;
+  object-fit: cover;
 }
 
 ion-card-header {
-  text-align: center; /* Centrer le texte dans l'en-tête de la carte */
+  text-align: center;
 }
 
 ion-card-title {
-  font-size: 16px; /* Taille du titre */
-  color: #007bff; /* Couleur du titre */
-  margin: 0; /* Supprimer les marges par défaut */
+  font-size: 16px;
+  color: #007bff;
+  margin: 0;
 }
 
 ion-card-subtitle {
-  font-size: 14px; /* Taille du sous-titre */
-  color: #666; /* Couleur du sous-titre */
-  margin: 0; /* Supprimer les marges par défaut */
+  font-size: 14px;
+  color: #666;
+  margin: 0;
 }
 
+ion-button {
+  margin-top: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 5px;
+}
+.custom-button {
+  background-color: #007bff; /* Couleur de fond */
+  color: #fff; /* Couleur du texte */
+  border-radius: 8px; /* Coins arrondis */
+  font-size: 16px; /* Taille de la police */
+  margin: 0 5px; /* Espacement entre les boutons */
+  padding: 10px 15px; /* Espacement interne */
+  transition: background-color 0.3s, transform 0.2s; /* Transition pour les effets */
+}
 
+.custom-button:hover {
+  background-color: #0056b3; /* Couleur de fond au survol */
+  transform: scale(1.05); /* Agrandir légèrement au survol */
+}
 
-
+.custom-button:focus {
+  outline: none; /* Supprimer l'effet de focus par défaut */
+}

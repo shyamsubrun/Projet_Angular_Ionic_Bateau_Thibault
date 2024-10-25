@@ -59,7 +59,7 @@ export class HomePage implements OnInit {
 
   constructor(private router: Router, private cartService: CartService, private listsService: ListsService) { }
   swiperConfig: any = {
-    slidesPerView: 3,
+    slidesPerView: 2,
     spaceBetween: 2,  
     pagination: {
       clickable: true,

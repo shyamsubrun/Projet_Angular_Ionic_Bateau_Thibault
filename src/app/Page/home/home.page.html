@@ -4,11 +4,11 @@
     <ion-searchbar [(ngModel)]="searchTerm" (ionInput)="filterItems()" placeholder="Rechercher un bateau..."></ion-searchbar>
   </ion-toolbar>
   <ion-buttons>
-      <ion-button (click)="navigateToInfo('all')">All</ion-button>
-      <ion-button (click)="navigateToInfo(0)">Poisson</ion-button>
-      <ion-button (click)="navigateToInfo(1)">Crustacé</ion-button>
-      <ion-button (click)="navigateToInfo(2)">Coquillage</ion-button>
-  </ion-buttons>
+  <ion-button class="custom-button" (click)="navigateToInfo('all')">All</ion-button>
+  <ion-button class="custom-button" (click)="navigateToInfo(0)">Poisson</ion-button>
+  <ion-button class="custom-button" (click)="navigateToInfo(1)">Crustacé</ion-button>
+  <ion-button class="custom-button" (click)="navigateToInfo(2)">Coquillage</ion-button>
+</ion-buttons>
 
 <ion-content [fullscreen]="true">
   <ion-list *ngIf="searchTerm && filteredProduits.length > 0">
@@ -17,11 +17,11 @@
     </ion-item>
   </ion-list>
   <ion-content>
-  <h2>Offres du jour</h2>
+  <h2 class="section-title">Offres du jour</h2>
   <swiper-container [pagination]="false" [navigation]="false" [slidesPerView]="swiperConfig.slidesPerView" [spaceBetween]="swiperConfig.spaceBetween">
     <swiper-slide *ngFor="let produit of produitsEnPromotion">
-      <ion-card>
-        <img [src]="produit.url" alt="{{ produit.name }}" width="300" />
+      <ion-card class="product-card">
+        <img [src]="produit.url" alt="{{ produit.name }}" class="card-image" />
         <ion-card-header>
           <ion-card-title>{{ produit.name }}</ion-card-title>
           <ion-card-subtitle>{{ produit.price | currency }}</ion-card-subtitle>
@@ -29,18 +29,22 @@
       </ion-card>
     </swiper-slide>
   </swiper-container>
-      <hr/>
-  <h2>Recettes du jour</h2>
+  
+  <hr/>
+
+  <h2 class="section-title">Recettes du jour</h2>
   <swiper-container [pagination]="false" [navigation]="false" [slidesPerView]="swiperConfig.slidesPerView" [spaceBetween]="swiperConfig.spaceBetween">
     <swiper-slide *ngFor="let recette of listRecettes">
-      <ion-card>
-        <img [src]="recette.url" />
-        <ion-card-title>{{ recette.nom }}</ion-card-title>
-        <ion-card-subtitle>{{ recette.tempsDePreparation }} - {{ recette.tempsDeCuisson }}</ion-card-subtitle>
+      <ion-card class="recipe-card">
+        <img [src]="recette.url" class="card-image" />
+        <ion-card-header>
+          <ion-card-title>{{ recette.nom }}</ion-card-title>
+        </ion-card-header>
       </ion-card>
     </swiper-slide>
   </swiper-container>
 </ion-content>
+
 
   
   <!-- Message si aucun résultat trouvé ou si la recherche est vide -->
