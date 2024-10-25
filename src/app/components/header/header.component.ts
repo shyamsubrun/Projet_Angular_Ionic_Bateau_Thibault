@@ -37,29 +37,39 @@ import { filter } from 'rxjs/operators';
     IonCardSubtitle],
 })
 export class HeaderComponent  implements OnInit {
-  title: string = 'Titre';
+  title: string = 'Bateau de Thibault';
   totalItems: number = 0;
   public isHomePage: boolean = false;
+  public activeTab: string = 'home';
 
 
   constructor(private cartService: CartService, private navCtr:NavController, private router:Router) {}
 
   ngOnInit() {
-    this.cartService.getCartItems().subscribe(() => {
-      this.totalItems = this.cartService.getTotalItems();
-    });
-  
-    this.router.events
+       this.router.events
       .pipe(
-        filter(event => event instanceof NavigationEnd)
+        filter((event): event is NavigationEnd => event instanceof NavigationEnd) // Typage pour s'assurer que seul NavigationEnd passe
       )
-      .subscribe((event) => {
-        const navigationEndEvent = event as NavigationEnd;
-        this.isHomePage = navigationEndEvent.urlAfterRedirects === '/home';
-      });
+      .subscribe(event => this.updateActiveTab(event));
+  }
+
+  private updateActiveTab(event: NavigationEnd) {
+    this.isHomePage = event.urlAfterRedirects === '/home';
+
+    if (event.urlAfterRedirects.includes('/produits')) {
+      this.activeTab = 'produits';
+    } else if (event.urlAfterRedirects.includes('/restaurants')) {
+      this.activeTab = 'restaurants';
+    } else if (event.urlAfterRedirects.includes('/bateaux')) {
+      this.activeTab = 'bateaux';
+    } else if (event.urlAfterRedirects.includes('/recettes')) {
+      this.activeTab = 'recettes';
+    } else {
+      this.activeTab = 'home';
+    }
   }
 
   goBack() {
-    this.router.navigate(['../']); 
+    this.navCtr.back();
   }
 }
