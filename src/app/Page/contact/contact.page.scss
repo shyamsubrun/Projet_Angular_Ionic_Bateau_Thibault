@@ -96,44 +96,117 @@ li::marker {
 }
 
 
-.quantity-controls {
-  position: absolute;
-  bottom: 10px;
-  right: 10px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  background-color: rgba(255, 255, 255, 0.6); /* Fond semi-transparent */
-  border-radius: 20px;
-  padding: 5px 10px;
+.info-recette-details {
+  margin: 20px 0;
 }
 
-.decrement-btn,
-.increment-btn {
-  width: 20px;
-  height: 20px;
-  border: none;
-  border-radius: 50%;
-  background-color: #2600ff;
-  color: white;
-  font-size: 1.2rem;
-  font-weight: bold;
+.recette-summary {
+  display: flex;
+  justify-content: space-around;
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  padding: 10px;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.recette-item {
   display: flex;
   align-items: center;
   justify-content: center;
-  cursor: pointer;
-  transition: transform 0.1s ease-in-out;
-
-  &:hover {
-    transform: scale(1.1);
-  }
-
-  &:active {
-    transform: scale(0.9);
-  }
-  .quantity {
-  font-size: 1.1rem;
-  font-weight: bold;
-  color: rgb(0, 0, 0);
 }
+
+.recette-icon {
+  font-size: 24px;
+  margin-right: 5px;
+  color: #ff4081;
+}
+
+.recette-item span {
+  font-size: 1rem;
+  color: #333;
+}
+
+.info-image {
+  border-radius: 12px;
+  width: 100%;
+  height: auto;
+}
+
+.info-title {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.info-details {
+  margin-top: 20px;
+}
+
+ul, ol {
+  padding-left: 20px;
+}
+
+ul li, ol li {
+  margin-bottom: 5px;
+}
+
+.kcal-icon {
+  font-size: 24px;
+  margin-right: 5px;
+  color: #ff4500; 
+}
+
+.recette-item span {
+  font-size: 1rem;
+  color: #333; 
+}
+
+
+
+
+
+//=====================
+.info-section {
+  border: 1px solid #e0e0e0; /* Bordure légère autour de la section */
+  border-radius: 8px; /* Coins arrondis */
+  padding: 20px; /* Espacement intérieur */
+  background-color: #f9f9f9; /* Couleur de fond douce */
+  max-width: 600px; /* Largeur maximale de la section */
+  margin: 20px auto; /* Centrer la section sur la page */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Ombre douce */
+}
+
+.info-image-container {
+  text-align: center; /* Centrer l'image */
+}
+
+.info-image {
+  max-width: 100%; /* Image responsive */
+  height: auto; /* Conserver le rapport hauteur/largeur */
+  border-radius: 8px; /* Coins arrondis pour l'image */
+}
+
+.info-title {
+  font-size: 24px; /* Taille de police pour le titre */
+  color: #333; /* Couleur du texte */
+  margin: 10px 0; /* Marges autour du titre */
+}
+
+.info-subtitle {
+  font-size: 18px; /* Taille de police pour le sous-titre */
+  color: #777; /* Couleur plus claire pour le sous-titre */
+  margin-bottom: 15px; /* Espacement en bas du sous-titre */
+}
+
+.info-details p {
+  font-size: 16px; /* Taille de police pour les détails */
+  color: #555; /* Couleur des détails */
+  line-height: 1.6; /* Hauteur de ligne pour une meilleure lisibilité */
+  margin: 5px 0; /* Marges verticales pour chaque paragraphe */
+}
+
+strong {
+  color: #000; /* Couleur pour les étiquettes en gras */
 }
