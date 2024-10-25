@@ -95,3 +95,72 @@ li::marker {
   margin-bottom: 0.5rem;  
 }
 
+
+.info-recette-details {
+  margin: 20px 0;
+}
+
+.recette-summary {
+  display: flex;
+  justify-content: space-around;
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  padding: 10px;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.recette-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.recette-icon {
+  font-size: 24px;
+  margin-right: 5px;
+  color: #ff4081;
+}
+
+.recette-item span {
+  font-size: 1rem;
+  color: #333;
+}
+
+.info-image {
+  border-radius: 12px;
+  width: 100%;
+  height: auto;
+}
+
+.info-title {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.info-details {
+  margin-top: 20px;
+}
+
+ul, ol {
+  padding-left: 20px;
+}
+
+ul li, ol li {
+  margin-bottom: 5px;
+}
+
+.kcal-icon {
+  font-size: 24px;
+  margin-right: 5px;
+  color: #ff4500; 
+}
+
+.recette-item span {
+  font-size: 1rem;
+  color: #333; 
+}
+
+
