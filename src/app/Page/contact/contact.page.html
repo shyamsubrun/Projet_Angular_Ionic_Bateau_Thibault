@@ -1,15 +1,16 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>
-      Info de  {{ infoType }}
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
     <ion-buttons slot="start">
         <ion-button (click)="goBack()">
           <ion-icon slot="icon-only" name="arrow-back"></ion-icon>
         </ion-button>
      </ion-buttons>
+    <ion-title>
+      Info de  {{ infoType }}
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+    
 
 <ion-content class="ion-padding">
   <ng-container *ngIf="infoType === 'bateau'">

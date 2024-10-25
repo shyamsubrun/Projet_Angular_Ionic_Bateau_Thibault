@@ -24,27 +24,54 @@
         [ngClass]="{'active': category === 2}" 
         (click)="filterByCategory(2)">Coquillage</ion-button>
     </ion-buttons>
-    <ion-list>
-      <ion-card *ngFor="let produit of filtreProduits">
-        <div (click)="navigateToInfo(produit, 'produit')" style="cursor: pointer;">
-          <ion-card-header>
-            <img src="{{produit.url}}" class="restaurant-image">
-            <ion-card-title>{{ produit.name }}</ion-card-title>
-          </ion-card-header>
-          <ion-card-content>
-            <p>Prix: {{ produit.price }} € / {{ produit.unit }}</p>
-            <p>{{ produit.availability ? 'Disponible' : 'Indisponible' }}</p>
-            <p>En soldes : {{ produit.sale ? 'Oui' : 'Non' }}</p>
-            <p>Origine: {{ produit.provenance }}</p>
-          </ion-card-content>
+
+<ion-list>
+  <ion-card *ngFor="let produit of filtreProduits" class="product-card">
+    <div class="product-container">
+      <!-- Image du produit -->
+      <ion-card-header class="product-image-container" (click)="navigateToInfo(produit, 'produit')" style="cursor: pointer;">
+        <img src="{{ produit.url }}" class="restaurant-image" width="100px;">
+      </ion-card-header>
+
+      <!-- Détails du produit et contrôle de quantité -->
+      <ion-card-content class="product-card-content">
+        <ion-card-title class="product-title">{{ produit.name }}</ion-card-title>
+        
+        <div class="product-info">
+            <p>
+              <ion-icon name="pricetag" class="info-icon"></ion-icon>
+              Prix: <strong>{{ produit.price }} € / {{ produit.unit }}</strong>
+          </p>
         </div>
-        <div>
-          <button (click)="removeFromCart(produit.id)">-</button>
-          <span>{{ getProductQuantity(produit.id) }}</span>
-          <button (click)="addToCart(produit)">+</button>
+
+        <!--
+        <div class="product-info">
+          <ion-icon [name]="produit.availability ? 'checkmark-circle' : 'close-circle'" class="info-icon"></ion-icon>
+          <p>{{ produit.availability ? 'Disponible' : 'Indisponible' }}</p>
         </div>
-      </ion-card>
-    </ion-list>
+      -->
+        <!--
+        <div class="product-info">
+          <ion-icon [name]="produit.sale ? 'flash' : 'flash-off'" class="info-icon"></ion-icon>
+          <p>En soldes : <strong>{{ produit.sale ? 'Oui' : 'Non' }}</strong></p>
+        </div>
+      
+        <div class="product-info">
+          <ion-icon name="earth" class="info-icon"></ion-icon>
+          <p>Origine: <strong>{{ produit.provenance }}</strong></p>
+        </div>
+      -->
+        <!-- Boutons d'incrémentation et de décrémentation--> 
+        <div class="quantity-controls">
+          <button class="decrement-btn" (click)="removeFromCart(produit.id)">-</button>
+          <span class="quantity">{{ getProductQuantity(produit.id) }}</span>
+          <button class="increment-btn" (click)="addToCart(produit)">+</button>
+        </div>
+        
+      </ion-card-content>
+    </div>
+  </ion-card>
+</ion-list>
   </ng-container>
 
   <ng-container *ngIf="!produits || produits.length === 0">

@@ -11,10 +11,9 @@
     </ion-buttons>
 
 <ion-content [fullscreen]="true">
-  <!-- Résultats filtrés uniquement si searchTerm n'est pas vide -->
   <ion-list *ngIf="searchTerm && filteredProduits.length > 0">
     <ion-item *ngFor="let produit of filteredProduits">
-      {{ produit.name }} <!-- Affichage du nom du bateau filtré -->
+      {{ produit.name }} 
     </ion-item>
   </ion-list>
   <ion-content>
@@ -22,7 +21,7 @@
   <swiper-container [pagination]="true" [navigation]="true" [slidesPerView]="swiperConfig.slidesPerView" [spaceBetween]="swiperConfig.spaceBetween">
     <swiper-slide *ngFor="let produit of produitsEnPromotion">
       <ion-card>
-        <img [src]="produit.url" alt="{{ produit.name }}" />
+        <img [src]="produit.url" alt="{{ produit.name }}" width="300" />
         <ion-card-header>
           <ion-card-title>{{ produit.name }}</ion-card-title>
           <ion-card-subtitle>{{ produit.price | currency }}</ion-card-subtitle>

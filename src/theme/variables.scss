@@ -1,19 +1,118 @@
 // For information on how to create your own theme, please see:
 // http://ionicframework.com/docs/theming/
-:root {
-  --ion-color-tab-active: #3880ff; /* Couleur personnalisée pour les onglets actifs */
-  --ion-color-tab-inactive: #8e8e93; /* Couleur personnalisée pour les onglets inactifs */
+/**
+#container {
+  text-align: center;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
-ion-tab-button {
-  --color: var(--ion-color-tab-inactive);
+#container strong {
+  font-size: 20px;
+  line-height: 26px;
 }
 
-ion-tab-button.ion-selected {
-  --color: var(--ion-color-tab-active);
+#container p {
+  font-size: 16px;
+  line-height: 22px;
+
+  color: #8c8c8c;
+
+  margin: 0;
 }
 
-ion-tab-button.ion-selected ion-icon,
-ion-tab-button.ion-selected ion-label {
-  --color: var(--ion-color-tab-active);
+#container a {
+  text-decoration: none;
 }
+.badge {
+  background-color: red;
+  color: white;
+  border-radius: 10px;
+  padding: 2px 5px;
+  margin-left: 5px;
+}*/
+
+/* src/app/tabs/tabs.page.scss */
+
+
+/*
+.cart-button {
+  position: relative;
+}
+
+ion-badge {
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(50%, -50%);
+  font-size: 0.75rem;
+}
+ion-content {
+  --background: #f9f9f9; 
+  padding: 16px;
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333; 
+  margin-bottom: 20px;
+  text-align: center; 
+}
+
+swiper-container {
+  margin: 0 auto; 
+  max-width: 800px; 
+}
+
+swiper-slide {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); 
+  gap: 10px; 
+}
+
+ion-card {
+  height: 200px; 
+  border-radius: 10px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  overflow: hidden; 
+  display: flex;
+  flex-direction: column; 
+  justify-content: space-between; 
+}
+
+
+ion-card img {
+  width: 100%; 
+  height: 120px; 
+  object-fit: cover; 
+}
+
+ion-card-header {
+  text-align: center; 
+}
+
+ion-card-title {
+  font-size: 16px; 
+  color: #007bff; 
+  margin: 0; 
+}
+
+ion-card-subtitle {
+  font-size: 14px; 
+  color: #666;
+  margin: 0; 
+}
+
+ion-button {
+  margin-top: 10px; 
+  background-color: #007bff; 
+  color: #fff; 
+  border-radius: 5px; 
+}*/
+
+
+
