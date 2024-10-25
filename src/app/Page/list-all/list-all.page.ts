@@ -121,5 +121,8 @@ export class ListAllPage implements OnInit {
       return 'rating-low'; // Classe pour les notes en dessous de 8
     }
   }
+  navigateToHome() {
+    this.router.navigate(['/home']);
+  }
   
 }

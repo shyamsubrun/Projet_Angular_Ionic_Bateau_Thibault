@@ -3,7 +3,13 @@
 </ion-header>
 
 <ion-content class="ion-padding">
-  <p>Vous êtes dans {{ listType }}</p>
+  <div class="breadcrumb">
+  <ion-icon name="home-outline"></ion-icon>
+  <a (click)="navigateToHome()">Accueil</a>
+  <span class="breadcrumb-separator">/</span>
+  <span>{{ listType }}</span>
+</div>
+
   <ng-container *ngIf="listType === 'bateaux'">
     <ion-list>
       <ion-card *ngFor="let bateau of listBateaux" (click)="navigateToInfo(bateau, 'bateau')" class="bateau-card">
