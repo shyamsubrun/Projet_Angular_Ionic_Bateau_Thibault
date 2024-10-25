@@ -1,11 +1,11 @@
 <ion-tabs>
   <ion-tab-bar slot="bottom">
     <ion-tab-button (click)="onGoToHome()" [ngClass]="{'active': activeTab === 'home'}">
-      <ion-icon name="home-outline"></ion-icon>      
+      <ion-icon name="home-outline"></ion-icon>
       Accueil
     </ion-tab-button>
     <ion-tab-button (click)="navigateToProduits()" [ngClass]="{'active': activeTab === 'produits'}">
-      <ion-icon name="reader-outline"></ion-icon>      
+      <ion-icon name="reader-outline"></ion-icon>
       Produits
     </ion-tab-button>
     <ion-tab-button (click)="navigateToRestaurants()" [ngClass]="{'active': activeTab === 'restaurants'}">
@@ -17,7 +17,7 @@
       Bateaux
     </ion-tab-button>
     <ion-tab-button (click)="navigateToRecettes()" [ngClass]="{'active': activeTab === 'recettes'}">
-      <ion-icon name="newspaper-outline"></ion-icon>      
+      <ion-icon name="newspaper-outline"></ion-icon>
       Recettes
     </ion-tab-button>
   </ion-tab-bar>

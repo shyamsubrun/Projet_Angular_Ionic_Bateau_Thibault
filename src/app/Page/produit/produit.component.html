@@ -2,7 +2,6 @@
   <app-header></app-header>
 </ion-header>
 <ion-content class="ion-padding">
-  <p>Vous êtes dans produits</p>
   <ng-container *ngIf="produits && produits.length > 0">
     <ion-toolbar>
       <ion-searchbar [(ngModel)]="searchTerm" (ionInput)="filterItems()" placeholder="Rechercher un bateau..."></ion-searchbar>
@@ -28,10 +27,9 @@
 <ion-list>
   <ion-card *ngFor="let produit of filtreProduits" class="product-card">
     <div class="product-container">
-      <!-- Image du produit -->
-      <ion-card-header class="product-image-container" (click)="navigateToInfo(produit, 'produit')" style="cursor: pointer;">
-        <img src="{{ produit.url }}" class="restaurant-image" width="100px;">
-      </ion-card-header>
+      <ion-label class="product-image-container" (click)="navigateToInfo(produit, 'produit')" style="cursor: pointer;">
+        <img src="{{ produit.url }}" class="restaurant-image">
+      </ion-label>
 
       <!-- Détails du produit et contrôle de quantité -->
       <ion-card-content class="product-card-content">

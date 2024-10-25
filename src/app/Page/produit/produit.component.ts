@@ -1,18 +1,30 @@
 import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { ListsService } from '../../services/lists.service';
-import {IonHeader,IonToolbar,IonTitle,IonContent,IonList,IonCardSubtitle,IonCard,IonCardHeader,IonCardTitle,IonCardContent, IonButtons, IonIcon, IonBadge, IonButton,IonSearchbar } from  '@ionic/angular/standalone';
+import {IonHeader,IonToolbar,IonTitle,IonContent,IonList,IonCardSubtitle,IonCard,IonCardHeader,IonCardTitle,IonCardContent, IonButtons, IonIcon, IonBadge, IonButton,IonSearchbar, IonLabel } from  '@ionic/angular/standalone';
 import { CommonModule } from '@angular/common'; // Importer CommonModule
 import { CartService } from 'src/app/services/cart.service';
 import { NavigationExtras, Router ,ActivatedRoute} from '@angular/router';
 import { RouterModule } from '@angular/router';
 import { HeaderComponent } from "../../components/header/header.component";
 
-
+export interface Produit {
+  id: number;
+  name: string;
+  price: number;
+  unit: string;
+  category: number;
+  availability: boolean;
+  sale: boolean;
+  discount: number;
+  comments: string;
+  owner: string;
+  url: string;
+}
 @Component({
   selector: 'app-produit',
   standalone: true,  
-  imports: [IonButton, 
+  imports: [IonLabel, IonButton, 
     HeaderComponent,
     IonBadge,
     IonIcon,
