@@ -1,15 +1,13 @@
 <ion-header>
-  
   <ion-toolbar>
     <ion-buttons slot="start">
-        <ion-button (click)="goBack()">
-          <ion-icon slot="icon-only" name="arrow-back"></ion-icon>
-        </ion-button>
-     </ion-buttons>
+      <ion-button (click)="goBack()">
+        <ion-icon slot="icon-only" name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
     <ion-title>Mon Panier</ion-title>
   </ion-toolbar>
 </ion-header>
-    
 
 <ion-content class="ion-padding">
   <ng-container *ngIf="cartItems.length > 0">
@@ -25,6 +23,29 @@
         </ion-card-content>
       </ion-card>
     </ion-list>
+
+    <ion-item>
+      <ion-label>Point relais :</ion-label>
+      <ion-select placeholder="Choisissez un point relais" (ionChange)="selectPointRelais($event.detail.value)">
+        <ion-select-option *ngFor="let relais of pointRelais" [value]="relais.id">
+          {{ relais.name }} - {{ relais.price }} €
+        </ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-card *ngIf="selectedPointRelais">
+      <ion-card-header>
+        <ion-card-title>{{ selectedPointRelais.name }}</ion-card-title>
+        <ion-card-subtitle>{{ selectedPointRelais.address }}</ion-card-subtitle>
+      </ion-card-header>
+      <ion-card-content>
+        <p>Prix de livraison : {{ selectedPointRelais.price }} €</p>
+        <p>Heures d'ouverture : {{ selectedPointRelais.hours }}</p>
+        <p>Type : {{ selectedPointRelais.type }}</p>
+        <p>Contact : {{ selectedPointRelais.phone }}</p>
+      </ion-card-content>
+    </ion-card>
+
     <ion-card>
       <ion-card-header>
         <ion-card-title>Total</ion-card-title>
@@ -33,13 +54,14 @@
         <p>Prix Total: {{ getTotalPrice() }} €</p>
       </ion-card-content>
     </ion-card>
-    <ion-content class="ion-padding">
-  
 
-  <ion-button expand="full" (click)="validateCart()">
-    Valider le Panier
-  </ion-button>
-</ion-content>
+    <div *ngIf="errormessage" class="error-message">
+      {{ errormessage }}
+    </div>
+
+    <ion-button expand="full" (click)="validateCart()">
+      Valider le Panier
+    </ion-button>
   </ng-container>
 
   <ng-container *ngIf="cartItems.length === 0">
