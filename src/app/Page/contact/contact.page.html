@@ -99,8 +99,16 @@
         <p><strong>Commentaires:</strong> {{ item.comments }}</p>
         <p><strong>Propriétaire:</strong> {{ item.owner }}</p>
       </div>
+  
+      <!-- Ajout des contrôles de quantité -->
+      <div class="quantity-controls">
+        <button class="decrement-btn" (click)="removeFromCart(item.id)">-</button>
+        <span class="quantity">{{ getProductQuantity(item.id) }}</span>
+        <button class="increment-btn" (click)="addToCart(item)">+</button>
+      </div>
     </div>
   </ng-container>
+  
 
   <ng-container *ngIf="infoType === 'contact'">
     <div class="info-section">
