@@ -127,7 +127,14 @@
     <div class="info-details">
       <p><strong>Ingrédients:</strong></p>
       <ul>
-        <li *ngFor="let ingredient of item.ingredients">{{ ingredient }}</li>
+        <li *ngFor="let ingredient of item.ingredients">
+          <ng-container *ngIf="findProductsByFirstWord(ingredient) as produitMatch; else notFound">
+            <a (click)="navigateToInfo(produitMatch, 'produit')">{{ ingredient }}</a>
+          </ng-container>
+          <ng-template #notFound>
+            {{ ingredient }}
+          </ng-template>
+        </li>
       </ul>
       <p><strong>Instructions:</strong></p>
       <ol>

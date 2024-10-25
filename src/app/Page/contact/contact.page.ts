@@ -3,11 +3,12 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { IonContent, IonHeader, IonTitle, IonToolbar, IonList, IonItem, IonLabel, IonCard, IonCardHeader, IonCardContent, IonIcon, IonCardTitle,IonCardSubtitle, IonButtons, IonButton } from '@ionic/angular/standalone';
 import { HttpClient } from '@angular/common/http';
-import {Router ,ActivatedRoute} from '@angular/router';
 import { RouterModule } from '@angular/router';
 import { NavController } from '@ionic/angular';
-import { CartService } from '../../services/cart.service'; // Remplacez par le chemin correct
-import { Produit } from '../produit/produit.component'; // Remplacez par le chemin correct
+import { CartService } from '../../services/cart.service';
+import { Produit } from '../produit/produit.component'; 
+import { ListsService } from 'src/app/services/lists.service';
+import { NavigationExtras, Router ,ActivatedRoute} from '@angular/router';
 
 
 
@@ -21,9 +22,12 @@ import { Produit } from '../produit/produit.component'; // Remplacez par le chem
 export class ContactPage  {
   item!:any
   infoType!: string
-  constructor(private cartService: CartService,private http: HttpClient,private navCtrl: NavController,private activatedRoute:ActivatedRoute, private router : Router, private navCtr:NavController) {
+  produits: any[] = [];
+  constructor(private cartService: CartService,private http: HttpClient,private navCtrl: NavController,private activatedRoute:ActivatedRoute, private router : Router, private navCtr:NavController, private listsService:ListsService,) {
   }
   ngOnInit() {
+    console.log("this is from ngOnInit")
+    this.loadProduits();
     this.activatedRoute.queryParams.subscribe(params => {
       console.log(this.router.getCurrentNavigation()?.extras.state);
       const navigation = this.router.getCurrentNavigation();
@@ -71,5 +75,31 @@ export class ContactPage  {
       quantity = item ? item.quantity : 0;
     });
     return quantity;
+  }
+  loadProduits(): void {
+    this.listsService.getListProduits().subscribe(
+      (data) => {
+        this.produits = data;
+      },
+      (error) => {
+        console.error('Erreur lors du chargement des produits', error);
+      }
+    );
+  }
+  findProductsByFirstWord(text: string): any | null {
+    if (!text || typeof text !== 'string') {
+        return null; 
+    }
+    const words = text.toLowerCase().split(/\s+/);
+    if (words.length < 3 || words[2].length <= 2) {
+        return null; 
+    }
+    const thirdWord = words[2]; 
+    const produit = this.produits.find(produit => produit.name.toLowerCase().includes(thirdWord)) || null;
+    return produit;
+  }
+  navigateToInfo(item: any, type: string) {
+    this.item = item
+    this.infoType = 'produit'
   }
 }
