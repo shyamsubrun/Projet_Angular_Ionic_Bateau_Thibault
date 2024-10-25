@@ -164,3 +164,49 @@ ul li, ol li {
 }
 
 
+
+
+
+//=====================
+.info-section {
+  border: 1px solid #e0e0e0; /* Bordure légère autour de la section */
+  border-radius: 8px; /* Coins arrondis */
+  padding: 20px; /* Espacement intérieur */
+  background-color: #f9f9f9; /* Couleur de fond douce */
+  max-width: 600px; /* Largeur maximale de la section */
+  margin: 20px auto; /* Centrer la section sur la page */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Ombre douce */
+}
+
+.info-image-container {
+  text-align: center; /* Centrer l'image */
+}
+
+.info-image {
+  max-width: 100%; /* Image responsive */
+  height: auto; /* Conserver le rapport hauteur/largeur */
+  border-radius: 8px; /* Coins arrondis pour l'image */
+}
+
+.info-title {
+  font-size: 24px; /* Taille de police pour le titre */
+  color: #333; /* Couleur du texte */
+  margin: 10px 0; /* Marges autour du titre */
+}
+
+.info-subtitle {
+  font-size: 18px; /* Taille de police pour le sous-titre */
+  color: #777; /* Couleur plus claire pour le sous-titre */
+  margin-bottom: 15px; /* Espacement en bas du sous-titre */
+}
+
+.info-details p {
+  font-size: 16px; /* Taille de police pour les détails */
+  color: #555; /* Couleur des détails */
+  line-height: 1.6; /* Hauteur de ligne pour une meilleure lisibilité */
+  margin: 5px 0; /* Marges verticales pour chaque paragraphe */
+}
+
+strong {
+  color: #000; /* Couleur pour les étiquettes en gras */
+}

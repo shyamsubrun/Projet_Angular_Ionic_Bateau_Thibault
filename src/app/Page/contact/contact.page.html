@@ -12,22 +12,29 @@
 </ion-header>
 
 <ion-content class="ion-padding">
+
+
   <ng-container *ngIf="infoType === 'bateau'">
-    <div class="info-section">
-      <div class="info-image-container">
-        <img class="info-image" [src]="item.url" alt="{{ item.nom }}">
-      </div>
-      <h2 class="info-title">{{ item.nom }}</h2>
-      <h3 class="info-subtitle">{{ item.taille }} - {{ item.Type }}</h3>
-      <div class="info-details">
-        <p><strong>Nombre d'employés:</strong> {{ item.nbEmployer }}</p>
-        <p><strong>Type de Pêche:</strong> {{ item.typedePache }}</p>
-        <p><strong>Spécialité:</strong> {{ item.specialite }}</p>
-        <p><strong>Lieu de Pêche:</strong> {{ item.lieuDePache }}</p>
-        <p><strong>Ancienneté:</strong> {{ item.anciente }} ans</p>
-      </div>
+  <div class="info-section">
+    <div class="info-image-container">
+      <img class="info-image" [src]="item.url" alt="{{ item.nom }}">
     </div>
-  </ng-container>
+    <h2 class="info-title">{{ item.nom }}</h2>
+    <h3 class="info-subtitle">{{ item.taille }} - {{ item.Type }}</h3>
+    <div class="info-details">
+      <p class="info-employes"><strong>Nombre d'employés:</strong> {{ item.nbEmployer }}</p>
+      <p class="info-type-peche"><strong>Type de Pêche:</strong> {{ item.typedePache }}</p>
+      <p class="info-specialite"><strong>Spécialité:</strong> {{ item.specialite }}</p>
+      <p class="info-lieu-peche"><strong>Lieu de Pêche:</strong> {{ item.lieuDePache }}</p>
+      <p class="info-anciennete"><strong>Ancienneté:</strong> {{ item.anciente }} ans</p>
+      <p class="info-capitaine"><strong>Capitaine:</strong> {{ item.nom_capitaine }}</p>
+      <p class="info-poids"><strong>Poids:</strong> {{ item.poids }}</p>
+      <p class="info-capacite-peche"><strong>Capacité de Pêche:</strong> {{ item.capacite_peche }}</p>
+      <p class="info-description"><strong>Description:</strong> {{ item.description }}</p>
+    </div>
+  </div>
+</ng-container>
+
 
   <ng-container *ngIf="infoType === 'restaurant'">
     <div class="info-section">
@@ -37,13 +44,18 @@
       <h2 class="info-title">{{ item.name }}</h2>
       <h3 class="info-subtitle">{{ item.city }}</h3>
       <div class="info-details">
-        <p><strong>Description:</strong> {{ item.description }}</p>
-        <p><strong>Plat Signature:</strong> {{ item.signature_dish }}</p>
-        <p><strong>Note:</strong> {{ item.rating }} / 5</p>
-        <p><strong>Prix Global:</strong> {{ item.global_price }} €</p>
+        <p class="info-description"><strong>Description:</strong> {{ item.description }}</p>
+        <p class="info-signature-dish"><strong>Plat Signature:</strong> {{ item.signature_dish }}</p>
+        <p class="info-rating"><strong>Note:</strong> {{ item.rating }} / 5</p>
+        <p class="info-global-price"><strong>Prix Global:</strong> {{ item.global_price }} €</p>
+        <p class="info-chef"><strong>Chef:</strong> {{ item.chef }}</p>
+        <p class="info-type"><strong>Type:</strong> {{ item.type }}</p>
+        <p class="info-history"><strong>Historique:</strong> {{ item.history }}</p>
+        <p class="info-reviews"><strong>Avis:</strong> {{ item.avis }} avis</p>
       </div>
     </div>
   </ng-container>
+  
 
   <ng-container *ngIf="infoType === 'recette'">
   <div class="info-section">
@@ -101,30 +113,32 @@
 
 
 
-  <ng-container *ngIf="infoType === 'produit'">
-    <div class="info-section">
-      <div class="info-image-container">
-        <img class="info-image" [src]="item.url" alt="{{ item.name }}">
-      </div>
-      <h2 class="info-title">{{ item.name }}</h2>
-      <h3 class="info-subtitle">Catégorie: {{ item.category }}</h3>
-      <div class="info-details">
-        <p><strong>Prix:</strong> {{ item.price }} € / {{ item.unit }}</p>
-        <p><strong>Disponibilité:</strong> {{ item.availability ? 'Disponible' : 'Indisponible' }}</p>
-        <p><strong>En soldes:</strong> {{ item.sale ? 'Oui' : 'Non' }}</p>
-        <p><strong>Remise:</strong> {{ item.discount }} %</p>
-        <p><strong>Commentaires:</strong> {{ item.comments }}</p>
-        <p><strong>Propriétaire:</strong> {{ item.owner }}</p>
-      </div>
-  
-      <!-- Ajout des contrôles de quantité -->
-      <div class="quantity-controls">
-        <button class="decrement-btn" (click)="removeFromCart(item.id)">-</button>
-        <span class="quantity">{{ getProductQuantity(item.id) }}</span>
-        <button class="increment-btn" (click)="addToCart(item)">+</button>
-      </div>
+<ng-container *ngIf="infoType === 'produit'">
+  <div class="info-section">
+    <div class="info-image-container">
+      <img class="info-image" [src]="item.url" alt="{{ item.name }}">
     </div>
-  </ng-container>
+    <h2 class="info-title">{{ item.name }}</h2>
+    <h3 class="info-subtitle">Catégorie: {{ item.category }}</h3>
+    <div class="info-details">
+      <p><strong>Prix:</strong> {{ item.price }} € / {{ item.unit }}</p>
+      <p><strong>Disponibilité:</strong> {{ item.availability ? 'Disponible' : 'Indisponible' }}</p>
+      <p><strong>En soldes:</strong> {{ item.sale ? 'Oui' : 'Non' }}</p>
+      <p><strong>Remise:</strong> {{ item.discount }} %</p>
+      <p><strong>Commentaires:</strong> {{ item.comments }}</p>
+      <p><strong>Propriétaire:</strong> {{ item.owner }}</p>
+      <p><strong>Provenance:</strong> {{ item.provenance }}</p> <!-- Ajout de la provenance -->
+    </div>
+  
+    <!-- Ajout des contrôles de quantité -->
+    <div class="quantity-controls">
+      <button class="decrement-btn" (click)="removeFromCart(item.id)">-</button>
+      <span class="quantity">{{ getProductQuantity(item.id) }}</span>
+      <button class="increment-btn" (click)="addToCart(item)">+</button>
+    </div>
+  </div>
+</ng-container>
+
   
 
   <ng-container *ngIf="infoType === 'contact'">
