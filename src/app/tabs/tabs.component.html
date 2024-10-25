@@ -1,26 +1,24 @@
 <ion-tabs>
   <ion-tab-bar slot="bottom">
-
-    <ion-tab-button (click)="onGoToHome()">
-          <ion-icon name="home-outline"></ion-icon>      
-        Accueil
+    <ion-tab-button (click)="onGoToHome()" [ngClass]="{'active': activeTab === 'home'}">
+      <ion-icon name="home-outline"></ion-icon>      
+      Accueil
     </ion-tab-button>
-    <ion-tab-button (click)="navigateToProduits()">
-        <ion-icon name="reader-outline"></ion-icon>      
-        Products
+    <ion-tab-button (click)="navigateToProduits()" [ngClass]="{'active': activeTab === 'produits'}">
+      <ion-icon name="reader-outline"></ion-icon>      
+      Produits
     </ion-tab-button>
-    <ion-tab-button (click)="navigateToRestaurants()">
+    <ion-tab-button (click)="navigateToRestaurants()" [ngClass]="{'active': activeTab === 'restaurants'}">
       <ion-icon name="restaurant-outline"></ion-icon>
-      restaurants
+      Restaurants
     </ion-tab-button>
-    <ion-tab-button (click)="navigateToBateaux()">
+    <ion-tab-button (click)="navigateToBateaux()" [ngClass]="{'active': activeTab === 'bateaux'}">
       <ion-icon name="boat-outline"></ion-icon>
       Bateaux
     </ion-tab-button>
-    <ion-tab-button (click)="navigateToRecettes()">
-        <ion-icon name="newspaper-outline"></ion-icon>      
-        Recettes
+    <ion-tab-button (click)="navigateToRecettes()" [ngClass]="{'active': activeTab === 'recettes'}">
+      <ion-icon name="newspaper-outline"></ion-icon>      
+      Recettes
     </ion-tab-button>
   </ion-tab-bar>
 </ion-tabs>
-

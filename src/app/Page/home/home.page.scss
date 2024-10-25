@@ -67,7 +67,7 @@ swiper-container {
 swiper-slide {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Colonnes flexibles */
-  gap: 10px; /* Espace entre les cartes */
+  gap: 3px; /* Espace entre les cartes */
 }
 
 ion-card {

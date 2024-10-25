@@ -4,33 +4,46 @@
 <ion-content class="ion-padding">
   <p>Vous êtes dans produits</p>
   <ng-container *ngIf="produits && produits.length > 0">
+    <ion-toolbar>
+      <ion-searchbar [(ngModel)]="searchTerm" (ionInput)="filterItems()" placeholder="Rechercher un bateau..."></ion-searchbar>
+    </ion-toolbar>
     <ion-buttons>
-      <ion-button (click)="filterByCategory('all')">All</ion-button>
-      <ion-button (click)="filterByCategory(0)">Poisson</ion-button>
-      <ion-button (click)="filterByCategory(1)">Crustacé</ion-button>
-      <ion-button (click)="filterByCategory(2)">Coquillage</ion-button>
+      <ion-button 
+        [ngClass]="{'active': category === 'all'}" 
+        (click)="filterByCategory('all')">All</ion-button>
+      
+      <ion-button 
+        [ngClass]="{'active': category === 0}" 
+        (click)="filterByCategory(0)">Poisson</ion-button>
+      
+      <ion-button 
+        [ngClass]="{'active': category === 1}" 
+        (click)="filterByCategory(1)">Crustacé</ion-button>
+      
+      <ion-button 
+        [ngClass]="{'active': category === 2}" 
+        (click)="filterByCategory(2)">Coquillage</ion-button>
     </ion-buttons>
     <ion-list>
       <ion-card *ngFor="let produit of filtreProduits">
-    <div (click)="navigateToInfo(produit, 'produit')" style="cursor: pointer;">
-        <ion-card-header>
-          <img src={{produit.url}} class="restaurant-image">
-          <ion-card-title>{{ produit.name }}</ion-card-title>
-
-        </ion-card-header>
-        <ion-card-content>
+        <div (click)="navigateToInfo(produit, 'produit')" style="cursor: pointer;">
+          <ion-card-header>
+            <img src="{{produit.url}}" class="restaurant-image">
+            <ion-card-title>{{ produit.name }}</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
             <p>Prix: {{ produit.price }} € / {{ produit.unit }}</p>
             <p>{{ produit.availability ? 'Disponible' : 'Indisponible' }}</p>
             <p>En soldes : {{ produit.sale ? 'Oui' : 'Non' }}</p>
             <p>Origine: {{ produit.provenance }}</p>
-        </ion-card-content>
-    </div>
-    <div>
-        <button (click)="removeFromCart(produit.id)">-</button>
-        <span>{{ getProductQuantity(produit.id) }}</span>
-        <button (click)="addToCart(produit)">+</button>
-    </div>
-</ion-card>
+          </ion-card-content>
+        </div>
+        <div>
+          <button (click)="removeFromCart(produit.id)">-</button>
+          <span>{{ getProductQuantity(produit.id) }}</span>
+          <button (click)="addToCart(produit)">+</button>
+        </div>
+      </ion-card>
     </ion-list>
   </ng-container>
 
