@@ -117,7 +117,7 @@ export class HomePage implements OnInit {
       }
     );
   }
-  navigateToInfo(categoty: any) {
+  navigateToInfo1(categoty: any) {
     let navigationExtras: NavigationExtras = {
       state: {
         category : categoty
@@ -133,5 +133,16 @@ export class HomePage implements OnInit {
         )
       )
     );
+  }
+  navigateToInfo(item: any, type: string) {
+    console.log("this is from all-âge" + JSON.stringify(item, null, 2))
+    console.log(item)
+    let navigationExtras: NavigationExtras = {
+      state: {
+        item: item,
+        type: type
+      }
+    }
+    this.router.navigate(['/info-item'], navigationExtras);
   }
 }

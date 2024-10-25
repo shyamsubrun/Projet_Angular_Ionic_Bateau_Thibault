@@ -2,13 +2,14 @@
 <app-header></app-header>
   <ion-toolbar>
     <ion-searchbar [(ngModel)]="searchTerm" (ionInput)="filterItems()" placeholder="Rechercher un bateau..."></ion-searchbar>
+    <ion-buttons>
+      <ion-button class="custom-button" (click)="navigateToInfo1('all')">All</ion-button>
+      <ion-button class="custom-button" (click)="navigateToInfo1(0)">Poisson</ion-button>
+      <ion-button class="custom-button" (click)="navigateToInfo1(1)">Crustacé</ion-button>
+      <ion-button class="custom-button" (click)="navigateToInfo1(2)">Coquillage</ion-button>
+    </ion-buttons>
   </ion-toolbar>
-  <ion-buttons>
-  <ion-button class="custom-button" (click)="navigateToInfo('all')">All</ion-button>
-  <ion-button class="custom-button" (click)="navigateToInfo(0)">Poisson</ion-button>
-  <ion-button class="custom-button" (click)="navigateToInfo(1)">Crustacé</ion-button>
-  <ion-button class="custom-button" (click)="navigateToInfo(2)">Coquillage</ion-button>
-</ion-buttons>
+  
 
 <ion-content [fullscreen]="true">
   <ion-list *ngIf="searchTerm && filteredProduits.length > 0">
@@ -19,7 +20,7 @@
   <ion-content>
   <h2 class="section-title">Offres du jour</h2>
   <swiper-container [pagination]="false" [navigation]="false" [slidesPerView]="swiperConfig.slidesPerView" [spaceBetween]="swiperConfig.spaceBetween">
-    <swiper-slide *ngFor="let produit of produitsEnPromotion">
+    <swiper-slide *ngFor="let produit of produitsEnPromotion" (click)="navigateToInfo(produit, 'produit')">
       <ion-card class="product-card">
         <img [src]="produit.url" alt="{{ produit.name }}" class="card-image" />
         <ion-card-header>
@@ -34,7 +35,7 @@
 
   <h2 class="section-title">Recettes du jour</h2>
   <swiper-container [pagination]="false" [navigation]="false" [slidesPerView]="swiperConfig.slidesPerView" [spaceBetween]="swiperConfig.spaceBetween">
-    <swiper-slide *ngFor="let recette of listRecettes">
+    <swiper-slide *ngFor="let recette of listRecettes" (click)="navigateToInfo(recette, 'recette')">
       <ion-card class="recipe-card">
         <img [src]="recette.url" class="card-image" />
         <ion-card-header>
