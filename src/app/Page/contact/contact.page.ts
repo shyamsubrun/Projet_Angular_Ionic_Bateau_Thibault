@@ -31,6 +31,23 @@ export class ContactPage  {
       }
     });
   }
+  extractNumber(value: string): number {
+    const match = value.match(/\d+/); 
+    return match ? parseInt(match[0], 10) : 0;
+  }
+  getTotalTime(tempsDePreparation: string, tempsDeCuisson: string): string {
+  const preparation = this.extractNumber(tempsDePreparation);
+  const cuisson = this.extractNumber(tempsDeCuisson);
+  const totalMinutes = preparation + cuisson;
+
+  if (totalMinutes >= 60) {
+    const hours = Math.floor(totalMinutes / 60);
+    const minutes = totalMinutes % 60;
+    return `${hours}h ${minutes}min`; 
+  } else {
+    return `${totalMinutes} min`;
+  }
+}
   goBack() {
     this.navCtrl.back();
   }

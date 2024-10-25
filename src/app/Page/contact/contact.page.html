@@ -1,120 +1,127 @@
 <ion-header>
   <ion-toolbar>
     <ion-buttons slot="start">
-        <ion-button (click)="goBack()">
-          <ion-icon slot="icon-only" name="arrow-back"></ion-icon>
-        </ion-button>
-     </ion-buttons>
+      <ion-button (click)="goBack()">
+        <ion-icon slot="icon-only" name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
     <ion-title>
-      Info de  {{ infoType }}
+      Info de {{ infoType }}
     </ion-title>
   </ion-toolbar>
 </ion-header>
-    
 
 <ion-content class="ion-padding">
   <ng-container *ngIf="infoType === 'bateau'">
-    <ion-list>
-      <ion-card>
-        <ion-card-header>
-          <img src={{item.url}} alt="">
-          <ion-card-title>{{ item.nom }}</ion-card-title>
-          <ion-card-subtitle>{{ item.taille }} - {{ item.Type }}</ion-card-subtitle>
-        </ion-card-header>
-        <ion-card-content>
-          <p>Nombre d'employes: {{ item.nbEmployer }}</p>
-          <p>Type de Pêche: {{ item.typedePache }}</p>
-          <p>Specialite: {{ item.specialite }}</p>
-          <p>Lieu de Pêche: {{ item.lieuDePache }}</p>
-          <p>Anciennete: {{ item.anciente }} ans</p>
-        </ion-card-content>
-      </ion-card>
-    </ion-list>
+    <div class="info-section">
+      <div class="info-image-container">
+        <img class="info-image" [src]="item.url" alt="{{ item.nom }}">
+      </div>
+      <h2 class="info-title">{{ item.nom }}</h2>
+      <h3 class="info-subtitle">{{ item.taille }} - {{ item.Type }}</h3>
+      <div class="info-details">
+        <p><strong>Nombre d'employés:</strong> {{ item.nbEmployer }}</p>
+        <p><strong>Type de Pêche:</strong> {{ item.typedePache }}</p>
+        <p><strong>Spécialité:</strong> {{ item.specialite }}</p>
+        <p><strong>Lieu de Pêche:</strong> {{ item.lieuDePache }}</p>
+        <p><strong>Ancienneté:</strong> {{ item.anciente }} ans</p>
+      </div>
+    </div>
   </ng-container>
 
   <ng-container *ngIf="infoType === 'restaurant'">
-    <ion-list>
-      <ion-card>
-        <ion-card-header>
-          <img src={{item.url}} alt="">
-
-          <ion-card-title>{{ item.name }}</ion-card-title>
-          <ion-card-subtitle>{{ item.city }}</ion-card-subtitle>
-        </ion-card-header>
-        <ion-card-content>
-          <p>{{ item.description }}</p>
-          <p>Plat Signature: {{ item.signature_dish }}</p>
-          <p>Note: {{ item.rating }} / 5</p>
-          <p>Prix Global: {{ item.global_price }} €</p>
-        </ion-card-content>
-      </ion-card>
-    </ion-list>
+    <div class="info-section">
+      <div class="info-image-container">
+        <img class="info-image" [src]="item.url" alt="{{ item.name }}">
+      </div>
+      <h2 class="info-title">{{ item.name }}</h2>
+      <h3 class="info-subtitle">{{ item.city }}</h3>
+      <div class="info-details">
+        <p><strong>Description:</strong> {{ item.description }}</p>
+        <p><strong>Plat Signature:</strong> {{ item.signature_dish }}</p>
+        <p><strong>Note:</strong> {{ item.rating }} / 5</p>
+        <p><strong>Prix Global:</strong> {{ item.global_price }} €</p>
+      </div>
+    </div>
   </ng-container>
 
   <ng-container *ngIf="infoType === 'recette'">
-    <ion-list>
-      <ion-card >
-        <ion-card-header>
-          <img src={{item.url}} alt="">
+    <div class="info-section">
+      <div class="info-image-container">
+        <img class="info-image" [src]="item.url" alt="{{ item.nom }}">
+      </div>
+      <h2 class="info-title">{{ item.nom }}</h2>
+      <!-- Ajout de la section de difficulté, kcal et portions -->
+      <div class="info-recette-details">
+        <div class="ligne-infos">
+          <span>difficulté : <strong>{{ item.niveauDeDifficulte }}</strong></span>
+          <span> - </span>
+          <span>Kcal/100g : <strong>{{ item.calories }}</strong></span>
+          <span> - </span>
+          <span> Quantité <strong>{{ item.nombreDePortions }}</strong></span>
+        </div>
+        <div class="ligne-infos">
+          <span>préparation <strong>{{ extractNumber(item.tempsDePreparation) }}</strong></span>
+          <span> - </span>
+          <span>cuisson <strong>{{ extractNumber(item.tempsDeCuisson) }}</strong></span>
+          <span> - </span>
+          <span>Temps total : <strong>{{ getTotalTime(item.tempsDePreparation, item.tempsDeCuisson)}}</strong></span>
+        </div>
+        <p><strong>Allergènes:</strong> {{ item.allergenes.join(', ') }}</p>
+      </div>
 
-          <ion-card-title>{{ item.nom }}</ion-card-title>
-          <ion-card-subtitle>Temps de preparation: {{ item.tempsDePreparation }}</ion-card-subtitle>
-        </ion-card-header>
-        <ion-card-content>
-          <p>Ingredients: {{ item.ingredients.join(', ') }}</p>
-          <p>Instructions: {{ item.instructions.join(' | ') }}</p>
-          <p>Temps de cuisson: {{ item.tempsDeCuisson }}</p>
-          <p>Nombre de portions: {{ item.nombreDePortions }}</p>
-          <p>Allergenes: {{ item.allergenes.join(', ') }}</p>
-        </ion-card-content>
-      </ion-card>
-    </ion-list>
+      <div class="info-details">
+        <p><strong>Ingrédients:</strong></p>
+        <ul>
+          <li *ngFor="let ingredient of item.ingredients">{{ ingredient }}</li>
+        </ul>
+        <p><strong>Instructions:</strong></p>
+          <ol>
+            <li *ngFor="let instruction of item.instructions">{{ instruction }}</li>
+          </ol>
+        
+      </div>
+    </div>
   </ng-container>
+
   <ng-container *ngIf="infoType === 'produit'">
-    <ion-card>
-        <ion-card-header>
-          <img src={{item.url}} alt="">
+    <div class="info-section">
+      <div class="info-image-container">
+        <img class="info-image" [src]="item.url" alt="{{ item.name }}">
+      </div>
+      <h2 class="info-title">{{ item.name }}</h2>
+      <h3 class="info-subtitle">Catégorie: {{ item.category }}</h3>
+      <div class="info-details">
+        <p><strong>Prix:</strong> {{ item.price }} € / {{ item.unit }}</p>
+        <p><strong>Disponibilité:</strong> {{ item.availability ? 'Disponible' : 'Indisponible' }}</p>
+        <p><strong>En soldes:</strong> {{ item.sale ? 'Oui' : 'Non' }}</p>
+        <p><strong>Remise:</strong> {{ item.discount }} %</p>
+        <p><strong>Commentaires:</strong> {{ item.comments }}</p>
+        <p><strong>Propriétaire:</strong> {{ item.owner }}</p>
+      </div>
+    </div>
+  </ng-container>
 
-          <ion-card-title>{{ item.name }}</ion-card-title>
-          <ion-card-subtitle>Catégorie: {{ item.category }}</ion-card-subtitle>
-        </ion-card-header>
-        <ion-card-content>
-          <p>Prix: {{ item.price }} € / {{ item.unit }}</p>
-          <p>Disponibilité: {{ item.availability ? 'Disponible' : 'Indisponible' }}</p>
-          <p>En soldes: {{ item.sale ? 'Oui' : 'Non' }}</p>
-          <p>Remise: {{ item.discount }} %</p>
-          <p>Commentaires: {{ item.comments }}</p>
-          <p>Propriétaire: {{ item.owner }}</p>
-        </ion-card-content>
-      </ion-card>
-    </ng-container>
-  <ion-content *ngIf="infoType === 'contact'">
-    <ion-card>
-      <ion-card-header>
-        <img src={{item.url}} alt="">
+  <ng-container *ngIf="infoType === 'contact'">
+    <div class="info-section">
+      <div class="info-image-container">
+        <img class="info-image" [src]="item.url" alt="{{ item.nomDuBateau }}">
+      </div>
+      <h2 class="info-title">{{ item.nomDuBateau }}</h2>
+      <div class="info-details">
+        <p><strong>Téléphone:</strong> {{ item.telephone }}</p>
+        <p><strong>Email:</strong> {{ item.email }}</p>
+        <p><strong>Adresse:</strong> {{ item.adresse }}</p>
+        <p><strong>Site Web:</strong> <a href="{{ item.siteWeb }}" target="_blank">{{ item.siteWeb }}</a></p>
+      </div>
+    </div>
+  </ng-container>
 
-        <ion-card-title>{{ item.nomDuBateau }}</ion-card-title>
-      </ion-card-header>
-      <ion-card-content>
-        <p>Téléphone: {{ item.telephone }}</p>
-        <p>Email: {{ item.email }}</p>
-        <p>Adresse: {{ item.adresse }}</p>
-        <p>Site Web: <a href="{{ item.siteWeb }}" target="_blank">{{ item.siteWeb }}</a></p>
-      </ion-card-content>
-    </ion-card>
-  </ion-content>
-
+  <!-- Message si aucune donnée à afficher -->
   <!-- <ng-container *ngIf="!listBateaux && !listRestaurants && !listRecettes">
-    <ion-card>
-      <ion-card-header>
-        <ion-card-title>Aucune donnee à afficher</ion-card-title>
-      </ion-card-header>
-      <ion-card-content>
-        Veuillez selectionner une categorie pour afficher les donnees.
-      </ion-card-content>
-    </ion-card>
+    <div class="info-section">
+      <h2>Aucune donnée à afficher</h2>
+      <p>Veuillez sélectionner une catégorie pour afficher les données.</p>
+    </div>
   </ng-container> -->
 </ion-content>
-
-
-

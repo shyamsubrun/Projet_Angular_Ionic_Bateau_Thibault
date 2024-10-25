@@ -59,12 +59,12 @@ export class HomePage implements OnInit {
 
   constructor(private router: Router, private cartService: CartService, private listsService: ListsService) { }
   swiperConfig: any = {
-    slidesPerView: 3, // Modifiez le nombre d'éléments visibles
-    spaceBetween: 2,  // Espace entre les slides
+    slidesPerView: 3,
+    spaceBetween: 2,  
     pagination: {
       clickable: true,
     },
-    navigation: true, // Si vous voulez des flèches de navigation
+    navigation: true, 
   };
   ngOnInit() {
     // Abonnez-vous au nombre d'articles dans le panier
