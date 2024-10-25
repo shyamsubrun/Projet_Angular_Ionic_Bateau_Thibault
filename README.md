@@ -4,7 +4,7 @@
 
 ### Description
 Ce projet consiste en une refonte du front-end de l'application de prise de rendez-vous pour **Bateau Thibault**, une entreprise de type AMAP (Association pour le Maintien d'une Agriculture Paysanne) spécialisée dans la vente de produits issus de la pêche en Normandie, du producteur directement au consommateur.  
-L'application a été développée en utilisant **Angular** et **Ionic** pour le front-end, avec un back-end basé sur des fichiers **JSON** statiques simulant les données.**.
+L'application a été développée en utilisant **Angular** et **Ionic** pour le front-end, avec un back-end basé sur des fichiers **JSON** statiques simulant les données.
 
 ---
 
