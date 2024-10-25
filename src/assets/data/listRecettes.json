@@ -67,7 +67,7 @@
         ],
         "calories": 250,
         "niveauDeDifficulte": "Facile",
-        "url": "assets/photo/recettes/Moules_la_Provençale.jpg"
+        "url": "assets/photo/recettes/Moules_la_Provencale.jpg"
     },
     {
         "nom": "Tartare de saumon",
@@ -221,6 +221,6 @@
         ],
         "calories": 280,
         "niveauDeDifficulte": "Facile",
-        "url": "assets/photo/recettes/Thon_Rouge_Grille_au_Sesame.jpg"
+        "url": "assets/photo/recettes/thon_Rouge_Sesame.jpg"
     }
 ]
