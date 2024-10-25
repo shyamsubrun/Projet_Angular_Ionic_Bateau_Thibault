@@ -8,9 +8,6 @@ import { NavController } from '@ionic/angular';
 import { Router, ActivatedRoute, NavigationEnd  } from '@angular/router';
 import { filter } from 'rxjs/operators';
 
-
-
-
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -48,11 +45,11 @@ export class HeaderComponent  implements OnInit {
   ngOnInit() {
 
      this.cartService.totalItems$.subscribe(total => {
-      this.totalItems = total; // Mise à jour du totalItems lorsque le panier change
+      this.totalItems = total; 
     });
        this.router.events
       .pipe(
-        filter((event): event is NavigationEnd => event instanceof NavigationEnd) // Typage pour s'assurer que seul NavigationEnd passe
+        filter((event): event is NavigationEnd => event instanceof NavigationEnd) 
       )
       .subscribe(event => this.updateActiveTab(event));
   }
